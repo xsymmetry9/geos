@@ -1,5 +1,15 @@
-# This is SPR form 
+# **React + Sass + Bundle**
 
-## Technology used
-React, CSS, JS
+This is a starter project for all React Projects.  
 
+## **Features**
+- Webpack
+- React
+- Sass
+
+## **Getting Started**
+
+``
+    npm install
+
+``
