@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header'
 import Footer from './Footer'
 import PersonalInformation from '../components/PersonalInformation'
+import StudentLevel from '../components/StudentLevel'
 
 const App = () =>{
 
@@ -18,6 +19,7 @@ const App = () =>{
             <div id="content">
                 <Title />
                 <PersonalInformation />
+                <StudentLevel />
             </div>
             <Footer />
         </>

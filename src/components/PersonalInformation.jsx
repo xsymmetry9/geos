@@ -62,8 +62,7 @@ const PersonalInformation = () =>{
                         
                         ></input>
                 </label>
-                <p>{name}</p>
-                <button onClick={handle}>Save</button>
+                <button onClick={handle}>Next</button>
             
             </div>
         </>
