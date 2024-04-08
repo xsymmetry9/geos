@@ -2,6 +2,20 @@ import React, {useState} from 'react'
 
 const StudentLevel = () =>{
 
+    const arr = [
+        {name: "vocabulary",
+        levels: [{initial: 5, target: 6, final: 7}]},
+        {name: "Grammar",
+        levels: [{initial: 5, target: 6, final: 7}]},
+        {name: "Pronunciation",
+        levels: [{initial: 5, target: 6, final: 7}]},
+        {name: "Listening",
+        levels: [{initial: 5, target: 6, final: 7}]},
+        {name: "Conversation",
+        levels: [{initial: 5, target: 6, final: 7}]},
+
+    ]
+
     const InputLevels = () =>{
         const [initialLevel, setInitialLevel] = useState(5);
         const [target, setTarget] = useState(5);
