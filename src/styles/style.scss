@@ -1,30 +1,57 @@
-$body-color: red;
-$font-color: #fff;
-$background-color: blue;
-$font-center: center;
+@use 'base';
 
-$font-size-1: .9rem;
-$font-size-2: 1.2rem;
-$font-size-3: 1.4rem;
-$font-size-4: 1.6rem;
-$font-size-5: 1.8rem;
-$font-size-6: 2rem;
-$font-size-7: 2.4rem;
-$font-size-8: 2.8rem;
-$font-size-9: 3rem;
-
+*{
+    padding: 0;
+    margin: 0;
+}
 body {
-    color: $font-color;
-    background-color: $background-color;
-    text-align: $font-center;
+    color: base.$font-color;
+    background-color: base.$background-color;
+    text-align: base.$font-center;
 }
 h1{
-    font-size: $font-size-9;
-    color: white;
+    font-size: base.$font-size-9;
+    color: base.$font-color;
 }
 p{
-    font-size: $font-size-1;
+    font-size: base.$font-size-1;
 }
+header{
+    color: base.$font-color-dark;
+    background-color: base.$primary-color;
+    border-bottom: 3px solid base.$primary-color-dark;
+
+
+    .header-container{
+        max-width: 1100px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-inline: auto;
+        padding: 1.5rem 0;
+
+        ul{
+            list-style-type: none;
+            display: flex;
+            gap: 2px;
+            li{
+                cursor: pointer;
+                a{
+                    font-size: .9rem;
+                    font-weight: 700;
+                    padding: 5px 12px;
+                }
+            }
+        }
+    }
+    .header-title{
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+    
+}
+
 
 button{
     cursor: pointer;
@@ -32,7 +59,7 @@ button{
     color: white;
     padding: 12px 10px;
     border: none;
-    font-size: $font-size-1;
+    font-size: base.$font-size-1;
     border-radius: 5px;
 }
 button:hover{

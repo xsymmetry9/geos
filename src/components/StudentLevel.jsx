@@ -1,8 +1,41 @@
-import React, {useState} from 'react'
+import React, {Component} from 'react'
 
-const StudentLevel = () =>{
+class StudentLevel extends Component{
+    constructor(props)
+    {
+        super(props);
 
-    const arr = [
+        this.state = {
+            initialLevel: 4,
+            targetLevel: 5,
+            finalLevel: 5
+        }
+
+        this.inputInitialLevel = this.inputInitialLevel.bind(this);
+        this.inputTargetLevel = this.inputTargetLevel.bind(this);
+        this.inputFinalLevel = this.inputFinalLevel.bind(this)
+    }
+
+    inputInitialLevel(e) {
+        this.setState((state) => ({
+            ...state,
+            initialLevel: e.target.value,
+        }));
+    }
+    inputTargetLevel(e) {
+        this.setState((state) => ({
+            ...state,
+            targetLevel: e.target.value,
+        }));
+    }
+    inputFinalLevel(e) {
+        this.setState((state) => ({
+            ...state,
+            finalLevel: e.target.value,
+        }));
+    }
+
+    arr = [
         {name: "vocabulary",
         levels: [{initial: 5, target: 6, final: 7}]},
         {name: "Grammar",
@@ -16,11 +49,7 @@ const StudentLevel = () =>{
 
     ]
 
-    const InputLevels = () =>{
-        const [initialLevel, setInitialLevel] = useState(5);
-        const [target, setTarget] = useState(5);
-        const [final, setFinal] = useState(5);
-
+    render(){
         return(
             <>
                 <div id="initial-level" className="level-container"> 
@@ -31,10 +60,10 @@ const StudentLevel = () =>{
                         <input
                             type='range'
                             name='vocabulary-initial'
-                            value= {initialLevel}
+                            value= {this.state.initialLevel}
                             min ="0"
                             max="10"
-                            onChange={(e) => setInitialLevel(e.target.value)}>
+                            onChange={this.inputInitialLevel}>
     
                         </input>
                     </label>
@@ -42,10 +71,10 @@ const StudentLevel = () =>{
                         <input
                             type='range'
                             name='final'
-                            value= {final}
+                            value= {this.state.finalLevel}
                             min ="0"
                             max="10"
-                            onChange={(e) => setFinal(e.target.value)}>
+                            onChange={this.inputFinalLevel}>
     
                         </input>
                     </label>
@@ -53,29 +82,19 @@ const StudentLevel = () =>{
                         <input
                             type='range'
                             name='target'
-                            value= {target}
+                            value= {this.state.targetLevel}
                             min ="0"
                             max="10"
-                            onChange={(e) => setTarget(e.target.value)}>
+                            onChange={this.inputTargetLevel}>
     
                         </input>
                     </label>
-                    <p>{initialLevel}, {target}, {final}</p>
+                    <p>{this.state.initialLevel}, {this.state.targetLevel}, {this.state.finalLevel}</p>
                 </div>
             </>
         )
 
     }
+}   
 
-    return(
-        <>
-            <InputLevels />
-        
-        </>
-    )
- 
-
-    
-
-}
 export default StudentLevel;
