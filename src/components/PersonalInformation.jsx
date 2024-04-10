@@ -1,10 +1,13 @@
-import React, {useState} from 'react'
-const PersonalInformation = () =>{
+import React, {useState} from 'react';
 
-    const [name, setName] = useState('Gary');
-    const [course, setCourse] = useState('English File I');
-    const [attendance, setAttendance] = useState(24);
-    const [totalLessons, setTotallessons] = useState(30);
+const PersonalInformation = ({...props}) =>{
+
+    console.log(props.name);
+
+    const [name, setName] = useState(props.name);
+    const [course, setCourse] = useState(props.course);
+    const [attendance, setAttendance] = useState(props.attendance);
+    const [totalLessons, setTotallessons] = useState(props.totalLessons);
 
     const handle = () =>{
         console.log(
@@ -17,7 +20,7 @@ const PersonalInformation = () =>{
     }
     return(
         <>
-            <div>
+            <div className="form-container">
                 <h2>Personal Information</h2>
                 <label>Name:
                     <input

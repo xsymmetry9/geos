@@ -26,7 +26,7 @@ class InputComment extends Component {
     }
     render(){
         return(
-            <section>
+            <div className='form-container'>
                 <h3>Comments:</h3>
                 <form onSubmit={this.handleSubmit}>
 
@@ -43,7 +43,7 @@ class InputComment extends Component {
                 <h4>Comments</h4>
                 <p>{this.state.comments}</p>
                 
-                </section>
+                </div>
         )
 
     }

@@ -52,7 +52,7 @@ class StudentLevel extends Component{
     render(){
         return(
             <>
-                <div id="initial-level" className="level-container"> 
+                <div id="initial-level" className="form-container"> 
                     <h2>Student Level</h2>
     
                     <h3>Vocabulary</h3>

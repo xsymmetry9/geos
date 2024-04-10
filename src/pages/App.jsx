@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
+import Student from '../components/Student.js';
 import Header from './Header'
 import Footer from './Footer'
-import PersonalInformation from '../components/PersonalInformation'
-import StudentLevel from '../components/StudentLevel'
-import Comment from '../components/Comment'
+import Form from '../components/Form';
 
 const App = () =>{
+
+    //Creates a new student
+    const [data, setData] = useState(
+        new Student("Gary", "English File 1", 5, 10)
+    );
     const Title = () =>{
         return (<>
             <h1>Student Progress Report</h1>
@@ -15,12 +19,9 @@ const App = () =>{
     return (
         <>
             <Header/>
-            <div id="content">
-                <Title />
-                <PersonalInformation />
-                <StudentLevel />
-                <Comment />
-            </div>
+            <Title />
+            <Form props = {data}/>
+
             <Footer />
         </>
 
