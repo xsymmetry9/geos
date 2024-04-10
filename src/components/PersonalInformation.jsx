@@ -1,23 +1,12 @@
 import React, {useState} from 'react';
 
-const PersonalInformation = ({...props}) =>{
-
-    console.log(props.name);
+const PersonalInformation = ({props, handle}) =>{
 
     const [name, setName] = useState(props.name);
     const [course, setCourse] = useState(props.course);
     const [attendance, setAttendance] = useState(props.attendance);
-    const [totalLessons, setTotallessons] = useState(props.totalLessons);
+    const [totalLessons, setTotallessons] = useState(props.totalLessons );
 
-    const handle = () =>{
-        console.log(
-            {
-                name: name, 
-                course: course, 
-                attendance: attendance,
-                totaleLessons: totalLessons
-            });
-    }
     return(
         <>
             <div className="form-container">
