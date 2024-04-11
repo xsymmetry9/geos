@@ -15,7 +15,7 @@ const Form = () =>{
     }
 
     return(
-        <div id="content">
+        <div className='form-container' id="content">
             <PersonalInformation props = {data} handle = {handleSubmit}/>
             <StudentLevel props = {data}/>
             <Comment props = {data}/>

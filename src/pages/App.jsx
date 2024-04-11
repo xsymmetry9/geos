@@ -8,7 +8,7 @@ const App = () =>{
 
     const Title = () =>{
         return (<>
-            <h1>Student Progress Report</h1>
+            <h1 className='title' id='title-name'>Student Progress Report</h1>
         </>)
     }
 

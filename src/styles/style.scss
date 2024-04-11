@@ -7,11 +7,11 @@
 body {
     color: base.$font-color;
     background-color: base.$background-color;
-    text-align: base.$font-center;
 }
 h1{
     font-size: base.$font-size-9;
     color: base.$font-color;
+    text-align: center;
 }
 p{
     font-size: base.$font-size-1;
@@ -52,6 +52,16 @@ header{
     
 }
 
+.title{
+    padding: 3rem 0;
+}
+
+.form-container{
+    margin-inline: auto;
+    max-width: 900px;
+    width: 100%;
+}
+
 button{
     cursor: pointer;
     background-color: black;
@@ -64,4 +74,26 @@ button{
 button:hover{
     background-color: white;
     color: black;
+}
+
+.d-grid{
+  
+}
+.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    border: 1px solid black;
+}
+
+.input-container{
+    padding: 1.2rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid black;
+
+    input{
+        padding: 12px 5px;
+        border: 1px solid green;
+    }
 }
