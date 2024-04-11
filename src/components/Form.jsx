@@ -9,22 +9,14 @@ const Form = () =>{
     const [data, setData] = useState(
         new Student("Gary", "English File 1", 5, 10)
     )
-
-    useEffect(() =>{
-        console.log(data);
-    }, [data])
-    const handleFormSubmit = (newStudentData) => {
-        setData({...data,
-            name: newStudentData.name,
-            course: newStudentData.course,
-            attendance: newStudentData.attendance,
-            totalLessons: newStudentData.totalLessons
-        });
+    const handleSubmit = (name, course, attendance, totalLessons) =>{
+        setData(...data, 
+            {name: name, course: course, attendance: attendance, totalLessons: totalLessons});
     }
 
     return(
         <div id="content">
-            <PersonalInformation props = {data} handle ={handleFormSubmit}/>
+            <PersonalInformation props = {data} handle = {handleSubmit}/>
             <StudentLevel props = {data}/>
             <Comment props = {data}/>
             <p>{data.name}</p>

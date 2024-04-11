@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
 
-const PersonalInformation = ({props, handle}) =>{
+const PersonalInformation = ({props}) =>{
 
-    const [name, setName] = useState(props.name);
-    const [course, setCourse] = useState(props.course);
-    const [attendance, setAttendance] = useState(props.attendance);
-    const [totalLessons, setTotallessons] = useState(props.totalLessons );
+    const [data, setData] = useState(props);
 
+    const handleChange = (e) =>{
+        const {name, value} = e.currentTarget;
+        setData({ ...data, [name]: value});
+    }
+  
     return(
         <>
             <div className="form-container">
@@ -17,8 +19,8 @@ const PersonalInformation = ({props, handle}) =>{
                         name="name"
                         type="text"
                         className='form-input'
-                        value = {name}
-                        onChange= {(e) =>setName(e.target.value)}
+                        value = {data.name}
+                        onChange={(e) => handleChange(e)}
                         placeholder='Student Name'>
                     </input>
                 </label>
@@ -28,8 +30,8 @@ const PersonalInformation = ({props, handle}) =>{
                         name="course"
                         type="text"
                         className='form-input'
-                        value={course}
-                        onChange = {(e) => setCourse(e.target.value)}>
+                        value={data.course}
+                        onChange={(e) => handleChange(e)}>
 
                     </input>
                 </label>
@@ -39,8 +41,9 @@ const PersonalInformation = ({props, handle}) =>{
                         name="attendance"
                         type="number"
                         className='form-input'
-                        value={attendance}
-                        onChange= {(e) => setAttendance(e.target.value)}>
+                        value={data.attendance}
+                        onChange={(e) => handleChange(e)}
+                        >
                         </input>
                 </label>
                 <label>Total Lessons:
@@ -49,12 +52,13 @@ const PersonalInformation = ({props, handle}) =>{
                         className='form-input'
                         name="total-lessons"
                         type="number"
-                        value={totalLessons}
-                        onChange = {(e) => setTotallessons(e.target.value)}
+                        value={data.totalLessons}
+                        onChange={(e) => handleChange(e)}
+                        >
                         
-                        ></input>
+                        </input>
                 </label>
-                <button onClick={handle}>Next</button>
+                <button>Next</button>
             
             </div>
         </>

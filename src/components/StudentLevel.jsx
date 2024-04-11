@@ -56,7 +56,7 @@ class StudentLevel extends Component{
                     <h2>Student Level</h2>
     
                     <h3>Vocabulary</h3>
-                    <label for ="vocabulary-initial">initial
+                    <label htmlFor ="vocabulary-initial">initial
                         <input
                             type='range'
                             name='vocabulary-initial'
@@ -67,7 +67,7 @@ class StudentLevel extends Component{
     
                         </input>
                     </label>
-                    <label for ="final">Final
+                    <label htmlFor ="final">Final
                         <input
                             type='range'
                             name='final'
@@ -78,7 +78,7 @@ class StudentLevel extends Component{
     
                         </input>
                     </label>
-                    <label for ="target">Target
+                    <label htmlFor ="target">Target
                         <input
                             type='range'
                             name='target'
