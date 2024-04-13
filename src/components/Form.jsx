@@ -15,12 +15,16 @@ const Form = () =>{
     }
 
     return(
-        <div className='form-container' id="content">
-            <PersonalInformation props = {data} handle = {handleSubmit}/>
-            <StudentLevel props = {data}/>
-            <Comment props = {data}/>
+        <>
+            <div className='form-container' id="content">
+                <PersonalInformation props = {data} handle = {handleSubmit}/>
+                {/* <StudentLevel props = {data}/> */}
+                <Comment props = {data}/> 
+            </div>
             <p>{data.name}</p>
-        </div>
+
+        </>
+  
     )
 }
 export default Form;

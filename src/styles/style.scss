@@ -6,6 +6,7 @@
 }
 body {
     color: base.$font-color;
+    font-family: base.$font-primary;
     background-color: base.$background-color;
 }
 h1{
@@ -16,6 +17,27 @@ h1{
 p{
     font-size: base.$font-size-1;
 }
+input, textarea{
+    font-family: base.$font-secondary;
+}
+
+button{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    padding: 12px 10px;
+    border: none;
+    font-size: base.$font-size-1;
+    border-radius: 5px;
+    width: 100px;
+}
+button:hover{
+    background-color: white;
+    color: black;
+}
+
+
+
 header{
     color: base.$font-color-dark;
     background-color: base.$primary-color;
@@ -57,47 +79,46 @@ header{
 }
 
 .form-container{
+
+    textarea{
+        font-size: .9rem;
+        width: 100%;
+        padding: 1.2rem 1rem;
+        box-sizing: border-box;
+    }
+    button{
+        float: right;
+    }
     margin-inline: auto;
     max-width: 900px;
     width: 100%;
-}
-
-button{
-    cursor: pointer;
-    background-color: black;
-    color: white;
-    padding: 12px 10px;
-    border: none;
-    font-size: base.$font-size-1;
-    border-radius: 5px;
-}
-button:hover{
-    background-color: white;
-    color: black;
-}
-
-.d-grid{
-  
-}
-.row{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
     border: 1px solid black;
-}
+    padding: 3rem 2.4rem;
 
-.input-container{
-
-
-    label{
-        border: 1px solid black;
-        input{
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .form-input{
-            padding: 5px 6px;
-        }
-
+    .row{
+        padding: 1rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
     }
+
+    .input-container{
+
+        label{
+            input{
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .form-input{
+                padding: 5px 6px;
+            }
+    
+        }
+    }
+
 }
+
+
+
+
+

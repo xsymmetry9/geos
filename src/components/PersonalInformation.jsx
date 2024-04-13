@@ -8,10 +8,8 @@ const PersonalInformation = ({props}) =>{
         const {name, value} = e.currentTarget;
         setData({ ...data, [name]: value});
     }
-  
     return(
         <>
-            <div className="section-container">
                 <h2>Personal Information</h2>
                 <div className='d-grid'>
                     <div class="row">
@@ -40,9 +38,7 @@ const PersonalInformation = ({props}) =>{
                                 </input></label>
                         </div>
                     </div>
-
-                    <div className="d-grid">
-                        <div className='row'>
+                    <div className='row'>
                             <div className='input-container'>
                                     <label><span>Attendance</span>
                                     <input
@@ -55,7 +51,7 @@ const PersonalInformation = ({props}) =>{
                                     </input>   
                                 </label>
                             </div>
-                            <div className='input-container'/>
+                            <div className='input-container'>
                                 <label><span>Total Lessons</span>
                                     <input
                                         id="total-lesson"
@@ -64,13 +60,12 @@ const PersonalInformation = ({props}) =>{
                                         type="number"
                                         value={data.totalLessons}
                                         onChange={(e) => handleChange(e)}>
-                                    </input></label>
+                                    </input>
+                                </label>
                             </div>
                         </div>
-                    </div>
-                <button>Next</button>
+                </div>
             
-            </div>
         </>
     )
     
