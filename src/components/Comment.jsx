@@ -1,34 +1,19 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class InputComment extends Component {
-    constructor(props){
-        super(props);
-        this.data = props;
-        this.handleInputChange = this.handleInputChange.bind(this);
-    }
+const InputComment = ({props, handleSubmit}) =>{
 
-    handleInputChange(e){
-        this.setState((data) =>({
-            ...data,
-            comment: e.target.value,
-        }));
-    }
-    render(){
-        return(
-            <>
-                <h3>Comments</h3>
-                <div className='input-container'>
-                    <textarea
-                        name="comment-entry"
-                        value={this.data.comment}            
-                        onChange={this.handleInputChange}>
-                    </textarea>
-                </div>
-            </>
+    return(
+        <>
+            <h3>Comments</h3>
+            <div className='input-container'>
+                <textarea
+                    name="comment"
+                    value={props.comment}            
+                    onChange={(e) => handleSubmit(e)}>
+                </textarea>
+            </div>
+        </>
    
-        )
-
-    }
-
+    )
 }
 export default InputComment;

@@ -13,9 +13,11 @@ class Student{
         this.course = course;
         this.attendance = attendance;
         this.totalLessons = totalLessons;
-        this.levels = levels
+        this.levels = levels;
         this.comment= comment;
     }
+
+
 }
 
 export default Student;

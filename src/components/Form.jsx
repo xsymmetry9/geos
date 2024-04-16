@@ -1,27 +1,43 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import PersonalInformation from '../components/PersonalInformation'
 import StudentLevel from '../components/StudentLevel'
 import Comment from '../components/Comment'
 import Student from '../components/Student.js';
+import Level from '../components/Levels.js';
 
 const Form = () =>{
-
     const [data, setData] = useState(
-        new Student("Gary", "English File 1", 5, 10)
+        new Student(
+            "Gary",
+            "English File 1",  
+             5,
+             10,
+             [new Level("vocabulary", 5, 4, 2),
+                new Level("grammar", 5, 6, 7),
+                new Level("pronunciation", 5, 6, 7),
+                new Level("listening", 5, 6, 7),
+                new Level("conversation", 5, 6, 7)],
+            'Comment goes here')
     )
-    const handleSubmit = (name, course, attendance, totalLessons) =>{
-        setData(...data, 
-            {name: name, course: course, attendance: attendance, totalLessons: totalLessons});
+    const handleSubmit = (e) =>{
+        const {name, value} = e.currentTarget;
+        setData({ ...data, [name]: value});
     }
 
     return(
         <>
             <div className='form-container' id="content">
-                <PersonalInformation props = {data} handle = {handleSubmit}/>
-                {/* <StudentLevel props = {data}/> */}
-                <Comment props = {data}/> 
+                <PersonalInformation props = {data} handleSubmit = {handleSubmit}/>
+                <StudentLevel props = {data}/>
+                <Comment props = {data} handleSubmit ={handleSubmit}/> 
+                <button onClick={handleSubmit}>Submit</button>
             </div>
-            <p>{data.name}</p>
+            <h3>{data.name}</h3>
+            <p>{data.course}</p>
+            <p>{data.attendance}</p>
+            <p>{data.totalLessons}</p>
+            <p>{data.comment}</p>
+
 
         </>
   

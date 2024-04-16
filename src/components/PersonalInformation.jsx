@@ -1,18 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 
-const PersonalInformation = ({props}) =>{
-
-    const [data, setData] = useState(props);
-
-    const handleChange = (e) =>{
-        const {name, value} = e.currentTarget;
-        setData({ ...data, [name]: value});
-    }
+const PersonalInformation = ({props, handleSubmit}) =>{
     return(
         <>
                 <h2>Personal Information</h2>
                 <div className='d-grid'>
-                    <div class="row">
+                    <div className="row">
                         <div className='input-container'>
                             <label><span>Name</span>
                                 <input
@@ -20,8 +13,8 @@ const PersonalInformation = ({props}) =>{
                                     name="name"
                                     type="text"
                                     className='form-input'
-                                    value = {data.name}
-                                    onChange={(e) => handleChange(e)}
+                                    value = {props.name}
+                                    onChange={(e) => handleSubmit(e)}
                                     placeholder='Student Name'>
                                 </input>
                             </label>
@@ -33,8 +26,8 @@ const PersonalInformation = ({props}) =>{
                                     name="course"
                                     type="text"
                                     className='form-input'
-                                    value={data.course}
-                                    onChange={(e) => handleChange(e)}>  
+                                    value={props.course}
+                                    onChange={handleSubmit}>  
                                 </input></label>
                         </div>
                     </div>
@@ -46,8 +39,8 @@ const PersonalInformation = ({props}) =>{
                                         name="attendance"
                                         type="number"
                                         className='form-input'
-                                        value={data.attendance}
-                                        onChange={(e) => handleChange(e)}>
+                                        value={props.attendance}
+                                        onChange={handleSubmit}>
                                     </input>   
                                 </label>
                             </div>
@@ -56,10 +49,10 @@ const PersonalInformation = ({props}) =>{
                                     <input
                                         id="total-lesson"
                                         className='form-input'
-                                        name="total-lessons"
+                                        name="totalLessons"
                                         type="number"
-                                        value={data.totalLessons}
-                                        onChange={(e) => handleChange(e)}>
+                                        value={props.totalLessons}
+                                        onChange={handleSubmit}>
                                     </input>
                                 </label>
                             </div>
