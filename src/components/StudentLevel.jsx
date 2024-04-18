@@ -1,49 +1,56 @@
-import React from 'react'
+import React from 'react';
 
 const StudentLevel = ({props}) =>{
-
-    props.levels.forEach(item =>{
-        console.log(item);
-    }) 
-
-    const plot = (item) =>{
+    const PlotAll = () =>{
         return(
-            <div className='level-container'>
-                <h4>{item.name}</h4>
-                <label htmlFor ="vocabulary-initial">initial
+            <>
+                {props.levels.map((item, index) => {
+                    return(
+                        <div key = {index}>
+                            <Plot {...item}/>                            
+                        </div>
+                    )
+                }
+                )}
+            </>
+        )
+    }
+  
+    const Plot = (item) =>{
+        return(
+            <>
+                <h4>{item.name.toUpperCase()}</h4>
+                <label htmlFor = {`${item.name}-initial`}>initial
                     <input
                         type='range'
-                        name='vocabulary-initial'
-                        value= "5"
+                        name= {`${item.name}-initial`}
+                        value= {item.initial}
                         min ="0"
                         max="10"
-                        >
+                        onChange={(e) => console.log(e.currentTarget.value)}>
                     </input>
                 </label>
-                <label htmlFor ="final">Final
+                <label htmlFor = {`${item.name}-final`}>Final
                     <input
                         type='range'
-                        name='final'
-                        value= "5"
+                        name = {`${item.name}-final`}
+                        value= {item.final}
                         min ="0"
                         max="10"
-                        >
-                        
+                        onChange={(e) => console.log(e.currentTarget.value)}>                   
                     </input>
                 </label>
-                <label htmlFor ="target">Target
+                <label htmlFor = {`${item.name}-target`}>Target
                     <input
                         type='range'
-                        name='target'
-                        value= "5"
+                        name= {`${item.name}-final`}
+                        value= {item.target}
                         min ="0"
                         max="10"
-                        >
-                        
+                        onChange={(e) => console.log(e.currentTarget.value)}>
                     </input>
                 </label>
-                </div>
-
+            </>
         )
     }
 
@@ -51,7 +58,8 @@ const StudentLevel = ({props}) =>{
             <>
                 <div> 
                     <h3>Student Level</h3>
-    
+                    <PlotAll {...props}/>
+
                 </div>
             </>
         )

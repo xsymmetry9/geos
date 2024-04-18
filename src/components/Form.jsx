@@ -37,8 +37,6 @@ const Form = () =>{
             <p>{data.attendance}</p>
             <p>{data.totalLessons}</p>
             <p>{data.comment}</p>
-
-
         </>
   
     )
