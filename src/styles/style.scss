@@ -13,6 +13,10 @@ h1{
     font-size: base.$font-size-9;
     color: base.$font-color;
     text-align: center;
+    text-transform: capitalize;
+}
+h2, h3, h4{
+    text-transform: capitalize;
 }
 p{
     font-size: base.$font-size-1;
@@ -118,6 +122,19 @@ header{
 
 }
 
+.range-input-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 2rem 0;
+    
+    label{
+        text-transform: capitalize;
+        input[type="range"]{
+            width: 100%;
+        }
+    }
+}
 
 
 
