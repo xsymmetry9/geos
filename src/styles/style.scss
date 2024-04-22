@@ -39,45 +39,6 @@ button:hover{
     background-color: white;
     color: black;
 }
-
-
-
-header{
-    color: base.$font-color-dark;
-    background-color: base.$primary-color;
-    border-bottom: 3px solid base.$primary-color-dark;
-
-
-    .header-container{
-        max-width: 1100px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-inline: auto;
-        padding: 1.5rem 0;
-
-        ul{
-            list-style-type: none;
-            display: flex;
-            gap: 2px;
-            li{
-                cursor: pointer;
-                a{
-                    font-size: .9rem;
-                    font-weight: 700;
-                    padding: 5px 12px;
-                }
-            }
-        }
-    }
-    .header-title{
-        font-size: 1.6rem;
-        font-weight: 700;
-    }
-    
-}
-
 .title{
     padding: 3rem 0;
 }
@@ -135,7 +96,14 @@ header{
         }
     }
 }
+.hidden{
+    display: none;
+}
 
-
-
+.form-nav-buttons-group
+{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
 
