@@ -17,21 +17,34 @@ const StudentLevel = ({props, handle}) =>{
     }
   
     const Plot = (item) =>{
+        const arr = ["initial", "final", "target"];
         return(
             <>
                 <h4>{item.name}</h4>
-                <label htmlFor = {`${item.name}-initial`}>initial
-                    <input
-                        type='range'
-                        name= {`${item.name}-initial`}
-                        value= {item.initial}
-                        min ="0"
-                        max="10"
-                        onChange={handle}>
-                    </input>
-                </label>
-                <p>{item.initial}</p>
-     
+                
+                <div className='range-input-container'>
+                    {arr.map((categoryItem, index) => {
+                        return(
+                            <>
+                             <label key={index} htmlFor = {`${item.name}-${categoryItem}`}>{categoryItem}
+                                <input
+                                    type='range'
+                                    name= {`${item.name}-${categoryItem}`}
+                                    value= {item[categoryItem]}
+                                    min ="0"
+                                    max="10"
+                                    onChange={handle}>
+                                </input>
+                            </label>
+                            </>
+                        )
+                    })}
+                   
+    
+              
+                </div>
+        
+
             </>
         )
     }
@@ -41,7 +54,6 @@ const StudentLevel = ({props, handle}) =>{
                 <div> 
                     <h3>Student Level</h3>
                     <PlotAll {...props}/>
-
                 </div>
             </>
         )
