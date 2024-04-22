@@ -39,11 +39,8 @@ const StudentLevel = ({props, handle}) =>{
                             </>
                         )
                     })}
-                   
-    
               
                 </div>
-        
 
             </>
         )
