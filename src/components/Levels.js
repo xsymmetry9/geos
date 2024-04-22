@@ -1,13 +1,13 @@
 class Levels{
     constructor(
         name,
-        intial,
+        initial,
         target,
         final
     )
     {   
         this.name = name;
-        this.intial = intial;
+        this.initial = initial;
         this.target = target;
         this.final = final;
     }

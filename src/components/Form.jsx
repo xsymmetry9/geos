@@ -23,12 +23,34 @@ const Form = () =>{
         const {name, value} = e.currentTarget;
         setData({ ...data, [name]: value});
     }
+    const handleLevels = (e) =>{
+        const {name, value} = e.currentTarget;
+        const parentCategory = name.split('-')[0];
+        const childCategory = name.split('-')[1];
+
+        setData({ ...data,
+            levels: data.levels.map((category) =>{
+                if(category.name === parentCategory)
+                {
+                    return{
+                        ...category,
+                        [childCategory]: value
+                    };
+                } else{
+                    return category
+                }
+                
+            }),
+        });       
+    }
+
+
 
     return(
         <>
             <div className='form-container' id="content">
                 <PersonalInformation props = {data} handleSubmit = {handleSubmit}/>
-                <StudentLevel props = {data}/>
+                <StudentLevel props = {data} handle= {handleLevels}/>
                 <Comment props = {data} handleSubmit ={handleSubmit}/> 
                 <button onClick={handleSubmit}>Submit</button>
             </div>
@@ -37,6 +59,7 @@ const Form = () =>{
             <p>{data.attendance}</p>
             <p>{data.totalLessons}</p>
             <p>{data.comment}</p>
+            {data.levels.map((item, index) => <p key={index}>{item.name}: {item.initial}</p>)}
         </>
   
     )

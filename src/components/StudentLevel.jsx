@@ -1,6 +1,6 @@
 import React from 'react';
 
-const StudentLevel = ({props}) =>{
+const StudentLevel = ({props, handle}) =>{
     const PlotAll = () =>{
         return(
             <>
@@ -19,7 +19,7 @@ const StudentLevel = ({props}) =>{
     const Plot = (item) =>{
         return(
             <>
-                <h4>{item.name.toUpperCase()}</h4>
+                <h4>{item.name}</h4>
                 <label htmlFor = {`${item.name}-initial`}>initial
                     <input
                         type='range'
@@ -27,29 +27,11 @@ const StudentLevel = ({props}) =>{
                         value= {item.initial}
                         min ="0"
                         max="10"
-                        onChange={(e) => console.log(e.currentTarget.value)}>
+                        onChange={handle}>
                     </input>
                 </label>
-                <label htmlFor = {`${item.name}-final`}>Final
-                    <input
-                        type='range'
-                        name = {`${item.name}-final`}
-                        value= {item.final}
-                        min ="0"
-                        max="10"
-                        onChange={(e) => console.log(e.currentTarget.value)}>                   
-                    </input>
-                </label>
-                <label htmlFor = {`${item.name}-target`}>Target
-                    <input
-                        type='range'
-                        name= {`${item.name}-final`}
-                        value= {item.target}
-                        min ="0"
-                        max="10"
-                        onChange={(e) => console.log(e.currentTarget.value)}>
-                    </input>
-                </label>
+                <p>{item.initial}</p>
+     
             </>
         )
     }
