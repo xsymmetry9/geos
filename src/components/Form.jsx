@@ -6,6 +6,7 @@ import Student from '../components/Student.js';
 import Level from '../components/Levels.js';
 
 const Form = () =>{
+    const [page, setPage] = useState(0);
     const [data, setData] = useState(
         new Student(
             "Gary",
@@ -43,22 +44,38 @@ const Form = () =>{
         });       
     }
 
-
+    const arr = [
+        <PersonalInformation props = {data} handleSubmit = {handleSubmit}/>,
+        <StudentLevel props = {data} handle= {handleLevels}/>,
+        <Comment props = {data} handleSubmit ={handleSubmit}/> 
+    ]
+    const nextPage = () =>{
+        if(page < arr.length - 1)
+        {
+            setPage(page => page + 1);
+        } else {
+            alert("error")
+        }        
+    }
+    const prevPage = () =>{
+        if(page > 0)
+        {
+            setPage(page => page - 1);
+        } else {
+            alert("error");
+        }
+    }
 
     return(
         <>
             <div className='form-container' id="content">
-                <PersonalInformation props = {data} handleSubmit = {handleSubmit}/>
-                <StudentLevel props = {data} handle= {handleLevels}/>
-                <Comment props = {data} handleSubmit ={handleSubmit}/> 
-                <button onClick={handleSubmit}>Submit</button>
+                {arr[page]}
+                <div className='form-nav-buttons-group'>
+                    <button className={`${page === 0 ? "hidden" : "block"}`} onClick ={prevPage}>Previous</button>
+                    <button onClick={nextPage}>{page < arr.length - 1 ? "Next page" : "Submit"}</button>
+                </div>
+
             </div>
-            <h3>{data.name}</h3>
-            <p>{data.course}</p>
-            <p>{data.attendance}</p>
-            <p>{data.totalLessons}</p>
-            <p>{data.comment}</p>
-            {data.levels.map((item, index) => <p key={index}>{item.name}: {item.initial}</p>)}
         </>
   
     )
