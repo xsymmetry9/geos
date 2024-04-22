@@ -12,11 +12,11 @@ const Form = () =>{
             "English File 1",  
              5,
              10,
-             [new Level("vocabulary", 5, 4, 2),
-                new Level("grammar", 5, 6, 7),
-                new Level("pronunciation", 5, 6, 7),
-                new Level("listening", 5, 6, 7),
-                new Level("conversation", 5, 6, 7)],
+             [new Level("vocabulary"),
+                new Level("grammar"),
+                new Level("pronunciation"),
+                new Level("listening"),
+                new Level("conversation")],
             'Comment goes here')
     )
     const handleSubmit = (e) =>{
@@ -38,8 +38,7 @@ const Form = () =>{
                     };
                 } else{
                     return category
-                }
-                
+                } 
             }),
         });       
     }
