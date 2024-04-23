@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PersonalInformation = ({props, handleSubmit}) =>{
+const PersonalInformation = ({props, handleData}) =>{
     return(
         <>
                 <h2>Personal Information</h2>
@@ -14,7 +14,7 @@ const PersonalInformation = ({props, handleSubmit}) =>{
                                     type="text"
                                     className='form-input'
                                     value = {props.name}
-                                    onChange={(e) => handleSubmit(e)}
+                                    onChange={(e) => handleData(e)}
                                     placeholder='Student Name'>
                                 </input>
                             </label>
@@ -27,7 +27,7 @@ const PersonalInformation = ({props, handleSubmit}) =>{
                                     type="text"
                                     className='form-input'
                                     value={props.course}
-                                    onChange={handleSubmit}>  
+                                    onChange={handleData}>  
                                 </input></label>
                         </div>
                     </div>
@@ -40,7 +40,7 @@ const PersonalInformation = ({props, handleSubmit}) =>{
                                         type="number"
                                         className='form-input'
                                         value={props.attendance}
-                                        onChange={handleSubmit}>
+                                        onChange={handleData}>
                                     </input>   
                                 </label>
                             </div>
@@ -52,7 +52,7 @@ const PersonalInformation = ({props, handleSubmit}) =>{
                                         name="totalLessons"
                                         type="number"
                                         value={props.totalLessons}
-                                        onChange={handleSubmit}>
+                                        onChange={handleData}>
                                     </input>
                                 </label>
                             </div>
