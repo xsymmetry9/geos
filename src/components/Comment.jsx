@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InputComment = ({props, handleSubmit}) =>{
+const InputComment = ({props, handleData}) =>{
 
     return(
         <>
@@ -9,7 +9,7 @@ const InputComment = ({props, handleSubmit}) =>{
                 <textarea
                     name="comment"
                     value={props.comment}            
-                    onChange={(e) => handleSubmit(e)}>
+                    onChange={(e) => handleData(e)}>
                 </textarea>
             </div>
         </>
