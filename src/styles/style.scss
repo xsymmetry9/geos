@@ -103,7 +103,25 @@ button:hover{
 .form-nav-buttons-group
 {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 10px;
+    padding-top: 1.2rem;
+    width: 100%;
+    
+    .levels{
+        color: white;
+        background-color: blue;
+    }
+    .levels:hover, .levels:focus{
+        background-color: #0000ffb4;
+    }
+}
+
+.text-center{
+    text-align: center;
+}
+
+.level-description-box{
+    padding: 2rem 0;
 }
 
