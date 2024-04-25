@@ -19,15 +19,45 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 5px;
     h1{
-        font-size: 1.6rem;
-    }
+        font-size: 1.2rem;
+        padding-top: 2px;
+        }
   
     .img-container{
         margin-inline: auto;
-        width: 291px;
-        height: 150px;
+        width: 120px;
+        height: 60px;
     }
+  
+}
+.two-columns-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.justify-end{
+    justify-self: end;
+    padding-right: 5px;
+}
 
+.even-columns{
+    padding-top: 1.2rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    // border: 1px solid black;
+    gap: 1rem;
+}
+
+.d-flex{
+    font-size: .8rem;
+    display: flex;
+    color: rgb(129, 129, 129);
+    gap: 5px;
+}
+
+.label-containers{
+    display: flex;
+    border: 1px solid blue;
+    justify-content: center;
+    gap: 5px;
 }
