@@ -5,13 +5,13 @@
     }
 }
 .papersize{
-    width: 210mm;
-    height: 297mm;
+    width: 595px;
+    height: 852px;
     margin: auto;
     background-color: white;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20mm;
+    padding: 12mm;
     box-sizing: border-box;
 }
 
@@ -20,7 +20,7 @@
     flex-direction: column;
     justify-content: center;
     h1{
-        font-size: 1.2rem;
+        font-size: 20px;
         padding-top: 2px;
         }
   
@@ -34,6 +34,13 @@
 .two-columns-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+.personalInformation-title{
+    font-size: 14px;
+    font-weight: 600;
+}
+.personalInformation-description{
+    font-size: 12px;
 }
 .justify-end{
     justify-self: end;
@@ -49,15 +56,36 @@
 }
 
 .d-flex{
-    font-size: .8rem;
+    font-size: 8px;
     display: flex;
     color: rgb(129, 129, 129);
     gap: 5px;
 }
 
 .label-containers{
+    padding: 3px 0;
     display: flex;
-    border: 1px solid blue;
     justify-content: center;
     gap: 5px;
 }
+
+.table{
+    width: 520px;
+    font-size: 10px;
+    .row{
+        display: grid;
+        grid-template-columns: repeat(8, 65px);
+        border: 1px solid black;
+    }
+    .col{
+        border: 1px solid black;
+        text-align: center;
+        padding: 2px 0;
+    }
+    .table-header{
+        font-size: 9px;
+        text-align: center;
+    }
+
+}
+
