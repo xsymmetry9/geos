@@ -11,6 +11,7 @@ const App = () =>{
     const [data, setData] = useState(
         new Student(
             "Gary",
+            "PL",
             "English File 1",  
              5,
              10,
