@@ -7,14 +7,20 @@ $background-light: rgba(0, 161, 173, .2);
         margin: 0;
     }
 }
+h2{
+    font-size: 13px;
+}
+p{
+    font-size: 10px;
+}
 .papersize{
     width: 595px;
-    height: 852px;
+    height: 842px;
     margin: auto;
     background-color: white;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 12mm;
+    padding: 6mm 8mm 6mm 8mm;
     box-sizing: border-box;
 }
 
@@ -23,14 +29,21 @@ $background-light: rgba(0, 161, 173, .2);
     flex-direction: column;
     justify-content: center;
     h1{
-        font-size: 20px;
-        padding-top: 2px;
+        font-size: 16px;
         }
   
     .img-container{
+        display: flex;
+        flex-direction: column;
         margin-inline: auto;
-        width: 100px;
-        height: 40px;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+        img{
+            width: 100px;
+            height: 40px;
+        }
+
     }
   
 }
@@ -42,9 +55,7 @@ $background-light: rgba(0, 161, 173, .2);
     font-size: 14px;
     font-weight: 600;
 }
-.personalInformation-description{
-    font-size: 12px;
-}
+
 .justify-end{
     justify-self: end;
     padding-right: 5px;
@@ -57,7 +68,11 @@ $background-light: rgba(0, 161, 173, .2);
     // border: 1px solid black;
     gap: 1rem;
 }
-
+.graph-levelInfo{
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 .d-flex{
     font-size: 8px;
     display: flex;
@@ -73,14 +88,15 @@ $background-light: rgba(0, 161, 173, .2);
 }
 
 .table{
-    width: 520px;
+    width: 100%;
     font-size: 10px;
     border: 1px solid black;
     .row{
         background-color: $background-light;
         color: white;
         display: grid;
-        grid-template-columns: repeat(8, 65px);
+        width: 100%;
+        grid-template-columns: repeat(8, 1fr);
     }
     .row:nth-child(n+2)
     {
@@ -101,6 +117,9 @@ $background-light: rgba(0, 161, 173, .2);
         padding: 2px 0;
         border-right: 1px solid black;
     }
+    .col:last-child{
+        border: none;
+    }
     
     .table-header{
         font-size: 9px;
@@ -108,4 +127,19 @@ $background-light: rgba(0, 161, 173, .2);
     }
 
 }
-
+.cards-container{
+    display: grid;
+    gap: 12px;
+}
+.level-card{
+    border: 1px solid black;
+    height: 100px;
+    .level-card-title{
+        background-color: $background-color-dark;
+        padding: 4px;
+        color: white;
+    }
+    .level-card-description{
+        padding: 6px 8px;
+    }
+}

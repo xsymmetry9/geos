@@ -1,12 +1,16 @@
 class Levels{
     constructor(
-        name
+        name,
+        initial,
+        target,
+        final
     )
     {   
         this.name = name;
-        this.initial = 0;
-        this.target = 0;
-        this.final = 0;
+        this.initial = initial;
+        this.target = target;
+        this.final = final;
     }
+
 }
 export default Levels;

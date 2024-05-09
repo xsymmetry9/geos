@@ -1,0 +1,277 @@
+
+{
+    "English": {
+        "Vocabulary": {
+            "Levels":[
+                {
+                    "id": 1,
+                    "name": "Pre A1",
+                    "description": "Can use isolated words and basic expressions in order to give simple information about him/herself."
+                },
+                {
+                    "id": 2,
+                    "name": "A1",
+                    "description": "Has a basic vocabulary repertoire of isolated words and phrases related to particular concrete situations."
+                },
+                {
+                    "id": 3,
+                    "name": "A1-A2/A1+",
+                    "description": "Has a very basic range of simple expressions and vocabulary about personal details and needs of a concrete type."
+                },
+                {
+                    "id": 4,
+                    "name": "A2",
+                    "description": "Has a sufficient vocabulary for the expression of basic communicative needs. Has a sufficient vocabulary for coping with simple survival needs."
+                },
+                {
+                    "id": 5,
+                    "name": "A2-B1 / A2+",
+                    "description": "Has sufficient vocabulary to conduct routine, everyday transactions involving familiar situations and topics."
+                },
+                {
+                    "id": 6,
+                    "name": "B1",
+                    "description": "Has a sufficient vocabulary to express him/herself with some circumlocutions on most topics pertinent to his/her everyday life such as family, hobbies and interests, work, travel, and current events."
+                },
+                {
+                    "id": 7,
+                    "name": "B1-B2/ B1+",
+                    "description": "Has a good range of vocabulary related to familiar topics and everyday situations."
+                },
+                {
+                    "id": 8,
+                    "name": "B2",
+                    "description": "Can produce the appropriate collocations of many words in most contexts fairly systematically. Can understand and use much of the specialist vocabulary of his/her field but has problems with specialist terminology outside of it."
+                },
+                {
+                    "id": 9,
+                    "name": "B2-C1 / B2+",
+                    "description": "Can understand and use the main technical terminology of his/her field. Has a good range of vocabulary for matters connected to his/her field and most general topics."
+                },
+                {
+                    "id": 10,
+                    "name": "C1",
+                    "description": "Has a good command of a broad lexical repertoire allowing gaps to be readily overcome with circumlocutions; little obvious searching for expressions or avoidance strategies."
+                }
+            ]
+        },
+        "Grammar": {
+            "Levels":[
+                {
+                    "id": 1,
+                    "name": "Pre A1",
+                    "description": "Can employ very simple principles of word order in short statements."
+                },
+                {
+                    "id": 2,
+                    "name": "A1",
+                    "description": "Shows only limited control of a few simple grammatical structures and sentence patterns in a learnt repertoire."
+                },
+                {
+                    "id": 3,
+                    "name": "A1-A2/A1+",
+                    "description": "Shows only limited control of a few simple grammatical structures and sentence patterns in a learnt repertoire."
+                },
+                {
+                    "id": 4,
+                    "name": "A2",
+                    "description": "Uses some simple structures correctly, but still systematically makes basic mistakes - for example tends to mix up tenses and forget to mark agreement; nevertheless, it is usually clear what he/she is trying to say."
+                },
+                {
+                    "id": 5,
+                    "name": "A2-B1 / A2+",
+                    "description": "Uses some simple structures correctly, but still systematically makes basic mistakes - for example tends to mix up tenses and forget to mark agreement; nevertheless, it is usually clear what he/she is trying to say."
+                },
+                {
+                    "id": 6,
+                    "name": "B1",
+                    "description": "Uses reasonably accurately a repertoire of frequently used ‘routines’ and patterns associated with more predictable situations."
+                },
+                {
+                    "id": 7,
+                    "name": "B1-B2/ B1+",
+                    "description": "Communicates with reasonable accuracy in familiar contexts; generally good control though with noticeable mother tongue influence. Errors occur, but it is clear what he/she is trying to express."
+                },
+                {
+                    "id": 8,
+                    "name": "B2",
+                    "description": "Has a good command of simple language structures and some complex grammatical forms, although he/she tends to use complex structures rigidly with some inaccuracy."
+                },
+                {
+                    "id": 9,
+                    "name": "B2-C1 / B2+",
+                    "description": "Good grammatical control. Occasional ‘slips’ or non-systematic errors and minor flaws in sentence structure may still occur, but they are rare and can often be corrected in retrospect."
+                },
+                {
+                    "id": 10,
+                    "name": "C1",
+                    "description": "Consistently maintains a high degree of grammatical accuracy; errors are rare and difficult to spot. "
+                }
+            ]
+        },
+        "Pronunciation":{
+            "Levels":[
+                {
+                    "id": 1,
+                    "name": "Pre A1",
+                    "description": "has clearly noticeable foreign accent. Generally difficult to be understood."
+                },
+                {
+                    "id": 2,
+                    "name": "A1",
+                    "description": "Pronunciation of a very limited repertoire of learnt words and phrases can be understood with some effort by native speakers used to dealing with speakers of his/her language group."
+                },
+                {
+                    "id": 3,
+                    "name": "A1-A2/A1+",
+                    "description": "Pronunciation of a very limited repertoire of learnt words and phrases can be understood with some effort by native speakers used to dealing with speakers of his/her language group"
+                },
+                {
+                    "id": 4,
+                    "name": "A2",
+                    "description": "Pronunciation is generally clear enough to be understood despite a noticeable foreign accent, but conversational partners will need to ask for repetition from time to time."
+                },
+                {
+                    "id": 5,
+                    "name": "A2-B1 / A2+",
+                    "description": "Pronunciation is generally clear enough to be understood despite a noticeable foreign accent, but conversational partners will need to ask for repetition from time to time."
+                },
+                {
+                    "id": 6,
+                    "name": "B1",
+                    "description": "Pronunciation is generally intelligible; can approximate intonation and stress at both utterance and word levels. However, accent is usually influenced by other language(s) he/she speaks."
+                },
+                {
+                    "id": 7,
+                    "name": "B1-B2/ B1+",
+                    "description": "Pronunciation is generally intelligible; can approximate intonation and stress at both utterance and word levels. However, accent is usually influenced by other language(s) he/she speaks."
+                },
+                {
+                    "id": 8,
+                    "name": "B2",
+                    "description": "Can generally use appropriate intonation, place stress correctly and articulate individual sounds clearly; accent tends to be influenced by other language(s) he/she speaks, but has little or no effect on intelligibility."
+                },
+                {
+                    "id": 9,
+                    "name": "B2-C1 / B2+",
+                    "description": "Can generally use appropriate intonation, place stress correctly and articulate individual sounds clearly; accent tends to be influenced by other language(s) he/she speaks, but has little or no effect on intelligibility."
+                },
+                {
+                    "id": 10,
+                    "name": "C1",
+                    "description": "Can employ the full range of phonological features in the target language with sufficient control to ensure intelligibility throughout. Can articulate virtually all the sounds of the target language."
+                }
+            ]
+        },
+
+        "Listening":{
+            "Levels":[
+                {
+                    "id": 1,
+                    "name": "Pre A1",
+                    "description": "Can recognise everyday, familiar words, provided they are delivered clearly and slowly in a clearly defined, familiar, everyday context."
+                },
+                {
+                    "id": 2,
+                    "name": "A1",
+                    "description": "Can recognise concrete information (e.g. places and times) on familiar topics encountered in everyday life, provided it is delivered in slow and clear speech."
+                },
+                {
+                    "id": 3,
+                    "name": "A1-A2/A1+",
+                    "description": "Can follow speech that is very slow and carefully articulated, with long pauses for him/her to assimilate meaning."
+                },
+                {
+                    "id": 4,
+                    "name": "A2",
+                    "description": "Can understand phrases and expressions related to areas of most immediate priority (e.g. very basic personal and family information), provided speech is clearly and slowly articulated."
+                },
+                {
+                    "id": 5,
+                    "name": "A2-B1 / A2+",
+                    "description": "Can understand enough to be able to meet needs of a concrete type provided speech is clearly and slowly articulated."
+                },
+                {
+                    "id": 6,
+                    "name": "B1",
+                    "description": "Can understand the main points of clear standard speech on familiar matters regularly encountered in work, school, leisure etc., including short narratives."
+                },
+                {
+                    "id": 7,
+                    "name": "B1-B2/ B1+",
+                    "description": "Can understand straightforward factual information about common everyday or job related topics, identifying both general messages and specific details, provided speech is clearly articulated in a generally familiar accent."
+                },
+                {
+                    "id": 8,
+                    "name": "B2",
+                    "description": "Can understand the main ideas of complex speech on both concrete and abstract topics delivered in standard speech, including technical discussions in his/her field of specialisation."
+                },
+                {
+                    "id": 9,
+                    "name": "B2-C1 / B2+",
+                    "description": "Can understand standard spoken language on both familiar and unfamiliar topics normally encountered in personal, social, academic or vocational life."
+                },
+                {
+                    "id": 10,
+                    "name": "C1",
+                    "description": "Can understand enough to follow extended speech on abstract and complex topics beyond his/her own field, though he/she may need to confirm occasional details, especially if the accent is unfamiliar."
+                }
+            ]
+        },
+        "Conversation":{
+            "Levels":[
+                {
+                    "id": 1,
+                    "name": "Pre A1",
+                    "description": "Can ask and answer questions about him/herself and daily routines,using short, formulaic expressions and relying on gestures to reinforce the information."
+                },
+                {
+                    "id": 2,
+                    "name": "A1",
+                    "description": "Can interact in a simple way but communication is totally dependent on repetition at a slower rate of speech, rephrasing and repair."
+                },
+                {
+                    "id": 3,
+                    "name": "A1-A2/A1+",
+                    "description": "Can interact in a simple way but communication is totally dependent on repetition at a slower rate of speech, rephrasing and repair."
+                },
+                {
+                    "id": 4,
+                    "name": "A2",
+                    "description": "Can communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar and routine matters to do with work and free time. Can handle very short social exchanges." 
+                },
+                {
+                    "id": 5,
+                    "name": "A2-B1 / A2+",
+                    "description": "Can interact with reasonable ease in structured situations and short conversations, provided the other person helps if necessary. Can exchange ideas and information on familiar topics in predictable everyday situations."
+                },
+                {
+                    "id": 6,
+                    "name": "B1",
+                    "description": "Can enter unprepared into conversation of familiar topics, express personal opinions and exchange information on topics that are familiar, of personal interest or pertinent to everyday life."
+                },
+                {
+                    "id": 7,
+                    "name": "B1-B2/ B1+",
+                    "description": "Can communicate with some confidence on familiar routine and non-routine matters related to his/her interests and professional field. Can exchange, check and confirm information, deal with less routine situations "
+                },
+                {
+                    "id": 8,
+                    "name": "B2",
+                    "description": "Can interact with a degree of fluency and spontaneity that makes regular interaction, and sustained relationships with speakers of the target language quite possible without imposing strain on either party."
+                },
+                {
+                    "id": 9,
+                    "name": "B2-C1 / B2+",
+                    "description": "Can communicate spontaneously with good grammatical control without much sign of having to restrict what he/she wants to say, adopting a level of formality appropriate to the circumstances."
+                },
+                {
+                    "id": 10,
+                    "name": "C1",
+                    "description": "Can express him/herself fluently and spontaneously, almost effortlessly. Has a good command of a broad lexical repertoire allowing gaps to be readily overcome withcircumlocutions."
+                }
+            ]
+        }
+    }
+   
+}

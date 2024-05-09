@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/preview.scss";
+import PlotCards from "../plot/PlotCards";
+import Graph from "../plot/Graph";
 
 const Preview = (data) =>{
     const {name,
@@ -7,11 +9,9 @@ const Preview = (data) =>{
         textbook,
         attendance,
         totalLessons} = data; //returns data
-
-        //Want to find the total of all initials
-        console.log(data.getTotal());
-
-   
+    
+    console.log(data.getAverage("initial"));
+  
     const Name = ({__name}) =>{
         return(
             <>
@@ -99,44 +99,43 @@ const Preview = (data) =>{
                     </div>
                     <div className="row">
                         <div className='col'><p className='title-table'>Initial</p></div>
-                        <div className='col'><p id="initial-vocabulary">{__data[0].initial}</p></div>
-                        <div className='col'><p id="initial-grammar">{__data[1].initial}</p></div>
-                        <div className='col'><p id="initial-pronunciation">{__data[2].initial}</p></div>
-                        <div className='col'><p id="initial-listening">{__data[3].initial}</p></div>
-                        <div className='col'><p id="initial-conversation">{__data[4].initial}</p></div>
-                        <div className='col'><p id="initial-total">8</p></div>
-                        <div className='col'><p id="initial-average">8</p></div>
+                        <div className='col'><p id="initial-vocabulary">{__data.levels[0].initial}</p></div>
+                        <div className='col'><p id="initial-grammar">{__data.levels[1].initial}</p></div>
+                        <div className='col'><p id="initial-pronunciation">{__data.levels[2].initial}</p></div>
+                        <div className='col'><p id="initial-listening">{__data.levels[3].initial}</p></div>
+                        <div className='col'><p id="initial-conversation">{__data.levels[4].initial}</p></div>
+                        <div className='col'><p id="initial-total">{__data.getTotal("initial")}</p></div>
+                        <div className='col'><p id="initial-average">{__data.getAverage("initial")}</p></div>
                     </div>
                     <div className="row">
                         <div className='col'><p className='title-table'>Target</p></div>
-                        <div className='col'><p id="target-vocabulary">{__data[0].target}</p></div>
-                        <div className='col'><p id="target-grammar">{__data[1].target}</p></div>
-                        <div className='col'><p id="target-pronunciation">{__data[2].target}</p></div>
-                        <div className='col'><p id="target-listening">{__data[3].target}</p></div>
-                        <div className='col'><p id="target-conversation">{__data[4].initial}</p></div>
-                        <div className='col'><p id="target-total">8</p></div>
-                        <div className='col'><p id="target-average">8</p></div>
+                        <div className='col'><p id="target-vocabulary">{__data.levels[0].target}</p></div>
+                        <div className='col'><p id="target-grammar">{__data.levels[1].target}</p></div>
+                        <div className='col'><p id="target-pronunciation">{__data.levels[2].target}</p></div>
+                        <div className='col'><p id="target-listening">{__data.levels[3].target}</p></div>
+                        <div className='col'><p id="target-conversation">{__data.levels[4].initial}</p></div>
+                        <div className='col'><p id="target-total">{__data.getTotal("initial")}</p></div>
+                        <div className='col'><p id="target-average">{__data.getAverage("initial")}</p></div>
                     </div>
                     <div className="row">
                         <div className='col'><p className='title-table'>Final</p></div>
-                        <div className='col'><p id="final-vocabulary">{__data[0].final}</p></div>
-                        <div className='col'><p id="final-grammar">{__data[1].final}</p></div>
-                        <div className='col'><p id="final-pronunciation">{__data[2].final}</p></div>
-                        <div className='col'><p id="final-listening">{__data[3].final}</p></div>
-                        <div className='col'><p id="final-conversation">{__data[4].final}</p></div>
-                        <div className='col'><p id="final-total">8</p></div>
-                        <div className='col'><p id="final-average">8</p></div>
+                        <div className='col'><p id="final-vocabulary">{__data.levels[0].final}</p></div>
+                        <div className='col'><p id="final-grammar">{__data.levels[1].final}</p></div>
+                        <div className='col'><p id="final-pronunciation">{__data.levels[2].final}</p></div>
+                        <div className='col'><p id="final-listening">{__data.levels[3].final}</p></div>
+                        <div className='col'><p id="final-conversation">{__data.levels[4].final}</p></div>
+                        <div className='col'><p id="final-total">{__data.getTotal("final")}</p></div>
+                        <div className='col'><p id="final-average">{__data.getAverage("final")}</p></div>
                     </div>
-
                 </div>
             )
         }
+    
         return(
             <>
                 <Label />
-                <Table __data = {data.levels} />
+                <Table __data = {data} />
             </>
-
         )
     }
     return(
@@ -145,24 +144,26 @@ const Preview = (data) =>{
                 <div className='title-container'>
                     <div className='img-container'>
                         <img className="imgLogo" src='https://www.geos.com.tw/Templates/C109122EZW/images/all/logo.svg'></img>
+                        <h1 className="preview-title">Student Progress Report</h1>
                     </div>
-                    <h1>Student Progress Report</h1>
                 </div>
                 <div className='even-columns'>
-
                     <div>
                         <Name __name = {name}/>
                         <Course __course = {course} __textbook= {textbook}/>
                     </div>
-                <div>
-                <Date __date = {data.getDate()}/>
-                <Attendance __attendance = {attendance} />
-                <TotalLessons __totalLessons = {totalLessons} />
-                <RateOfAttendance __rate = {data.getPercentage()}/>
-            </div>
- 
+                    <div>
+                        <Date __date = {data.getDate()}/>
+                        <Attendance __attendance = {attendance} />
+                        <TotalLessons __totalLessons = {totalLessons} />
+                        <RateOfAttendance __rate = {data.getPercentage()}/>
+                    </div>
                 </div>
                 <StudentLevelTable />
+                <div className = "graph-levelInfo">
+                    <Graph {...data}/>
+                    <PlotCards {...data}/>
+                </div>
 
 
             </div>

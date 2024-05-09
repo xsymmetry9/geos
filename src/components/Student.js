@@ -35,6 +35,10 @@ class Student{
         })
         return sum;
     }
+    getAverage =(category) =>{
+        const average = this.getTotal(category) / this.levels.length;
+        return average;
+    }
 
 
 }

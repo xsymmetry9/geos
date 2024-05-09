@@ -7,7 +7,7 @@ import Student from '../components/Student'
 import Level from '../components/Levels'
 
 const App = () =>{
-    const [page, setPages] = useState(1);
+    const [page, setPages] = useState("input");
     const [data, setData] = useState(
         new Student(
             "Gary",
@@ -15,13 +15,17 @@ const App = () =>{
             "English File 1",  
              5,
              10,
-             [new Level("vocabulary"),
-                new Level("grammar"),
-                new Level("pronunciation"),
-                new Level("listening"),
-                new Level("conversation")],
+             [new Level("vocabulary", 1, 2, 3),
+                new Level("grammar", 1, 2, 3),
+                new Level("pronunciation",1 ,2, 3),
+                new Level("listening", 1, 2, 3),
+                new Level("conversation", 1, 2, 3)],
             'Comment goes here')
     );
+
+    const navControl = (e) =>{
+        setPages(e.currentTarget.getAttribute("id"));
+    }
 
     const handleData = (e) =>{
         const {name, value} = e.currentTarget;
@@ -56,10 +60,13 @@ const App = () =>{
             <h1 className='title' id='title-name'>Student Progress Report</h1>
         </>)
     }
-    const contents = [<Form data ={data} handleData={handleData} handleLevels={handleLevels} handleSubmit = {handleSubmit} />, <Preview {...data}/>];
+    const contents = {
+        "input": <Form data ={data} handleData={handleData} handleLevels={handleLevels} handleSubmit = {handleSubmit} />,
+        "preview": <Preview {...data}/>,
+        "print": <Preview {...data}/>}
     return (
         <>
-            <Header/>
+            <Header navControl = {navControl}/>
             {contents[page]}
             <Footer />
         </>
