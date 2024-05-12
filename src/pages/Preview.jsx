@@ -8,10 +8,9 @@ const Preview = (data) =>{
         course,
         textbook,
         attendance,
-        totalLessons} = data; //returns data
-    
-    console.log(data.getAverage("initial"));
-  
+        totalLessons,
+        comment} = data; //returns data
+      
     const Name = ({__name}) =>{
         return(
             <>
@@ -138,6 +137,23 @@ const Preview = (data) =>{
             </>
         )
     }
+    const Comment = ({__comment}) =>{
+
+        return(
+            <div className="card">
+                <div className="card-title"><h2>Comment</h2></div>
+                <p className="card-comment">{__comment}</p>
+            </div>
+        )
+
+    }
+    const Signature = () =>{
+        return(
+            <div className="signature-section">
+                <div className="card-title-no-border"><p>Signature</p></div>
+                <div className="signature-line"id = "line"></div>
+            </div>)
+    }
     return(
         <>
             <div className='papersize'>
@@ -161,7 +177,11 @@ const Preview = (data) =>{
                 </div>
                 <StudentLevelTable />
                 <div className = "graph-levelInfo">
-                    <Graph {...data}/>
+                    <div>
+                        <Graph {...data}/>
+                        <Comment __comment = {comment} /> 
+                        <Signature />   
+                    </div>
                     <PlotCards {...data}/>
                 </div>
 

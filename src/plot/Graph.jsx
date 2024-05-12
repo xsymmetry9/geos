@@ -4,7 +4,7 @@ const Graph = (data) =>{
     console.log(data);
     return(
         <>
-            <div className="container">
+            <div className="graph-container">
                 <h1>Graph goes here</h1>
             </div>
         

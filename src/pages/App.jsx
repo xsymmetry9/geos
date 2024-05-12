@@ -20,7 +20,7 @@ const App = () =>{
                 new Level("pronunciation",1 ,2, 3),
                 new Level("listening", 1, 2, 3),
                 new Level("conversation", 1, 2, 3)],
-            'Comment goes here')
+            "Gary has been a great student.  He listens well and always participates in every discussion he is assigned.  Since he has had a lot of speaking time, he has had a lot of chances to use the class material we learned.  He is doing well and I hope he can keep it up.")
     );
 
     const navControl = (e) =>{
@@ -67,7 +67,9 @@ const App = () =>{
     return (
         <>
             <Header navControl = {navControl}/>
-            {contents[page]}
+            <div className="content">
+                {contents[page]}
+            </div>
             <Footer />
         </>
 

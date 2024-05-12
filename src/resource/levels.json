@@ -1,7 +1,7 @@
 
 {
     "English": {
-        "Vocabulary": {
+        "vocabulary": {
             "Levels":[
                 {
                     "id": 1,
@@ -55,7 +55,7 @@
                 }
             ]
         },
-        "Grammar": {
+        "grammar": {
             "Levels":[
                 {
                     "id": 1,
@@ -109,7 +109,7 @@
                 }
             ]
         },
-        "Pronunciation":{
+        "pronunciation":{
             "Levels":[
                 {
                     "id": 1,
@@ -164,7 +164,7 @@
             ]
         },
 
-        "Listening":{
+        "listening":{
             "Levels":[
                 {
                     "id": 1,
@@ -218,7 +218,7 @@
                 }
             ]
         },
-        "Conversation":{
+        "conversation":{
             "Levels":[
                 {
                     "id": 1,

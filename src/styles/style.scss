@@ -9,15 +9,6 @@ body {
     font-family: base.$font-primary;
     background-color: base.$background-color;
 }
-h1{
-    font-size: base.$font-size-9;
-    color: base.$font-color;
-    text-align: center;
-    text-transform: capitalize;
-}
-h2, h3, h4{
-    text-transform: capitalize;
-}
 
 input, textarea{
     font-family: base.$font-secondary;
@@ -122,3 +113,8 @@ button:hover{
 .level-description-box{
     padding: 2rem 0;
 }
+
+.content{
+    padding: 10px 0;
+}
+
