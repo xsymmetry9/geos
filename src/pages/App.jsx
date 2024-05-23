@@ -24,7 +24,15 @@ const App = () =>{
     );
 
     const navControl = (e) =>{
-        setPages(e.currentTarget.getAttribute("id"));
+        const page = e.currentTarget.getAttribute("id");
+
+        if(page === "print")
+            {
+                window.print();
+            }
+            else{
+                setPages(page);
+            }
     }
 
     const handleData = (e) =>{
@@ -52,7 +60,7 @@ const App = () =>{
     }
     const handleSubmit = ()=>{
         console.log(page);
-        setPages(1);
+        setPages("preview");
     }
 
     const Title = () =>{

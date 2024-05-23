@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/preview.scss";
+import "../styles/print.scss";
 import PlotCards from "../plot/PlotCards";
 import Graph from "../plot/Graph";
 
@@ -187,6 +188,7 @@ const Preview = (data) =>{
 
 
             </div>
+            <button onClick={console.log("print")}>Print</button>
         </>
     )
 }

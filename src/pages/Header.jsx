@@ -1,5 +1,5 @@
 import "../styles/header.scss";
-import React from 'react'
+import React from 'react';
 
 const Header = ({navControl}) =>{
 
