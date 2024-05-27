@@ -6,33 +6,30 @@ $background-light: rgba(0, 161, 173, .2);
 h1, h2{
     text-transform: capitalize;
 }
-
+h1{
+    font-size: base.$print-font-size-6;
+}
 h2{
-    font-size: 12px;
+    font-size: base.$print-font-size-3;
 }
 p{
-    font-size: 9.5px;
+    font-size: base.$print-font-size-1;
 }
 .papersize{
-    max-width: 595px;
-    width: 100%;
-    height: 842px;
-    margin: auto;
-    background-color: white;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 6mm 8mm 6mm 8mm;
-    box-sizing: border-box;
-    font-family: base.$font-secondary;
-}
+        max-width: 21cm;
+        width: auto;
+        height: 27cm;
+        margin: auto;
+        background-color: white;
+        padding: 6mm 8mm 6mm 8mm;
+        box-sizing: border-box;
+        font-family: base.$font-secondary;
+    }
 
 .title-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    h1{
-        font-size: 16px;
-        }
   
     .img-container{
         display: flex;
@@ -40,10 +37,10 @@ p{
         margin-inline: auto;
         justify-content: center;
         align-items: center;
-        gap: 2px;
+        gap: 5px;
         img{
-            width: 100px;
-            height: 40px;
+            width: 180px;
+            height: 60px;
         }
     }
 }
@@ -52,10 +49,11 @@ p{
     grid-template-columns: 1fr 1fr;
 }
 .personalInformation-title{
-    font-size: 14px;
     font-weight: 600;
 }
-
+.studentName{
+    font-size: 1rem;
+}
 .justify-end{
     justify-self: end;
     padding-right: 5px;
@@ -69,16 +67,15 @@ p{
     gap: 1rem;
 }
 .graph-levelInfo{
-    margin-top: 8px;
+    margin-top: 14px;
     display: grid;
-    gap: 8px;
+    gap: 12px;
     grid-template-columns: 1fr 1fr;
 }
 .d-flex{
-    font-size: 8px;
     display: flex;
     color: rgb(129, 129, 129);
-    gap: 5px;
+    gap: 10px;
 }
 
 .label-containers{
@@ -90,7 +87,6 @@ p{
 
 .table{
     width: 100%;
-    font-size: 10px;
     font-family: base.$font-secondary;
     border: 1px solid black;
     .row{
@@ -124,7 +120,6 @@ p{
     }
     
     .table-header{
-        font-size: 9px;
         text-align: center;
     }
 
@@ -132,11 +127,10 @@ p{
 .cards-container{
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
 }
 .level-card{
     border: 1px solid black;
-    font-size: 10px;
     font-family: base.$font-secondary;
     .level-card-title{
         background-color: $background-color-dark;

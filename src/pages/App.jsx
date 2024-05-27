@@ -28,7 +28,7 @@ const App = () =>{
 
         if(page === "print")
             {
-                window.print();
+                document.querySelector(".content").print();
             }
             else{
                 setPages(page);
