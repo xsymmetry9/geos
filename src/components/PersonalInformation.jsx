@@ -22,6 +22,15 @@ const PersonalInformation = ({props, handleData}) =>{
                         <div className="input-container">
                             <label><span>Textbook</span>
                                 <input
+                                    id="textbook"
+                                    name="textbook"
+                                    type="text"
+                                    className='form-input'
+                                    value={props.textbook}
+                                    onChange={handleData}>  
+                                </input></label>
+                            <label><span>Course</span>
+                                <input
                                     id="course"
                                     name="course"
                                     type="text"
