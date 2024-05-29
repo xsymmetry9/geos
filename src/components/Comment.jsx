@@ -4,7 +4,7 @@ const InputComment = ({props, handleData}) =>{
 
     return(
         <>
-            <h3>Comments</h3>
+            <h2 className='form-title'>Comments</h2>
             <div className='input-container'>
                 <textarea
                     name="comment"

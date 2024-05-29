@@ -36,8 +36,10 @@ const Form = ({data, handleData, handleLevels, handleSubmit}) =>{
 
                 {/* Navigation goes here */}
                 <div className='form-nav-buttons-group'>
-                    <button className={`${page === 0 ? "hidden" : "block"}`} onClick ={prevPage}>Previous</button>
-                    <button onClick={nextPage}>{page < arr.length - 1 ? "Next page" : "Submit"}</button>
+                    <button className={`${page === 0 ? "hidden" : "block"}`} onClick ={prevPage}>&#10229;</button>
+                    <button onClick={nextPage}>
+                        {page < arr.length - 1 ? <span>&#10230;</span>: <span>Preview</span> }
+                    </button>
                 </div>
 
             </div>

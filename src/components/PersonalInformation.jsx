@@ -3,9 +3,9 @@ import React from 'react';
 const PersonalInformation = ({props, handleData}) =>{
     return(
         <>
-                <h2>Personal Information</h2>
+                <h2 className='form-title'>Personal Information</h2>
                 <div className='d-grid'>
-                    <div className="row">
+                    <div className='row'>
                         <div className='input-container'>
                             <label><span>Name</span>
                                 <input
@@ -19,16 +19,10 @@ const PersonalInformation = ({props, handleData}) =>{
                                 </input>
                             </label>
                         </div>
-                        <div className="input-container">
-                            <label><span>Textbook</span>
-                                <input
-                                    id="textbook"
-                                    name="textbook"
-                                    type="text"
-                                    className='form-input'
-                                    value={props.textbook}
-                                    onChange={handleData}>  
-                                </input></label>
+                    </div>
+                        
+                    <div className="row double-columns">
+                        <div className='input-container'>
                             <label><span>Course</span>
                                 <input
                                     id="course"
@@ -39,8 +33,20 @@ const PersonalInformation = ({props, handleData}) =>{
                                     onChange={handleData}>  
                                 </input></label>
                         </div>
+                        <div className="input-container">
+                            <label><span>Textbook</span>
+                                <input
+                                    id="textbook"
+                                    name="textbook"
+                                    type="text"
+                                    className='form-input'
+                                    value={props.textbook}
+                                    onChange={handleData}>  
+                                </input></label>
+                            
+                        </div>
                     </div>
-                    <div className='row'>
+                    <div className='row double-columns'>
                             <div className='input-container'>
                                     <label><span>Attendance</span>
                                     <input

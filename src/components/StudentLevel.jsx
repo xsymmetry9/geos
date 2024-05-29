@@ -42,14 +42,26 @@ const StudentLevel = ({props, handle}) =>{
             </>
         )
     }
+    //Tab menu (future function with a dropdown)
+    const Tabs = () =>{
+        const arr = ["vocabulary", "grammar", "pronunciation", "listening", "conversation"];
+        return(
+            <div className='tab-level'>
+                <div className='tab-container'>
+                    {arr.map((item) => <span>{item}</span>)}
+                    <button className='dropdown-menu'></button>
+                </div>
+            </div>
+     
+        )
+    }
   
     const Plot = (item) =>{
         console.log(item);
         const arr = ["initial", "final", "target"];
         return(
             <>
-                <h4 className='text-center'>{item.name}</h4>
-                
+                <h2 className='level-title text-center'>{item.name}</h2>
                 <div className='range-input-container'>
                     {arr.map((categoryItem, index) => {
                         return(
@@ -75,16 +87,13 @@ const StudentLevel = ({props, handle}) =>{
         return(
             <>
                 <div className="content-container"> 
-                    <h3>Student Level</h3>
+                    <h2 className='form-title'>Student Level</h2>
                     {/* <PlotAll {...props}/> */}
                     <PlotOne {...props}/>
                     <div className='level-description-container'>
-                        <div className="level-description-box">
-                            <p>
-                                Has sufficient vocabulary to conduct routine, everyday transaction involving familiar situations and topics.
-                            </p>
-                        </div>
-
+                        <p className='level-text'>
+                            Has sufficient vocabulary to conduct routine, everyday transaction involving familiar situations and topics.
+                        </p>
                     </div>
                     <div className='form-nav-buttons-group'>
                         <button className="levels" onClick={prevTab}>Prev</button>
