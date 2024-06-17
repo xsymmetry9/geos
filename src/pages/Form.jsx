@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import PersonalInformation from '../components/PersonalInformation.jsx'
-import StudentLevel from '../components/StudentLevel.jsx'
-import Comment from '../components/Comment.jsx'
+import PersonalInformation from '../components/PersonalInformation.jsx';
+import StudentLevel from '../components/StudentLevel.jsx';
+import Comment from '../components/Comment.jsx';
 
 const Form = ({data, handleData, handleLevels, handleSubmit}) =>{
     const [page, setPage] = useState(0);

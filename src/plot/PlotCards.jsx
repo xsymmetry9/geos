@@ -3,7 +3,6 @@ import levelData from "../resource/levels.json";
 
 const PlotCards = (data) =>{
     const {levels} = data;
-    console.log(levels[0].final);
 
     const arr = ["vocabulary", "grammar", "pronunciation", "listening", "conversation"];
 
@@ -16,14 +15,10 @@ const PlotCards = (data) =>{
                 </div>)
     }
 
-    console.log(levelData["English"]["vocabulary"].Levels[1 - 1].description);
-
     return(
         <>
             <div className='cards-container'>
                 {arr.map((item, index) => <Card item = {item} index = {index} key = {index} />)}
-
-
             </div>
         
         </>

@@ -1,75 +1,32 @@
 import React from 'react';
+import Heading from "./Heading/Heading";
+import Input from './Input/Input';
 
 const PersonalInformation = ({props, handleData}) =>{
     return(
         <>
-                <h2 className='form-title'>Personal Information</h2>
+                <Heading name="heading-1" styleName='form-title' titleName="Personal Information"/>
                 <div className='d-grid'>
                     <div className='row'>
                         <div className='input-container'>
-                            <label><span>Name</span>
-                                <input
-                                    id="name"
-                                    name="name"
-                                    type="text"
-                                    className='form-input'
-                                    value = {props.name}
-                                    onChange={(e) => handleData(e)}
-                                    placeholder='Student Name'>
-                                </input>
-                            </label>
+                            <Input title="name" id="name" type="text" styleName="form-input" value={props.name} handler ={(e) => handleData(e)} placeHolder="Student Name"/>
                         </div>
                     </div>
                         
                     <div className="row double-columns">
                         <div className='input-container'>
-                            <label><span>Course</span>
-                                <input
-                                    id="course"
-                                    name="course"
-                                    type="text"
-                                    className='form-input'
-                                    value={props.course}
-                                    onChange={handleData}>  
-                                </input></label>
+                            <Input title="course" id="course" type="text" styleName="form-input" value={props.course} handler ={handleData} placeHolder="PL"/>
                         </div>
                         <div className="input-container">
-                            <label><span>Textbook</span>
-                                <input
-                                    id="textbook"
-                                    name="textbook"
-                                    type="text"
-                                    className='form-input'
-                                    value={props.textbook}
-                                    onChange={handleData}>  
-                                </input></label>
-                            
+                            <Input title="textbook" id="textbook" type="text" styleName="form-input" value={props.textbook} handler ={handleData} placeHolder="EF1"/>                            
                         </div>
                     </div>
                     <div className='row double-columns'>
                             <div className='input-container'>
-                                    <label><span>Attendance</span>
-                                    <input
-                                        id="attendance"
-                                        name="attendance"
-                                        type="number"
-                                        className='form-input'
-                                        value={props.attendance}
-                                        onChange={handleData}>
-                                    </input>   
-                                </label>
+                                <Input title="attendance" id="attendance" type="number" styleName="form-input" value={props.attendance} handler ={handleData} placeHolder="28"/>                            
                             </div>
                             <div className='input-container'>
-                                <label><span>Total Lessons</span>
-                                    <input
-                                        id="total-lesson"
-                                        className='form-input'
-                                        name="totalLessons"
-                                        type="number"
-                                        value={props.totalLessons}
-                                        onChange={handleData}>
-                                    </input>
-                                </label>
+                                <Input title="total lessons" id="total-lesson" type="number" styleName="form-input" value={props.totalLessons} handler ={handleData} placeHolder="30"/>                            
                             </div>
                         </div>
                 </div>

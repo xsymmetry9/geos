@@ -3,7 +3,7 @@ import "../styles/preview.scss";
 import "../styles/print.scss";
 import PlotCards from "../plot/PlotCards";
 import Graph from "../plot/Graph";
-import logo from "../images/logo.svg";
+import RenderLogo from "../components/Image/RenderLogo";
 
 const Preview = (data) =>{
     const {name,
@@ -161,7 +161,7 @@ const Preview = (data) =>{
             <div className='print-window'>
                 <div className='title-container'>
                     <div className='img-container'>
-                        <img className="imgLogo" src={logo} alt="logo"></img>
+                        <RenderLogo style ="logoName" description="logo"/>
                         <h1 className="preview-title">Student Progress Report</h1>
                     </div>
                 </div>

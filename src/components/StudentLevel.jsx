@@ -1,63 +1,26 @@
 import React, {useState} from 'react';
+import RenderLevel from "../components/RenderLevel.jsx";
 
 const StudentLevel = ({props, handle}) =>{
     const [tab, setTab] = useState(0);
-    console.log(props.levels.length);
 
     const nextTab = () =>{
-        if(tab < props.levels.length - 1)
-        {
-            setTab(tab => tab + 1);
-        } else {
-            alert("error")
-        }        
+        setTab(tab => tab + 1);
     }
     const prevTab = () =>{
-        if(tab > 0)
-        {
-            setTab(tab => tab - 1);
-        } else {
-            alert("error");
-        }
+        setTab(tab => tab - 1);
     }
-
-    const PlotOne = (props) =>{
+    const PlotBarInput = (props) =>{
         return(
             <>
                 <Plot {...props.levels[tab]}/>
-            </>
-        )
-    }
-    const PlotAll = () =>{
-        return(
-            <>
-                {props.levels.map((item, index) => {
-                    return(
-                        <div key = {index}>
-                            <Plot {...item}/>                            
-                        </div>
-                    )
-                }
-                )}
-            </>
-        )
-    }
-    //Tab menu (future function with a dropdown)
-    const Tabs = () =>{
-        const arr = ["vocabulary", "grammar", "pronunciation", "listening", "conversation"];
-        return(
-            <div className='tab-level'>
-                <div className='tab-container'>
-                    {arr.map((item) => <span>{item}</span>)}
-                    <button className='dropdown-menu'></button>
+                <div className='level-description-container'>
+                        <RenderLevel {...props.levels[tab]}/>
                 </div>
-            </div>
-     
+            </>
         )
     }
-  
     const Plot = (item) =>{
-        console.log(item);
         const arr = ["initial", "final", "target"];
         return(
             <>
@@ -83,21 +46,15 @@ const StudentLevel = ({props, handle}) =>{
             </>
         )
     }
-
         return(
             <>
                 <div className="content-container"> 
                     <h2 className='form-title'>Student Level</h2>
-                    {/* <PlotAll {...props}/> */}
-                    <PlotOne {...props}/>
-                    <div className='level-description-container'>
-                        <p className='level-text'>
-                            Has sufficient vocabulary to conduct routine, everyday transaction involving familiar situations and topics.
-                        </p>
-                    </div>
+                    <PlotBarInput {...props}/>
+                
                     <div className='form-nav-buttons-group'>
-                        <button className="levels" onClick={prevTab}>Prev</button>
-                        <button className="levels" onClick={nextTab}>Next</button>
+                        <button className= {`levels ${tab !== 0 ? "active" : "disabled"}`} onClick={prevTab} disabled={tab===0}>Prev</button>
+                        <button className={`levels ${tab === props.levels.length-1 ? "disabled" : "active"}`} disabled={tab===props.levels.length -1} onClick={nextTab}>Next</button>
                     </div>
                 </div>
             </>

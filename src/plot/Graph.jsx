@@ -34,9 +34,9 @@ const Graph = (data) =>{
                     position: "center",
                 },
                 labels:{
-                    font: {size: 10},
+                    font: {size: 12},
                     color: "black"
-                }
+                },
             },
         },
 
@@ -45,12 +45,26 @@ const Graph = (data) =>{
                 min: 1,
                 max: 10,
                 ticks: {
-                    stepSize: 2
+                    stepSize: 2,
+                    color: "gray"
                 },
                 padding: 0,
-                display: true
+                grid:{
+                    color: "gray",
+                },
+                angleLines:{
+                    color: "gray",
+                },
+                pointLabels:{
+                    color: "gray",
+                    font: {
+                        size: 11,
+                    },
+                }
+             
             }
-        }
+        },
+        
     };
     const graphData = {
         labels: ["Vocabulary", "Grammar", "Pronunciation", "Listening", "Conversation"],
@@ -60,21 +74,21 @@ const Graph = (data) =>{
                 data: [data.levels[0].initial, data.levels[1].initial, data.levels[2].initial, data.levels[3].initial, data.levels[4].initial],
                 backgroundColor: "rgba(0,0,250,.1)",
                 borderColor: 'rgb(0, 0, 250)',
-                borderWidth: 1
+                borderWidth: 1,
             },
             {
                 label: "Final",
                 data: [data.levels[0].final, data.levels[1].final, data.levels[2].final, data.levels[3].final, data.levels[4].final],
                 backgroundColor: "rgba(0, 250, 0, .1)",
                 borderColor: 'rgb(0, 250, 0)',
-                borderWidth: 1
+                borderWidth: 1,
             },
             {
                 label: "Target",
                 data: [data.levels[0].target, data.levels[1].target, data.levels[2].target, data.levels[3].target, data.levels[4].target],
                 backgroundColor: "rgba(250, 0, 0, .1)",
                 borderColor: 'rgb(250, 0, 0)',
-                borderWidth: 1
+                borderWidth: 1,
             }
 
         ]

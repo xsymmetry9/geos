@@ -112,13 +112,18 @@ button:hover{
         font-weight: 600;
         font-size: base.$font-size-1;
     }
-    
-    .levels{
-        color: white;
+    .active{
         background-color: blue;
     }
-    .levels:hover, .levels:focus{
+    .active:hover, .levels:focus{
         background-color: #0000ffb4;
+    }
+    .disabled{
+        background-color: gray;
+        color: black;
+    }
+    .levels{
+        color: white;
     }
 }
 
@@ -162,4 +167,7 @@ button:hover{
 .level-text{
     font-size: base.$font-size-1;
     padding: 1.2rem;
+}
+.disabled{
+    background-color: gray;
 }
