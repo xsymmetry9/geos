@@ -10,7 +10,9 @@ const Heading = (props) =>{
         case "heading-2":
             return <h2 className={styleName}>{titleName}</h2>
         case "heading-3":
-            return <h2 className={styleName}>{titleName}</h2>
+            return <h3 className={styleName}>{titleName}</h3>
+        case "heading-4":
+            return <h4 className={styleName}>{titleName}</h4>
     }
 }
 
