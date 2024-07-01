@@ -10,10 +10,7 @@ body {
     background-color: base.$background-color;
 }
 
-.two-columns{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
+
 .title{
     padding: 3rem 0;
 }
@@ -23,45 +20,6 @@ label{
     margin-inline: auto;
 }
 
-.form-container{
-    display: grid;
-    gap: 10px;
-    outline: 1px solid black;
-
-    .row{
-        display: grid;
-      
-    }
-    .double-columns{
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    @media (max-width: 55em)
-    {
-        .double-columns{
-            grid-template-columns: 1fr;
-            gap: inherit;
-        }
-    }
-
-    .input-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 0 10px;
-        label{
-            input{
-                width: 100%;
-                box-sizing: border-box;
-            }
-            .form-input{
-                padding: 5px 6px;
-            }
-        }
-    }
-}
 .range-input-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -139,8 +97,3 @@ label{
     border: 1px solid gray;
 }
 
-.three-columns{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-}

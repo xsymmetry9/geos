@@ -4,7 +4,6 @@ import "../styles/print.scss";
 import PlotCards from "../plot/PlotCards";
 import Graph from "../plot/Graph";
 import RenderLogo from "../components/Image/RenderLogo";
-import { sum } from "lodash";
 
 const Preview = (data) =>{
     const {name,
@@ -63,7 +62,6 @@ const Preview = (data) =>{
             </>
         )
     }
-
     const Attendance = ({__attendance}) =>{
         return(
             <>
@@ -105,48 +103,37 @@ const Preview = (data) =>{
                     </div>)
             }
         const Table = ({__data}) =>{
-    
+            const labels = ["", "vocabulary", "grammar", "pronunciation", "listening", "conversation", "total", "average"];
+
+            const PlotRow = ({data, label}) =>{
+                return(
+                    <>
+                        <div className='col'><p className='title-table'>{label}</p></div>
+                        <div className='col'><p id={`${label}}-${labels[1]}`}>{data.levels[0][label]}</p></div>
+                        <div className='col'><p id={`${label}-${labels[2]}`}>{data.levels[1][label]}</p></div>
+                        <div className='col'><p id={`${label}-${labels[3]}`}>{data.levels[2][label]}</p></div>
+                        <div className='col'><p id={`${label}-${labels[4]}`}>{data.levels[3][label]}</p></div>
+                        <div className='col'><p id={`${label}-${labels[5]}`}>{data.levels[4][label]}</p></div>
+                        <div className='col'><p id={`${label}-${labels[6]}`}>{getSum(data, label)}</p></div>
+                        <div className='col'><p id={`${label}-${labels[7]}`}>{getLevelAverage(data, label)}</p></div>
+                    </>
+                )
+            }
             return(
                 <div className='table'>
+                    {/* Prints header */}
                     <div className="row">
-                        <div className="col"><p></p></div>
-                        <div className="col"><p className='table-header'>Vocabulary</p></div>
-                        <div className="col"><p className='table-header'>Grammar</p></div>
-                        <div className="col"><p className='table-header'>Pronunciation</p></div>
-                        <div className="col"><p className='table-header'>Listening</p></div>
-                        <div className="col"><p className='table-header'>Conversation</p></div>
-                        <div className="col"><p className='table-header'>Total</p>
-                        </div><div className="col"><p className='table-header'>Average</p></div>
+                        {labels.map((item, index) =>(<div key={index} className="col"><p className='table-header'>{item}</p></div>))}
                     </div>
                     <div className="row">
-                        <div className='col'><p className='title-table'>Initial</p></div>
-                        <div className='col'><p id="initial-vocabulary">{__data.levels[0].initial}</p></div>
-                        <div className='col'><p id="initial-grammar">{__data.levels[1].initial}</p></div>
-                        <div className='col'><p id="initial-pronunciation">{__data.levels[2].initial}</p></div>
-                        <div className='col'><p id="initial-listening">{__data.levels[3].initial}</p></div>
-                        <div className='col'><p id="initial-conversation">{__data.levels[4].initial}</p></div>
-                        <div className='col'><p id="initial-total">{getSum(__data, 'initial')}</p></div>
-                        <div className='col'><p id="initial-average">{getLevelAverage(__data, "initial")}</p></div>
+                        {/* Prints Initial Level */}
+                        <PlotRow data = {__data} label={"initial"}/>
                     </div>
                     <div className="row">
-                        <div className='col'><p className='title-table'>Target</p></div>
-                        <div className='col'><p id="target-vocabulary">{__data.levels[0].target}</p></div>
-                        <div className='col'><p id="target-grammar">{__data.levels[1].target}</p></div>
-                        <div className='col'><p id="target-pronunciation">{__data.levels[2].target}</p></div>
-                        <div className='col'><p id="target-listening">{__data.levels[3].target}</p></div>
-                        <div className='col'><p id="target-conversation">{__data.levels[4].target}</p></div>
-                        <div className='col'><p id="target-total">{getSum(__data, 'target')}</p></div>
-                        <div className='col'><p id="target-average">{getLevelAverage(__data, "target")}</p></div>
+                        <PlotRow data = {__data} label={"target"}/>
                     </div>
                     <div className="row">
-                        <div className='col'><p className='title-table'>Final</p></div>
-                        <div className='col'><p id="final-vocabulary">{__data.levels[0].final}</p></div>
-                        <div className='col'><p id="final-grammar">{__data.levels[1].final}</p></div>
-                        <div className='col'><p id="final-pronunciation">{__data.levels[2].final}</p></div>
-                        <div className='col'><p id="final-listening">{__data.levels[3].final}</p></div>
-                        <div className='col'><p id="final-conversation">{__data.levels[4].final}</p></div>
-                        <div className='col'><p id="final-total">{getSum(__data, 'final')}</p></div>
-                        <div className='col'><p id="final-average">{getLevelAverage(__data, "final")}</p></div>
+                        <PlotRow data = {__data} label={"final"}/>
                     </div>
                 </div>
             )

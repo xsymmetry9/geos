@@ -6,7 +6,7 @@ const PersonalInformation = ({props, handleData}) =>{
     return(
         <>
             <Heading name="heading-2" styleName='form-title' titleName="Personal Information"/>
-            <div className='form-container'>
+            <div className='wrapper-container'>
                 <label className='two-columns'>
                             <span>Name</span>
                             <RenderInput title="name" id="name" type="text" styleName="form-input" value={props.name} handler ={(e) => handleData(e)} placeHolder="Student Name"/>

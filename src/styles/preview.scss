@@ -121,6 +121,7 @@ p{
     
     .table-header{
         text-align: center;
+        text-transform: capitalize;
     }
 
 }
@@ -165,4 +166,9 @@ p{
         width: 100%;
         border-bottom: 2px solid gray;
     }
+}
+
+.wrapper-two-columns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
