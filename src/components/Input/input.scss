@@ -1,3 +1,12 @@
+@use "../../styles/base.scss";
+
+input, textarea{
+    font-family: base.$font-secondary;
+    box-sizing: border-box;
+    padding: 8px 12px;
+}
+ 
+
 .text-capitalized{
     text-transform: capitalize;
 }

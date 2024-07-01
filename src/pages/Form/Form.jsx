@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
-import PersonalInformation from '../components/PersonalInformation.jsx';
-import StudentLevel from '../components/StudentLevel.jsx';
-import Comment from '../components/Comment.jsx';
+import PersonalInformation from '../../components/PersonalInformation.jsx';
+import StudentLevel from '../../components/StudentLevel.jsx';
+import Comment from '../../components/Comment.jsx';
+import Button from "../../components/Button/Button.jsx";
+import "./Form.scss";
 
 const Form = ({data, handleData, handleLevels, handleSubmit}) =>{
     const [page, setPage] = useState(0);
@@ -36,10 +38,12 @@ const Form = ({data, handleData, handleLevels, handleSubmit}) =>{
 
                 {/* Navigation goes here */}
                 <div className='form-nav-buttons-group'>
-                    <button className={`${page === 0 ? "hidden" : "block"}`} onClick ={prevPage}>&#10229;</button>
-                    <button onClick={nextPage}>
-                        {page < arr.length - 1 ? <span>&#10230;</span>: <span>Preview</span> }
-                    </button>
+                    <Button name={`\u27F5`} style={`secondary ${page === 0 ? "inactive" : "active"}`}handle={prevPage} />
+                    <Button 
+                        name={page < arr.length - 1 ? "\u27F6": "Preview"}
+                        style={"primary"}
+                        handle={nextPage}>
+                    </Button>
                 </div>
 
             </div>

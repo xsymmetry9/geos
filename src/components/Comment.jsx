@@ -1,10 +1,11 @@
 import React from 'react';
+import Heading from "./Heading/Heading";
 
 const InputComment = ({props, handleData}) =>{
 
     return(
         <>
-            <h2 className='form-title'>Comments</h2>
+            <Heading name ="heading-2" styleName="form-title" titleName="comments"/>
             <div className='input-container'>
                 <textarea
                     name="comment"

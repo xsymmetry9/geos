@@ -1,0 +1,51 @@
+@use "../../styles/base.scss";
+
+button{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    font-size: base.$font-size-1;
+    font-weight: 600;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: white;
+    color: black;
+}
+
+.primary{
+    background-color: blue;
+    color: white;
+}
+.primary.inactive{
+    background-color: gray;
+}
+
+.secondary{
+    background-color: green;
+    color: white;
+
+}
+.secondary.inactive{
+    background-color: gray;
+}
+.active{
+
+}
+.hidden{
+
+}
+
+    // .active{
+    //     background-color: blue;
+    // }
+    // .active:hover, .levels:focus{
+    //     background-color: #0000ffb4;
+    // }
+    // .disabled{
+    //     background-color: gray;
+    //     color: black;
+    // }
+

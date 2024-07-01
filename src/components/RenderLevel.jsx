@@ -2,14 +2,15 @@ import levelData from "../resource/levels.json";
 import React from 'react';
 
 const RenderLevel = (props) =>{
-    console.log(levelData["English"].conversation[props.final]);
-    console.log("level", props.final)
+    const {titleName, value} = props;
+    const levels = levelData["English"][titleName].levels
 
     return(
         <>
-            <p className="level-text">Hello</p>
+            <p className="level-text">{levels[value].description}</p>
         </>
     )
 }
+
 
 export default RenderLevel;

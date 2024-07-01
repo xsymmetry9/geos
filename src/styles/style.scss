@@ -10,43 +10,24 @@ body {
     background-color: base.$background-color;
 }
 
-input, textarea{
-    font-family: base.$font-secondary;
-}
-
-button{
-    cursor: pointer;
-    background-color: black;
-    color: white;
-    padding: 12px 10px;
-    border: none;
-    font-size: base.$font-size-1;
-    border-radius: 5px;
-    width: 100px;
-}
-button:hover{
-    background-color: white;
-    color: black;
+.two-columns{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 .title{
     padding: 3rem 0;
 }
-
-.form-container{
-    margin-inline: auto;
+label{
     max-width: 900px;
     width: 100%;
+    margin-inline: auto;
+}
+
+.form-container{
+    display: grid;
+    gap: 10px;
     outline: 1px solid black;
 
-    textarea{
-        font-size: .9rem;
-        width: 100%;
-        padding: 1.2rem 1rem;
-        box-sizing: border-box;
-    }
-    button{
-        float: right;
-    }
     .row{
         display: grid;
       
@@ -54,6 +35,8 @@ button:hover{
     .double-columns{
         grid-template-columns: 1fr 1fr;
         gap: 12px;
+        justify-content: center;
+        align-items: center;
     }
 
     @media (max-width: 55em)
@@ -65,6 +48,8 @@ button:hover{
     }
 
     .input-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         padding: 0 10px;
         label{
             input{
@@ -82,12 +67,6 @@ button:hover{
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     padding: 2rem 12px;
-    label{
-        text-transform: capitalize;
-        input[type="range"]{
-            width: 100%;
-        }
-    }
 }
 
 @media (max-width: 45em){
@@ -102,26 +81,10 @@ button:hover{
 .form-nav-buttons-group
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 10px;
-    padding: 1.2rem 0;
-    button{
-        margin-right: 10px;
-        background-color: blue;
-        color: white;
-        font-weight: 600;
-        font-size: base.$font-size-1;
-    }
-    .active{
-        background-color: blue;
-    }
-    .active:hover, .levels:focus{
-        background-color: #0000ffb4;
-    }
-    .disabled{
-        background-color: gray;
-        color: black;
-    }
+    padding: 1rem 0;
+
     .levels{
         color: white;
     }
@@ -170,4 +133,14 @@ button:hover{
 }
 .disabled{
     background-color: gray;
+}
+.form-card{
+    background-color:white;
+    border: 1px solid gray;
+}
+
+.three-columns{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
 }

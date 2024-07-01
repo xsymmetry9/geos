@@ -4,6 +4,7 @@ import "../styles/print.scss";
 import PlotCards from "../plot/PlotCards";
 import Graph from "../plot/Graph";
 import RenderLogo from "../components/Image/RenderLogo";
+import { sum } from "lodash";
 
 const Preview = (data) =>{
     const {name,
@@ -12,6 +13,24 @@ const Preview = (data) =>{
         attendance,
         totalLessons,
         comment} = data; //returns data
+    
+    const getAverage = () =>{
+        const average = attendance / totalLessons * 100;
+        return parseFloat(average.toFixed(1));
+    }
+    const getSum = (arr, str) =>{
+        let sum = 0;
+        for(let i = 0; i < 5; i++){
+            sum = sum + parseInt(arr.levels[i][str]);
+        }
+        return sum;
+    }
+    const getLevelAverage = (arr, str) =>{
+        const sum = getSum(arr, str);
+        const average = sum / 5;
+
+        return average;
+    } 
       
     const Name = ({__name}) =>{
         return(
@@ -68,7 +87,7 @@ const Preview = (data) =>{
         return(
             <div className='two-columns-container'>
                 <p className='personalInformation-description'>% of Attendance</p>
-                <p className='personalInformation-description justify-end'>{__rate} %</p>
+                <p className='personalInformation-description justify-end'>{__rate}%</p>
             </div>
         )
     }
@@ -86,6 +105,7 @@ const Preview = (data) =>{
                     </div>)
             }
         const Table = ({__data}) =>{
+    
             return(
                 <div className='table'>
                     <div className="row">
@@ -105,8 +125,8 @@ const Preview = (data) =>{
                         <div className='col'><p id="initial-pronunciation">{__data.levels[2].initial}</p></div>
                         <div className='col'><p id="initial-listening">{__data.levels[3].initial}</p></div>
                         <div className='col'><p id="initial-conversation">{__data.levels[4].initial}</p></div>
-                        <div className='col'><p id="initial-total">{__data.getTotal("initial")}</p></div>
-                        <div className='col'><p id="initial-average">{__data.getAverage("initial")}</p></div>
+                        <div className='col'><p id="initial-total">{getSum(__data, 'initial')}</p></div>
+                        <div className='col'><p id="initial-average">{getLevelAverage(__data, "initial")}</p></div>
                     </div>
                     <div className="row">
                         <div className='col'><p className='title-table'>Target</p></div>
@@ -114,9 +134,9 @@ const Preview = (data) =>{
                         <div className='col'><p id="target-grammar">{__data.levels[1].target}</p></div>
                         <div className='col'><p id="target-pronunciation">{__data.levels[2].target}</p></div>
                         <div className='col'><p id="target-listening">{__data.levels[3].target}</p></div>
-                        <div className='col'><p id="target-conversation">{__data.levels[4].initial}</p></div>
-                        <div className='col'><p id="target-total">{__data.getTotal("initial")}</p></div>
-                        <div className='col'><p id="target-average">{__data.getAverage("initial")}</p></div>
+                        <div className='col'><p id="target-conversation">{__data.levels[4].target}</p></div>
+                        <div className='col'><p id="target-total">{getSum(__data, 'target')}</p></div>
+                        <div className='col'><p id="target-average">{getLevelAverage(__data, "target")}</p></div>
                     </div>
                     <div className="row">
                         <div className='col'><p className='title-table'>Final</p></div>
@@ -125,8 +145,8 @@ const Preview = (data) =>{
                         <div className='col'><p id="final-pronunciation">{__data.levels[2].final}</p></div>
                         <div className='col'><p id="final-listening">{__data.levels[3].final}</p></div>
                         <div className='col'><p id="final-conversation">{__data.levels[4].final}</p></div>
-                        <div className='col'><p id="final-total">{__data.getTotal("final")}</p></div>
-                        <div className='col'><p id="final-average">{__data.getAverage("final")}</p></div>
+                        <div className='col'><p id="final-total">{getSum(__data, 'final')}</p></div>
+                        <div className='col'><p id="final-average">{getLevelAverage(__data, "final")}</p></div>
                     </div>
                 </div>
             )
@@ -174,7 +194,7 @@ const Preview = (data) =>{
                         <Date __date = {data.getDate()}/>
                         <Attendance __attendance = {attendance} />
                         <TotalLessons __totalLessons = {totalLessons} />
-                        <RateOfAttendance __rate = {data.getPercentage()}/>
+                        <RateOfAttendance __rate = {getAverage()}/>
                     </div>
                 </div>
                 <StudentLevelTable />

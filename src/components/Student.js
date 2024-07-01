@@ -18,10 +18,13 @@ class Student{
         this.totalLessons = totalLessons;
         this.levels = levels;
         this.comment= comment;
+        this.average = this.getAverage();
+  
     }
 
     getPercentage = () =>{
-        return Math.round((this.attendance / this.totalLessons) * 100);
+        this.average = Math.round((this.attendance / this.totalLessons) * 100);
+        return this.average;
     }
 
     getDate = () =>{
@@ -36,8 +39,7 @@ class Student{
         return sum;
     }
     getAverage =(category) =>{
-        const average = this.getTotal(category) / this.levels.length;
-        return average;
+        return this.getTotal(category) / this.levels.length;
     }
 
 

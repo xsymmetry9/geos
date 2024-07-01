@@ -2,7 +2,7 @@
 {
     "English": {
         "vocabulary": {
-            "Levels":[
+            "levels":[
                 {
                     "id": 1,
                     "name": "Pre A1",
@@ -56,7 +56,7 @@
             ]
         },
         "grammar": {
-            "Levels":[
+            "levels":[
                 {
                     "id": 1,
                     "name": "Pre A1",
@@ -110,7 +110,7 @@
             ]
         },
         "pronunciation":{
-            "Levels":[
+            "levels":[
                 {
                     "id": 1,
                     "name": "Pre A1",
@@ -165,7 +165,7 @@
         },
 
         "listening":{
-            "Levels":[
+            "levels":[
                 {
                     "id": 1,
                     "name": "Pre A1",
@@ -219,7 +219,7 @@
             ]
         },
         "conversation":{
-            "Levels":[
+            "levels":[
                 {
                     "id": 1,
                     "name": "Pre A1",

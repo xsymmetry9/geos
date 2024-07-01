@@ -1,8 +1,13 @@
 import React, {useState} from 'react';
+import levelData from "../resource/levels.json";
 import RenderLevel from "../components/RenderLevel.jsx";
+import Input from "../components/Input/Input.jsx";
 
 const StudentLevel = ({props, handle}) =>{
+    const studentLevel = levelData["English"];
     const [tab, setTab] = useState(0);
+
+    const {levels}  = props;
 
     const nextTab = () =>{
         setTab(tab => tab + 1);
@@ -13,10 +18,10 @@ const StudentLevel = ({props, handle}) =>{
     const PlotBarInput = (props) =>{
         return(
             <>
-                <Plot {...props.levels[tab]}/>
-                <div className='level-description-container'>
+                <Plot {...props[tab]}/>
+                {/* <div className='level-description-container'>
                         <RenderLevel {...props.levels[tab]}/>
-                </div>
+                </div> */}
             </>
         )
     }
@@ -25,24 +30,20 @@ const StudentLevel = ({props, handle}) =>{
         return(
             <>
                 <h2 className='level-title text-center'>{item.name}</h2>
-                <div className='range-input-container'>
+                <div className='three-columns'>
                     {arr.map((categoryItem, index) => {
-                        return(
-                            <>
-                             <label key={`${item.name}-${categoryItem}-${index}`} htmlFor = {`${item.name}-${categoryItem}`}>{categoryItem}
-                                <input
-                                    type='range'
-                                    name= {`${item.name}-${categoryItem}`}
-                                    value= {item[categoryItem]}
-                                    min ="0"
-                                    max="10"
-                                    onChange={handle}>
-                                </input>
-                            </label>
-                            </>
-                        )
-                    })}
+                            return(
+                                <div key={`${item.name}-${categoryItem}-${index}`} className="form-card">
+                                    <label htmlFor = {`${item.name}-${categoryItem}`}>
+                                        <span>{categoryItem}</span>
+                                        <Input title = {`${item.name}-${categoryItem}`} type="range" value ={item[categoryItem]} handler={handle}/>
+                                    </label>
+                                    <RenderLevel levelType={categoryItem} value={item[categoryItem]} titleName ={item.name}/>
+                                </div>
+                            )
+                        })}
                 </div>
+           
             </>
         )
     }
@@ -50,17 +51,15 @@ const StudentLevel = ({props, handle}) =>{
             <>
                 <div className="content-container"> 
                     <h2 className='form-title'>Student Level</h2>
-                    <PlotBarInput {...props}/>
+                    <PlotBarInput {...levels}/>
                 
                     <div className='form-nav-buttons-group'>
                         <button className= {`levels ${tab !== 0 ? "active" : "disabled"}`} onClick={prevTab} disabled={tab===0}>Prev</button>
-                        <button className={`levels ${tab === props.levels.length-1 ? "disabled" : "active"}`} disabled={tab===props.levels.length -1} onClick={nextTab}>Next</button>
+                        <button className={`levels ${tab === levels.length-1 ? "disabled" : "active"}`} disabled={tab===props.levels.length -1} onClick={nextTab}>Next</button>
                     </div>
                 </div>
             </>
         )
-
     }
-
 
 export default StudentLevel;

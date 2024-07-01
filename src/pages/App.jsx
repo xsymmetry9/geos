@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Header from "../components/Header/Header"
 import Footer from '../components/Footer/Footer'
-import Form from './Form';
+import Form from './Form/Form';
 import Preview from './Preview';
 import Student from '../components/Student'
 import Level from '../components/Levels'
@@ -22,6 +22,7 @@ const App = () =>{
                 new Level("conversation", 1, 2, 3)],
             "Gary has been a great student.  He listens well and always participates in every discussion he is assigned.  Since he has had a lot of speaking time, he has had a lot of chances to use the class material we learned.  He is doing well and I hope he can keep it up.")
     );
+    const [average, setAverage] = useState(0);
 
     const navControl = (e) =>{
         const page = e.currentTarget.getAttribute("id");
@@ -38,6 +39,10 @@ const App = () =>{
     const handleData = (e) =>{
         const {name, value} = e.currentTarget;
         setData({ ...data, [name]: value});
+
+        if(name == "attendance" || name == "totalLessons")
+            console.log(value);
+
     }
     const handleLevels = (e) =>{
         const {name, value} = e.currentTarget;

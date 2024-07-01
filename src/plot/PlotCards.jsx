@@ -11,7 +11,7 @@ const PlotCards = (data) =>{
         
         return (<div className= "level-card">
                     <h2 className="level-card-title">{item}</h2>
-                    <p className="level-card-description">{levelData["English"][item].Levels[score].description}</p>
+                    <p className="level-card-description">{levelData["English"][item].levels[score].description}</p>
                 </div>)
     }
 
