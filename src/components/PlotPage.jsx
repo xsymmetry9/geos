@@ -108,8 +108,8 @@ const Preview = (data) =>{
             const PlotRow = ({data, label}) =>{
                 return(
                     <>
-                        <div className='col'><p className='title-table'>{label}</p></div>
-                        <div className='col'><p id={`${label}}-${labels[1]}`}>{data.levels[0][label]}</p></div>
+                        <div className='col'><p className='title-table text-capitalized'>{label}</p></div>
+                        <div className='col'><p id={`${label}-${labels[1]}`}>{data.levels[0][label]}</p></div>
                         <div className='col'><p id={`${label}-${labels[2]}`}>{data.levels[1][label]}</p></div>
                         <div className='col'><p id={`${label}-${labels[3]}`}>{data.levels[2][label]}</p></div>
                         <div className='col'><p id={`${label}-${labels[4]}`}>{data.levels[3][label]}</p></div>

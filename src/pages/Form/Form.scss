@@ -44,14 +44,35 @@
 .three-columns{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
     @media(max-width: 55em)
     {
         grid-template-columns: 1fr;
     }
 }
-.wrapper-two-columns{
-    display: flex;
-}
+// .wrapper-two-columns{
+//     display: flex;
+// }
 .wrapper-level-input{
     display: flex;
+    flex-direction: column;
+}
+
+.form-card{
+    background-color:white;
+    border: 1px solid gray;
+    padding: 8px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    @media (max-width: 55em)
+    {
+        border-radius: 0px;
+
+    }
+    p{
+        line-height: 1.5;
+        font-size: .9rem;
+    }
 }

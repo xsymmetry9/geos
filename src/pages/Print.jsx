@@ -15,11 +15,11 @@ const ComponentToPrint = forwardRef((props, ref) => {
 const Print = (props) => {
     const contentRef = useRef();
     return (
-        <div>
+        <div className="printContainer">
             <ComponentToPrint ref={contentRef} {...props} />
 
             <ReactToPrint
-                trigger={() => <button>Print</button>}
+                trigger={() => <button className="printBtn">Print</button>}
                 content={() => contentRef.current}
             />
         </div>

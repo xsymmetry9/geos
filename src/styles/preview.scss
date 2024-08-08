@@ -172,3 +172,11 @@ p{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+.text-capitalized{
+    text-transform: capitalize;
+}
+
+@media (max-width: 55em){
+
+}

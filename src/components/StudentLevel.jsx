@@ -30,16 +30,17 @@ const StudentLevel = ({props, handle}) =>{
         return(
             <>
                 <h2 className='level-title text-center'>{item.name}</h2>
-                <div className='three-columns'>
+        
+                <div className='three-columns input-wrapper'>
                     {arr.map((categoryItem, index) => {
                             return(
                                 <div key={`${item.name}-${categoryItem}-${index}`} className="form-card">
                                     <label className="wrapper-level-input" htmlFor = {`${item.name}-${categoryItem}`}>
-                                        <div className="wrapper-two-columns">
+                                        <div className="wrapper-two-columns input-title">
                                             <span className='text-capitalized'>{categoryItem}</span>
-                                            <span className='spacing-left-1'>Level: {item[categoryItem]}</span>
+                                            <span className='text-capitalized'>Level: {item[categoryItem]}</span>
                                         </div>
-                                        <div>
+                                        <div className='wrapper-level-input'>
                                             <Input title = {`${item.name}-${categoryItem}`} type="range" value ={item[categoryItem]} handler={handle}/>
 
                                         </div>
@@ -49,7 +50,6 @@ const StudentLevel = ({props, handle}) =>{
                             )
                         })}
                 </div>
-           
             </>
         )
     }

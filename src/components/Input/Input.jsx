@@ -25,6 +25,14 @@ const RenderInput = (props) =>{
                         min= "0"
                         max= "10">
                     </input>
+                ) : type === "textarea" ? (
+                    <textarea
+                        name={title}
+                        value={value}            
+                        onChange= {handler}
+                        placeholder={placeholder}
+                        rows={"6"}>
+                </textarea>
                 ) : <p>Error</p>}
         </>
     )
