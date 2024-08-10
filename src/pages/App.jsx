@@ -30,6 +30,7 @@ const App = () =>{
         if(page === "print")
             {
                 document.querySelector(".content").print();
+                console.log("hello");
             }
             else{
                 setPages(page);
