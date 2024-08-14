@@ -3,6 +3,7 @@ import Header from "../components/Header/Header"
 import Footer from '../components/Footer/Footer'
 import Form from './Form/Form';
 import Preview from './Preview';
+import ToPrint from './ToPrint';
 import Student from '../components/Student'
 import Level from '../components/Levels'
 
@@ -26,15 +27,15 @@ const App = () =>{
 
     const navControl = (e) =>{
         const page = e.currentTarget.getAttribute("id");
-
-        if(page === "print")
-            {
-                document.querySelector(".content").print();
-                console.log("hello");
-            }
-            else{
-                setPages(page);
-            }
+        setPages(page);
+        // if(page === "print")
+        //     {
+        //         document.querySelector(".content").print();
+        //         console.log("hello");
+        //     }
+        //     else{
+        //         setPages(page);
+        //     }
     }
 
     const handleData = (e) =>{
@@ -77,7 +78,7 @@ const App = () =>{
     const contents = {
         "input": <Form data ={data} handleData={handleData} handleLevels={handleLevels} handleSubmit = {handleSubmit} />,
         "preview": <Preview {...data}/>,
-        "print": <Preview {...data}/>}
+        "print": <ToPrint {...data}/>}
     return (
         <>
             <Header navControl = {navControl}/>

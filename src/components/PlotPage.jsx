@@ -1,6 +1,4 @@
 import React from "react";
-import "../styles/preview.scss";
-import "../styles/print.scss";
 import PlotCards from "../plot/PlotCards";
 import Graph from "../plot/Graph";
 import RenderLogo from "../components/Image/RenderLogo";
@@ -186,7 +184,7 @@ const Preview = (data) =>{
                 </div>
                 <StudentLevelTable />
                 <div className = "graph-levelInfo">
-                    <div>
+                    <div className="comment-signature-container">
                         <Graph {...data}/>
                         <Comment __comment = {comment} /> 
                         <Signature />   

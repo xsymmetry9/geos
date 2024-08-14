@@ -1,11 +1,11 @@
 import React from "react";
-import PlotPage from "../components/PlotPage";
-import "../styles/preview.scss";
+import "../styles/print.scss";
+import Print from "./Print";
 
 const Preview = (data) =>{
     return(
         <>
-            <PlotPage {...data}/>
+            <Print {...data}/>
         </>
 
     )

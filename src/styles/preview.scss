@@ -15,10 +15,8 @@ h2{
 p{
     font-size: base.$print-font-size-1;
 }
-.papersize{
-        max-width: 21cm;
-        width: auto;
-        height: 27cm;
+.papersize
+{  
         margin: auto;
         background-color: white;
         padding: 6mm 8mm 6mm 8mm;

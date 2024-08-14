@@ -97,13 +97,14 @@ label{
 .input-wrapper{
     padding: 12px;
 }
-.printContainer{
-    position: relative;
+.container-print-view{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    overflow: hidden;
 }
 .printBtn{
-    position: absolute;
-    top: 0px;
-    right: 5px;
-    background-color: blueviolet;
+    background-color: lightgreen;
 }
 

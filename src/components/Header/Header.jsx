@@ -16,7 +16,7 @@ const Header = (props) =>{
                 <ul className='navigation-container'>
                     <li onClick={navControl} className='navigation-lists' id="input"><a>Input</a></li>
                     <li onClick={navControl} className='navigation-lists' id="preview"><a>Preview</a></li>
-                    <li onClick={()=> console.log("print")} className="navigation-lists" id="print"><a>Print</a></li>
+                    <li onClick={navControl} className="navigation-lists" id="print"><a>Print</a></li>
                 </ul>
             </div>
   
