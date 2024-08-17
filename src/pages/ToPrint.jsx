@@ -2,12 +2,14 @@ import React from "react";
 import "../styles/print.scss";
 import Print from "./Print";
 
-const Preview = (data) =>{
+const PrintPage = (data) =>{
     return(
         <>
-            <Print {...data}/>
+            <div className='print-window papersize'>
+                <Print {...data}/>
+            </div>
         </>
 
     )
 }
-export default Preview;
+export default PrintPage;

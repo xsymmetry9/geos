@@ -163,7 +163,6 @@ const Preview = (data) =>{
     }
     return(
         <>
-            <div className='print-window papersize'>
                 <div className='title-container'>
                     <div className='img-container'>
                         <RenderLogo style ="logoName" description="logo"/>
@@ -191,7 +190,6 @@ const Preview = (data) =>{
                     </div>
                     <PlotCards {...data}/>
                 </div>
-            </div>
     </>
 
     )

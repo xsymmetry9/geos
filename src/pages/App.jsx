@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Header from "../components/Header/Header"
 import Footer from '../components/Footer/Footer'
 import Form from './Form/Form';
-import Preview from './Preview';
+import Preview from "./Preview/Preview";
 import ToPrint from './ToPrint';
 import Student from '../components/Student'
 import Level from '../components/Levels'
