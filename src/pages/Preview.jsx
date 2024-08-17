@@ -5,7 +5,8 @@ import "../styles/preview.scss";
 const Preview = (data) =>{
     return(
         <>
-            <PlotPage {...data}/>
+            {/* <PlotPage {...data}/> */}
+            <h1>Hello</h1>
         </>
 
     )

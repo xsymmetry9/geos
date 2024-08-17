@@ -9,7 +9,12 @@ body {
     font-family: base.$font-primary;
     background-color: base.$background-color;
 }
-
+#app{
+    display: grid;
+    grid-template-rows: 
+    50px 1fr 50px;
+    height: 100vh;
+}
 
 .title{
     padding: 3rem 0;
