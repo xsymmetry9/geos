@@ -3,7 +3,7 @@ import Header from "../components/Header/Header"
 import Footer from '../components/Footer/Footer'
 import Form from './Form/Form';
 import Preview from "./Preview/Preview";
-import ToPrint from './ToPrint';
+import Print from './Print/Print';
 import Student from '../components/Student'
 import Level from '../components/Levels'
 
@@ -78,7 +78,7 @@ const App = () =>{
     const contents = {
         "input": <Form data ={data} handleData={handleData} handleLevels={handleLevels} handleSubmit = {handleSubmit} />,
         "preview": <Preview {...data}/>,
-        "print": <ToPrint {...data}/>}
+        "print": <Print {...data}/>}
     return (
         <>
             <Header navControl = {navControl}/>
