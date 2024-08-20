@@ -3,6 +3,12 @@
 $background-color-dark: rgba(0, 161, 173, 1);
 $background-light: rgba(0, 161, 173, .2);
 
+@media print {
+    @page {
+      size: 21cm 29.7cm;
+    }
+  }
+
 h1, h2{
     text-transform: capitalize;
 }
@@ -197,6 +203,26 @@ p{
 
     overflow: hidden;
 }
-.printBtn{
-    background-color: lightgreen;
+.btns-container{
+    display:flex;
+    justify-content: center;
+    gap: 10px;
+    button{
+        color: white;
+    }
+    #print{
+        background-color: blue;
+    }
+    #print:hover, #print:focus{
+        background-color: rgb(100, 100, 252);
+    }
+    #save{
+        background-color: green;
+    }
+    #save:hover, #print:focus{
+        background-color: rgb(71, 125, 71);
+    }
 }
+
+
+
