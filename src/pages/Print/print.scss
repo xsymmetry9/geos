@@ -7,6 +7,10 @@ $background-light: rgba(0, 161, 173, .2);
     @page {
       size: 21cm 29.7cm;
     }
+    .table{
+        height: 89.6px;
+        width: 733.25px;
+    }
   }
 
 h1, h2{
@@ -23,8 +27,7 @@ p{
 }
 
 .papersize{
-        max-width: 21cm;
-        width: auto;
+        width: 21cm;
         min-height: 29.7cm;
         margin: auto;
         background-color: white;
@@ -82,14 +85,17 @@ p{
 .d-flex{
     display: flex;
     color: rgb(129, 129, 129);
-    gap: 10px;
+    gap: 6px;
 }
 
 .label-containers{
     padding: 3px 0;
     display: flex;
     justify-content: center;
-    gap: 7px;
+    gap: 12px;
+    p{
+        font-size: 10.5px;
+    }
 }
 
 .table{
