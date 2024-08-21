@@ -5,7 +5,7 @@ $background-light: rgba(0, 161, 173, .2);
 
 @media print {
     @page {
-      size: 21cm 29.7cm;
+      size: 210mm 297mm;
     }
     .table{
         height: 89.6px;
@@ -27,8 +27,8 @@ p{
 }
 
 .papersize{
-        width: 21cm;
-        min-height: 29.7cm;
+        width: 210mm;
+        height: 297mm;
         margin: auto;
         background-color: white;
         padding: 6mm 8mm 6mm 8mm;
@@ -144,7 +144,7 @@ p{
 .cards-container{
     display: flex;
     flex-direction: column;
-    gap: 1.3rem;
+    gap: .7rem;
     p{
         font-size: base.$print-font-size-1;
     }
@@ -152,9 +152,10 @@ p{
 .level-card{
     border: 1px solid black;
     font-family: base.$font-secondary;
+    height: 36mm;
     .level-card-title{
         background-color: $background-color-dark;
-        padding: 4px;
+        padding: 2px;
         color: white;
     }
     .level-card-description{
@@ -166,7 +167,7 @@ p{
     aspect-ratio: 1/1;
 }
 .card{
-    height: 200px;
+    height: 240px;
     .card-title{
         background-color: $background-color-dark;
         padding: 4px;

@@ -77,7 +77,7 @@ const App = () =>{
     }
     const contents = {
         "input": <Form data ={data} handleData={handleData} handleLevels={handleLevels} handleSubmit = {handleSubmit} />,
-        "preview": <Preview {...data}/>,
+        "preview": <Preview data={data} handleData = {handleData} handleLevels={handleLevels} handleSubmit={handleSubmit}/>,
         "print": <Print {...data}/>}
     return (
         <>

@@ -149,7 +149,9 @@ const Preview = (data) =>{
         return(
             <div className="card">
                 <div className="card-title"><h2>Comment</h2></div>
-                <p className="card-comment">{__comment}</p>
+                <div className = "card-description">
+                    <p className="comment">{__comment}</p>
+                </div>
             </div>
         )
 
