@@ -14,10 +14,17 @@
 .flex-two-cols{
     position: relative;
     display: flex;
+    align-items: center;
     gap: 10px;
-    border: 1px solid black;
     padding: 12px;
+    height: 40px;
+    border-bottom: 1px solid lightgray;
+
+    p{
+        width: 100px;
+    }
 }
+
 .even-columns{
     display: flex;
 }
@@ -50,8 +57,13 @@ tb{
 
 .floating-btn{
     position: absolute;
-    flex-grow: 0;
-    top: 5px;
-    bottom: 5px;
+    height: 35px;
+    width: 60px;
+    top: 15px;
+    bottom: 15px;
     right: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
