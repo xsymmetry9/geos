@@ -53,7 +53,7 @@ const Preview = (data) =>{
         return(
             <>
             <div className='two-columns-container'>
-                <p className='personalInformation-description'>Date</p>
+                <p className='personalInformation-title'>Date</p>
                 <p className='personalInformation-description justify-end'>{__date}</p>
             </div>
         
@@ -64,7 +64,7 @@ const Preview = (data) =>{
         return(
             <>
                 <div className='two-columns-container'>
-                    <p className='personalInformation-description'>Attendance</p>
+                    <p className='personalInformation-title'>Attendance</p>
                     <p className='personalInformation-description justify-end'>{__attendance} times</p>
                 </div>
       
@@ -74,7 +74,7 @@ const Preview = (data) =>{
     const TotalLessons = ({__totalLessons}) =>{
         return(
             <div className='two-columns-container'>
-                <p className='personalInformation-description'>Total Lessons</p>
+                <p className='personalInformation-title'>Total Lessons</p>
                 <p className='personalInformation-description justify-end'>{__totalLessons} times</p>
             </div>
         )
@@ -82,7 +82,7 @@ const Preview = (data) =>{
     const RateOfAttendance = ({__rate}) =>{
         return(
             <div className='two-columns-container'>
-                <p className='personalInformation-description'>% of Attendance</p>
+                <p className='personalInformation-title'>% of Attendance</p>
                 <p className='personalInformation-description justify-end'>{__rate}%</p>
             </div>
         )

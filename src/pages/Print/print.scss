@@ -17,9 +17,12 @@ h1, h2{
     text-transform: capitalize;
 }
 h1{
-    font-size: base.$print-font-size-6;
+    font-size: base.$print-font-size-4;
 }
 h2{
+    font-size: base.$print-font-size-3;
+}
+h3{
     font-size: base.$print-font-size-3;
 }
 p{
