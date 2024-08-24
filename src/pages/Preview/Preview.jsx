@@ -12,7 +12,7 @@ const Preview = ({data, handleData}) =>{
     const {
         name,
         course,
-        textdook,
+        textbook,
         attendance,
         totalLessons
     } = data;
@@ -23,39 +23,39 @@ const Preview = ({data, handleData}) =>{
                 <h1 className="title">Preview</h1>
             </div>
             <section id="personalInformation" className="single-columns">
-                <div className="block"><h2>Personal Information</h2></div>
-                <div className="block">
-                {/* Names */}
-                <div className="flex-two-cols">
+                <div className="block spacing-b-3"><h2>Personal Information</h2></div>
+                <div className="block personal-information-container">
+                    {/* Names */}
+                    <div id="firstname" className="flex-two-cols">
                         <p>Name:</p>
                         <RenderInput title="name" id="name" type="text" styleName="form-preview-input" value={name} handler ={handleData} placeHolder="Student Name"/>
-                    
+
                     </div>
-                {/* Courses */}
-                    <div className="flex-two-cols">
+                    {/* Courses */}
+                    <div id="course"className="flex-two-cols">
                         <p>Course:</p>
                         <RenderInput title="course" id="course" type="text" styleName="form-preview-input" value={course} handler ={handleData} placeHolder="PL"/>                                      
                     </div>
-                {/* Textdooks */}
-                    <div className="flex-two-cols">
-                        <p>Textdook:</p>
-                        <RenderInput title="textdook" id="textdook" type="text" styleName="form-preview-input" value={textdook} handler ={handleData} placeHolder="Textdook"/>
-                        </div>
-                {/* Attendance */}
-                    <div className="flex-two-cols">
+                    {/* Textbooks */}
+                    <div id="textbooks"className="flex-two-cols">
+                        <p>Textbooks:</p>
+                        <RenderInput title="textbook" id="textbook" type="text" styleName="form-preview-input" value={textbook} handler ={handleData} placeHolder="Textbook Name"/>
+                    </div>
+                    {/* Attendance */}
+                    <div id="attendance" className="flex-two-cols">
                         <p>Attendance:</p>
                         <RenderInput title="attendance" id="attendance" type="number" styleName="form-preview-input" value={attendance} handler ={handleData} placeHolder="Attendance"/>
                     </div>  
-                {/* Total Lessons */}
-                    <div className="flex-two-cols">
+                    {/* Total Lessons */}
+                    <div id="totalLessons" className="flex-two-cols">
                         <p>Total Lessons:</p>
-                       <RenderInput title="totalLessons" id="totalLessons" type="number" styleName="form-preview-input" value={totalLessons} handler ={handleData} placeHolder="Attendance"/>
+                        <RenderInput title="totalLessons" id="totalLessons" type="number" styleName="form-preview-input" value={totalLessons} handler ={handleData} placeHolder="Attendance"/>
                     </div>   
                 </div>
                            
             </section>
             <section id="levelInformation" className="single-columns">
-                <div className="block"><h2>Student'sLevel</h2></div>
+                <div className="block spacing-b-3"><h2>Student's Level</h2></div>
                 <table>
                     <thead>
                         <tr>
@@ -100,7 +100,7 @@ const Preview = ({data, handleData}) =>{
                 </table>
             </section>
             <section id="feedback">
-                <div className="block"><h2>Feedback</h2></div>
+                <div className="block spacing-b-3"><h2>Feedback</h2></div>
                 <div className="block">
                         <RenderInput title="totalLessons" id="totalLessons" type="textarea" styleName="form-preview-input" value={data.comment} handler ={handleData} placeHolder="Attendance"/>                </div>
 

@@ -32,7 +32,7 @@ const Form = ({data, handleData, handleLevels, handleSubmit}) =>{
 
     return(
         <>
-            <div className='form-container' id="content">
+            <div className='form-container'>
                 {/* page goes here */}
                 {arr[page]}
 

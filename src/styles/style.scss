@@ -11,13 +11,19 @@ body {
 }
 #app{
     display: grid;
-    grid-template-rows: 
-    50px 1fr 50px;
+    grid-template-areas: 
+    "header header header"
+    "content content content"
+    "footer footer footer";
+    grid-template-rows: 50px auto 50px;
+    grid-template-columns: 1fr;
     height: 100vh;
 }
-
-.title{
-    padding: 3rem 0;
+header{
+    grid-area: header;
+}
+footer{
+    grid-area: footer;
 }
 label{
     max-width: 900px;
@@ -63,12 +69,15 @@ label{
 }
 
 .content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 12px;
+    grid-area: "content";
+    width: 100%;
+    margin-inline: auto;
     background-color: whitesmoke;
     padding: 3rem 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
 .d-grid{
@@ -111,6 +120,5 @@ label{
     display: flex;
     flex-direction: column;
     gap: 3rem;
-
     overflow: hidden;
 }

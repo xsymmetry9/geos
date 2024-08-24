@@ -1,8 +1,4 @@
-.content-container{
-    width: 100%;
-    max-width: 1100px;
-    margin-inline: auto;
-}
+@use '../../styles/base.scss';
 .title{
     text-align: center;
 }
@@ -11,22 +7,66 @@
     max-width: 1100px;
     margin-inline: auto;
 }
-.flex-two-cols{
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px;
-    height: 40px;
-    border-bottom: 1px solid lightgray;
 
-    p{
-        width: 100px;
+.personal-information-container{
+    display: grid;
+    grid-template-areas:
+        "firstname firstname"
+        "course textbooks"
+        "attendance totalLessons";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 45em){
+    .personal-information-container{
+        grid-template-areas:
+        "firstname"
+        "course"
+        "textbooks"
+        "attendance"
+        "totalLessons";
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
     }
 }
+.personal-information-container > #firstname{
+    grid-area: "firstname";
+    padding: 0 10px;
+}
+.personal-information-container > #course{
+    grid-area: "course";
+    padding: 0 10px;
 
-.even-columns{
-    display: flex;
+
+}
+.personal-information-container > #textbooks{
+    grid-area: "textbooks";
+    padding: 0 10px;
+
+}
+.personal-information-container > #attendance{
+    grid-area: "attendance";
+    padding: 0 10px;
+
+}
+.personal-information-container > #totalLessons{
+    grid-area: "totalLessons";
+    padding: 0 10px;
+
+}
+
+.flex-two-cols{
+    position: relative;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    // width: 100%;
 }
 
 table{
