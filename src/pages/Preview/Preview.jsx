@@ -27,29 +27,29 @@ const Preview = ({data, handleData}) =>{
                 <div className="block personal-information-container">
                     {/* Names */}
                     <div id="firstname" className="flex-two-cols">
-                        <p>Name:</p>
+                        <p><strong>Student's name:</strong></p>
                         <RenderInput title="name" id="name" type="text" styleName="form-preview-input" value={name} handler ={handleData} placeHolder="Student Name"/>
 
                     </div>
                     {/* Courses */}
                     <div id="course"className="flex-two-cols">
-                        <p>Course:</p>
-                        <RenderInput title="course" id="course" type="text" styleName="form-preview-input" value={course} handler ={handleData} placeHolder="PL"/>                                      
+                    <p><strong>Course Name:</strong></p>
+                    <RenderInput title="course" id="course" type="text" styleName="form-preview-input" value={course} handler ={handleData} placeHolder="PL"/>                                      
                     </div>
                     {/* Textbooks */}
                     <div id="textbooks"className="flex-two-cols">
-                        <p>Textbooks:</p>
-                        <RenderInput title="textbook" id="textbook" type="text" styleName="form-preview-input" value={textbook} handler ={handleData} placeHolder="Textbook Name"/>
+                    <p><strong>Textbook Name:</strong></p>
+                    <RenderInput title="textbook" id="textbook" type="text" styleName="form-preview-input" value={textbook} handler ={handleData} placeHolder="Textbook Name"/>
                     </div>
                     {/* Attendance */}
                     <div id="attendance" className="flex-two-cols">
-                        <p>Attendance:</p>
-                        <RenderInput title="attendance" id="attendance" type="number" styleName="form-preview-input" value={attendance} handler ={handleData} placeHolder="Attendance"/>
+                    <p><strong># of Attended Classes:</strong></p>
+                    <RenderInput title="attendance" id="attendance" type="number" styleName="form-preview-input" value={attendance} handler ={handleData} placeHolder="Attendance"/>
                     </div>  
                     {/* Total Lessons */}
                     <div id="totalLessons" className="flex-two-cols">
-                        <p>Total Lessons:</p>
-                        <RenderInput title="totalLessons" id="totalLessons" type="number" styleName="form-preview-input" value={totalLessons} handler ={handleData} placeHolder="Attendance"/>
+                        <p><strong>Total Lessons:</strong></p>
+                    <RenderInput title="totalLessons" id="totalLessons" type="number" styleName="form-preview-input" value={totalLessons} handler ={handleData} placeHolder="Attendance"/>
                     </div>   
                 </div>
                            
