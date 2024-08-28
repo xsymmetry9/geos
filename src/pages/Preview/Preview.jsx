@@ -102,7 +102,7 @@ const Preview = ({data, handleData}) =>{
             <section id="feedback">
                 <div className="block spacing-b-3"><h2>Feedback</h2></div>
                 <div className="block">
-                        <RenderInput title="totalLessons" id="totalLessons" type="textarea" styleName="form-preview-input" value={data.comment} handler ={handleData} placeHolder="Attendance"/>                </div>
+                        <RenderInput title="comment" id="comment" type="textarea" styleName="form-preview-input" value={data.comment} handler ={handleData} placeHolder="Your comment ..."/></div>
 
             </section>
          
