@@ -10,8 +10,13 @@ const PlotCards = (data) =>{
         const score = levels[index].final;
         
         return (<div className= "level-card">
-                    <h2 className="level-card-title">{item}</h2>
-                    <p className="level-card-description">{levelData["English"][item].levels[score].description}</p>
+                    <div className="level-card-title">
+                        <strong><p className="level-card-title">{item.toUpperCase()}</p></strong>
+                    </div>
+                    <div className="level-card-description">
+                        <p>{levelData["English"][item].levels[score].description}</p>
+
+                    </div>
                 </div>)
     }
 

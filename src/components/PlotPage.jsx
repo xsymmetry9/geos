@@ -28,27 +28,7 @@ const Preview = (data) =>{
 
         return average;
     } 
-      
-    const Name = ({__name}) =>{
-        return(
-            <>
-                <div className='two-columns-container'>
-                    <p className='personalInformation-title'>Student Name</p>
-                    <p className='personalInformation-title justify-end studentName'>{__name}</p>
-                </div>
-            </>
-        )
-    }
-    const Course = ({__course, __textbook})=>{
-        return(
-            <>
-                <div className='two-columns-container'>
-                    <p className='personalInformation-title'>{__course}</p>
-                    <p className='personalInformation-description justify-end'>{__textbook}</p>
-                </div>
-            </>
-        )
-    }
+
     const Date = ({__date}) =>{
         return(
             <>
@@ -148,7 +128,9 @@ const Preview = (data) =>{
 
         return(
             <div className="card">
-                <div className="card-title"><h2>Comment</h2></div>
+                <div className="card-title">
+                    <strong><p>{'Comment'.toUpperCase()}</p></strong>
+                </div>
                 <div className = "card-description">
                     <p className="comment">{__comment}</p>
                 </div>
@@ -168,13 +150,14 @@ const Preview = (data) =>{
                 <div className='title-container'>
                     <div className='img-container'>
                         <RenderLogo style ="logoName" description="logo"/>
-                        <h1 className="preview-title">Student Progress Report</h1>
+                        <h1>Student Progress Report</h1>
                     </div>
                 </div>
                 <div className='even-columns'>
                     <div>
-                        <Name __name = {name}/>
-                        <Course __course = {course} __textbook= {textbook}/>
+                        <p>Student's Name: <strong>{name}</strong></p>
+                        <p>Course: {course}</p>
+                        <p>Textbook: {textbook}</p>
                     </div>
                     <div>
                         <Date __date = {data.getDate()}/>
