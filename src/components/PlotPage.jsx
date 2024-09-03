@@ -33,7 +33,7 @@ const Preview = (data) =>{
         return(
             <>
             <div className='two-columns-container'>
-                <p className='personalInformation-title'>Date</p>
+                <p className='personalInformation-title'>Date: </p>
                 <p className='personalInformation-description justify-end'>{__date}</p>
             </div>
         
@@ -44,7 +44,7 @@ const Preview = (data) =>{
         return(
             <>
                 <div className='two-columns-container'>
-                    <p className='personalInformation-title'>Attendance</p>
+                    <p className='personalInformation-title'>Attendance: </p>
                     <p className='personalInformation-description justify-end'>{__attendance} times</p>
                 </div>
       
@@ -54,7 +54,7 @@ const Preview = (data) =>{
     const TotalLessons = ({__totalLessons}) =>{
         return(
             <div className='two-columns-container'>
-                <p className='personalInformation-title'>Total Lessons</p>
+                <p className='personalInformation-title'>Total Lessons: </p>
                 <p className='personalInformation-description justify-end'>{__totalLessons} times</p>
             </div>
         )
@@ -62,7 +62,7 @@ const Preview = (data) =>{
     const RateOfAttendance = ({__rate}) =>{
         return(
             <div className='two-columns-container'>
-                <p className='personalInformation-title'>% of Attendance</p>
+                <p className='personalInformation-title'>% of Attendance: </p>
                 <p className='personalInformation-description justify-end'>{__rate}%</p>
             </div>
         )
@@ -86,34 +86,34 @@ const Preview = (data) =>{
             const PlotRow = ({data, label}) =>{
                 return(
                     <>
-                        <div className='col'><p className='title-table text-capitalized'>{label}</p></div>
-                        <div className='col'><p id={`${label}-${labels[1]}`}>{data.levels[0][label]}</p></div>
-                        <div className='col'><p id={`${label}-${labels[2]}`}>{data.levels[1][label]}</p></div>
-                        <div className='col'><p id={`${label}-${labels[3]}`}>{data.levels[2][label]}</p></div>
-                        <div className='col'><p id={`${label}-${labels[4]}`}>{data.levels[3][label]}</p></div>
-                        <div className='col'><p id={`${label}-${labels[5]}`}>{data.levels[4][label]}</p></div>
-                        <div className='col'><p id={`${label}-${labels[6]}`}>{getSum(data, label)}</p></div>
-                        <div className='col'><p id={`${label}-${labels[7]}`}>{getLevelAverage(data, label)}</p></div>
+                        <td className='print-col'><p className='title-table text-capitalized'>{label}</p></td>
+                        <td className='print-col'><p id={`${label}-${labels[1]}`}>{data.levels[0][label]}</p></td>
+                        <td className='print-col'><p id={`${label}-${labels[2]}`}>{data.levels[1][label]}</p></td>
+                        <td className='print-col'><p id={`${label}-${labels[3]}`}>{data.levels[2][label]}</p></td>
+                        <td className='print-col'><p id={`${label}-${labels[4]}`}>{data.levels[3][label]}</p></td>
+                        <td className='print-col'><p id={`${label}-${labels[5]}`}>{data.levels[4][label]}</p></td>
+                        <td className='print-col'><p id={`${label}-${labels[6]}`}>{getSum(data, label)}</p></td>
+                        <td className='print-col'><p id={`${label}-${labels[7]}`}>{getLevelAverage(data, label)}</p></td>
                     </>
                 )
             }
             return(
-                <div className='table'>
+                <table className='print-table'>
                     {/* Prints header */}
-                    <div className="row">
-                        {labels.map((item, index) =>(<div key={index} className="col"><p className='table-header'>{item}</p></div>))}
-                    </div>
-                    <div className="row">
+                    <trow>
+                        {labels.map((item, index) =>(<th key={index} className="table-col table-header">{item}</th>))}
+                    </trow>
+                    <trow>
                         {/* Prints Initial Level */}
                         <PlotRow data = {__data} label={"initial"}/>
-                    </div>
-                    <div className="row">
+                    </trow>
+                    <trow>
                         <PlotRow data = {__data} label={"target"}/>
-                    </div>
-                    <div className="row">
+                    </trow>
+                    <trow>
                         <PlotRow data = {__data} label={"final"}/>
-                    </div>
-                </div>
+                    </trow>
+                </table>
             )
         }
     
