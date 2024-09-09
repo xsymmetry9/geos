@@ -113,3 +113,19 @@ tb{
     justify-content: center;
     align-items: center;
 }
+
+.preview-input{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    text-align: center;
+}
+.preview-input[type="number"]::-webkit-inner-spin-button,
+.preview-input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.preview-input:focus{
+    border: none;
+}

@@ -22,7 +22,7 @@ const RenderInput = (props) =>{
                         className={styleName}
                         value={value}
                         onChange={handler}
-                        min= "0"
+                        min= "1"
                         max= "10">
                     </input>
                 ) : type === "textarea" ? (

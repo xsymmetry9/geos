@@ -14,7 +14,8 @@ const Preview = ({data, handleData}) =>{
         course,
         textbook,
         attendance,
-        totalLessons
+        totalLessons,
+        levels
     } = data;
     console.log(data);
     return(
@@ -68,9 +69,10 @@ const Preview = ({data, handleData}) =>{
                     <tbody>
                         <tr>
                             <td>Vocabulary</td>
-                            <td>{data.levels[0]['initial']}</td>
-                            <td>{data.levels[0]['final']}</td>
-                            <td>{data.levels[0]['target']}</td>
+                            {/* <td><input name ="" className="preview-input" id="" step ="0.1" type="number" min = "1" max="10" onChange={handleData}></input></td> */}
+                            <td>{levels[0]['initial']}</td>
+                            <td>{levels[0]['final']}</td>
+                            <td>{levels[0]['target']}</td>
                         </tr>
                         <tr>
                             <td>Grammar</td>
