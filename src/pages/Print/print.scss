@@ -93,18 +93,17 @@ p{
         font-size: 10.5px;
     }
 }
-
 .print-table{    font-family: base.$font-secondary;
     width: 100%;
     border: 1px solid black;
     font-size: base.$print-font-size-1;
     p{
         font-size: base.$print-font-size-1;
-
     }
     th{
         border: none;
         background-color: $background-color-dark;
+        font-size: base.$print-font-size-1;
         font-weight: 400;
         padding: 1.5px;
         text-align: center;
