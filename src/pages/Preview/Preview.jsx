@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import "./Preview.scss";
 import RenderInput from "../../components/Input/Input"
 
-const Preview = ({data, handleData}) =>{
+const Preview = ({data, handleData, handleLevelData}) =>{
     const [isNameEditable, setIsNameEditable] = useState(false);
     const [isCourseEditable, setIsCourseEditable] = useState(false);
     const [IsTextdookEditable, setIsTextdookEditable] = useState(false);
@@ -69,34 +69,224 @@ const Preview = ({data, handleData}) =>{
                     <tbody>
                         <tr>
                             <td>Vocabulary</td>
-                            {/* <td><input name ="" className="preview-input" id="" step ="0.1" type="number" min = "1" max="10" onChange={handleData}></input></td> */}
-                            <td>{levels[0]['initial']}</td>
-                            <td>{levels[0]['final']}</td>
-                            <td>{levels[0]['target']}</td>
+                            <td>
+                                <label htmlFor="vocabulary-initial">
+                                    <input 
+                                        className="preview-input"
+                                        id={`vocabulary-initial`}
+                                        name={`vocabulary-initial`}
+                                        type="number" 
+                                        min={1} 
+                                        max={10} 
+                                        step={.1} 
+                                        value={levels[0]['initial']}
+                                        onChange = {handleLevelData}/>                                
+                                </label>
+                            </td>
+                            <td>
+                                <label htmlFor="vocabulary-final">
+                                        <input 
+                                            className="preview-input"
+                                            id={`vocabulary-final`}
+                                            name={`vocabulary-final`}
+                                            type="number" 
+                                            min={1} 
+                                            max={10} 
+                                            step={.1} 
+                                            value={levels[0]['final']}
+                                            onChange = {handleLevelData}/>                                
+                                    </label>
+                            </td>
+                            <td>
+                                <label htmlFor="vocabulary-target">
+                                    <input 
+                                        className="preview-input"
+                                        id={`vocabulary-target`}
+                                        name={`vocabulary-target`}
+                                        type="number" 
+                                        min={1} 
+                                        max={10} 
+                                        step={.1} 
+                                        value={levels[0]['target']}
+                                        onChange = {handleLevelData}/>                                
+                                </label>                            
+                            </td>
                         </tr>
                         <tr>
                             <td>Grammar</td>
-                            <td>{data.levels[1]['initial']}</td>
-                            <td>{data.levels[1]['final']}</td>
-                            <td>{data.levels[1]['target']}</td>                      
+                            <td>
+                                <label htmlFor="grammar-initial">
+                                    <input 
+                                        className="preview-input"
+                                        id={`grammar-initial`}
+                                        name={`grammar-initial`}
+                                        type="number" 
+                                        min={1} 
+                                        max={10} 
+                                        step={.1} 
+                                        value={levels[1]['initial']}
+                                        onChange = {handleLevelData}/>                                
+                                </label>                                
+                            </td>
+                            <td>
+                                <label htmlFor="grammar-final">
+                                    <input 
+                                        className="preview-input"
+                                        id={`grammar-final`}
+                                        name={`grammar-final`}
+                                        type="number" 
+                                        min={1} 
+                                        max={10} 
+                                        step={.1} 
+                                        value={levels[1]['final']}
+                                        onChange = {handleLevelData}/>                                
+                                </label>
+                            </td>
+                            <td>
+                                <label htmlFor="grammar-target">
+                                    <input 
+                                        className="preview-input"
+                                        id={`grammar-target`}
+                                        name={`grammar-target`}
+                                        type="number" 
+                                        min={1} 
+                                        max={10} 
+                                        step={.1} 
+                                        value={levels[1]['target']}
+                                        onChange = {handleLevelData}/>                                
+                                </label>
+                            </td>                      
                         </tr>
                         <tr>
                             <td>Pronunciation</td>
-                            <td>{data.levels[2]['initial']}</td>
-                            <td>{data.levels[2]['final']}</td>
-                            <td>{data.levels[2]['target']}</td>
+                            <td>          
+                                <label htmlFor="pronunciation-initial">
+                                    <input 
+                                        className="preview-input"
+                                        id={`pronunciation-initial`}
+                                        name={`pronunciation-initial`}
+                                        type="number" 
+                                        min={1} 
+                                        max={10} 
+                                        step={.1} 
+                                        value={levels[2]['initial']}
+                                        onChange = {handleLevelData}/>                                
+                                </label> 
+                            </td>
+                            <td>          
+                                <label htmlFor="pronunciation-target">
+                                    <input 
+                                        className="preview-input"
+                                        id={`pronunciation-target`}
+                                        name={`pronunciation-target`}
+                                        type="number" 
+                                        min={1} 
+                                        max={10} 
+                                        step={.1} 
+                                        value={levels[2]['target']}
+                                        onChange = {handleLevelData}/>                                
+                                </label> 
+                            </td>
+                            <td>          
+                                <label htmlFor="pronunciation-final">
+                                    <input 
+                                        className="preview-input"
+                                        id={`pronunciation-final`}
+                                        name={`pronunciation-final`}
+                                        type="number" 
+                                        min={1} 
+                                        max={10} 
+                                        step={.1} 
+                                        value={levels[2]['final']}
+                                        onChange = {handleLevelData}/>                                
+                                </label> 
+                            </td>
                         </tr>
                         <tr>
                             <td>Listening</td>
-                            <td>{data.levels[3]['initial']}</td>
-                            <td>{data.levels[3]['final']}</td>
-                            <td>{data.levels[3]['target']}</td>
+                            <td>          
+                                <label htmlFor="listening-initial">
+                                    <input 
+                                        className="preview-input"
+                                        id={`listening-initial`}
+                                        name={`listening-initial`}
+                                        type="number" 
+                                        min={1} 
+                                        max={10} 
+                                        step={.1} 
+                                        value={levels[3]['initial']}
+                                        onChange = {handleLevelData}/>                                
+                                </label> 
+                            </td>
+                            <td>          <label htmlFor="listening-target">
+                                    <input 
+                                        className="preview-input"
+                                        id={`listening-target`}
+                                        name={`listening-target`}
+                                        type="number" 
+                                        min={1} 
+                                        max={10} 
+                                        step={.1} 
+                                        value={levels[3]['target']}
+                                        onChange = {handleLevelData}/>                                
+                                </label> </td>
+                            <td>          <label htmlFor="listening-final">
+                                    <input 
+                                        className="preview-input"
+                                        id={`listening-final`}
+                                        name={`listening-final`}
+                                        type="number" 
+                                        min={1} 
+                                        max={10} 
+                                        step={.1} 
+                                        value={levels[3]['final']}
+                                        onChange = {handleLevelData}/>                                
+                                </label> </td>
                         </tr>
                         <tr>
                             <td>Conversation</td>
-                            <td>{data.levels[4]['initial']}</td>
-                            <td>{data.levels[4]['final']}</td>
-                            <td>{data.levels[4]['target']}</td>
+                            <td>          
+                                <label htmlFor="conversation-initial">
+                                    <input 
+                                        className="preview-input"
+                                        id={`conversation-initial`}
+                                        name={`conversation-initial`}
+                                        type="number" 
+                                        min={1} 
+                                        max={10} 
+                                        step={.1} 
+                                        value={levels[4]['initial']}
+                                        onChange = {handleLevelData}/>                                
+                                </label> 
+                            </td>
+                            <td>          
+                                <label htmlFor="conversation-final">
+                                    <input 
+                                        className="preview-input"
+                                        id={`conversation-final`}
+                                        name={`conversation-final`}
+                                        type="number" 
+                                        min={1} 
+                                        max={10} 
+                                        step={.1} 
+                                        value={levels[4]['final']}
+                                        onChange = {handleLevelData}/>                                
+                                </label> 
+                            </td>
+                            <td>          
+                                <label htmlFor="conversation-target">
+                                    <input 
+                                        className="preview-input"
+                                        id={`conversation-target`}
+                                        name={`conversation-target`}
+                                        type="number" 
+                                        min={1} 
+                                        max={10} 
+                                        step={.1} 
+                                        value={levels[4]['target']}
+                                        onChange = {handleLevelData}/>                                
+                                </label> 
+                            </td>
                         </tr>
                     </tbody>
                 </table>

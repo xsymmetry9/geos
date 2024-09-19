@@ -7,7 +7,7 @@ const PlotCards = (data) =>{
     const arr = ["vocabulary", "grammar", "pronunciation", "listening", "conversation"];
 
     const Card = ({item, index}) => {
-        const score = levels[index].final;
+        const score = Math.round(levels[index].final); //rounds to the nearest whole number
         
         return (<div className= "level-card">
                     <div className="level-card-title">
@@ -15,17 +15,14 @@ const PlotCards = (data) =>{
                     </div>
                     <div className="level-card-description">
                         <p>{levelData["English"][item].levels[score].description}</p>
-
                     </div>
                 </div>)
     }
-
     return(
         <>
             <div className='cards-container'>
                 {arr.map((item, index) => <Card item = {item} index = {index} key = {index} />)}
             </div>
-        
         </>
     )
 }

@@ -155,7 +155,7 @@ const Preview = (data) =>{
                 </div>
                 <div className='even-columns'>
                     <div>
-                        <p>Student's Name: <strong>{name}</strong></p>
+                        <p className="print-name">Student's Name: <strong>{name}</strong></p>
                         <p>Course: {course}</p>
                         <p>Textbook: {textbook}</p>
                     </div>

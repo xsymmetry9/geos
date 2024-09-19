@@ -26,7 +26,7 @@ h3{
     font-size: base.$print-font-size-3;
 }
 p{
-    font-size: base.$print-font-size-2;
+    font-size: base.$print-font-size-1;
 }
 
 .papersize{
@@ -55,6 +55,12 @@ p{
             width: 180px;
             height: 60px;
         }
+    }
+}
+.print-name{
+    strong{
+        font-size: base.$print-font-size-2;
+        color: black;
     }
 }
 .two-columns-container{

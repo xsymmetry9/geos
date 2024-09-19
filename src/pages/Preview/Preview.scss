@@ -1,4 +1,8 @@
 @use '../../styles/base.scss';
+
+input{
+    padding: 8px;
+}
 .title{
     text-align: center;
 }
@@ -79,12 +83,13 @@ tr{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
+th{
+    padding: 8px;
+}
 th, td{
 
     border: 1px solid black;
-    padding: 12px 6px;
     font-size: .8rem;
-
     text-align: center;
 }
 th{
@@ -92,13 +97,14 @@ th{
     color: white;
 }
 td{
-    font-size: .7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
 }
 
 tb{
-    text-align: center;
     padding: 8px;
-
 }
 
 .floating-btn{
@@ -115,6 +121,7 @@ tb{
 }
 
 .preview-input{
+    font-size: 12px;
     outline: none;
     border: none;
     background-color: transparent;

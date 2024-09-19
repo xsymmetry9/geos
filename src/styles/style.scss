@@ -113,12 +113,49 @@ label{
     background-color: gray;
 }
 
-.input-wrapper{
-    padding: 12px;
-}
 .container-print-view{
     display: flex;
     flex-direction: column;
     gap: 3rem;
     overflow: hidden;
+}
+
+
+.input-student-level-information{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    input{
+        width: 100%;
+    }
+
+    .input-student-level-container{
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid rgb(179, 170, 170);
+        padding: 10px;
+    }
+ 
+}
+
+@media(max-width: 55em)
+{
+    .input-student-level-information{
+
+        grid-template-columns: 1fr;
+    }
+}
+
+
+select{
+    width: 200px;
+    padding: 10px;
+    border: 2px solid #007BFF;
+}
+select option{
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
 }

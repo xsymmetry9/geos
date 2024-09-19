@@ -23,8 +23,6 @@ const App = () =>{
                 new Level("conversation", 1, 2, 3)],
             "")
     );
-    const [average, setAverage] = useState(0);
-
     const navControl = (e) =>{
         const page = e.currentTarget.getAttribute("id");
         setPages(page);
@@ -46,10 +44,59 @@ const App = () =>{
             console.log(value);
 
     }
+
+    const findIndexCategory = (category) =>{
+        switch(category) {
+            case "vocabulary":
+              return 0
+              break;
+            case "grammar":
+              return 1
+              break;
+              case "pronunciation":
+              return 2
+              break;
+              case "listening":
+              return 3
+              break;
+              case "conversation":
+              return 4
+              break;
+            default:
+              return "error"
+          }
+    }
+    const handleLevelData = (e) =>{
+        const {name, value} = e.currentTarget;
+        const parentCategory = name.split('-')[0];
+        const childCategory = name.split('-')[1];
+
+        setData(prevData => {
+            // Create a deep copy of the `levels` array
+            const updatedLevels = [...prevData.levels];
+    
+            // Get the index of the parent category
+            const parentIndex = findIndexCategory(parentCategory);
+    
+            // Create a new object for the specific level we are updating
+            updatedLevels[parentIndex] = {
+                ...updatedLevels[parentIndex],
+                [childCategory]: value
+            };
+    
+            // Return the updated data state
+            return {
+                ...prevData,
+                levels: updatedLevels
+            };
+        });
+        
+    }
     const handleLevels = (e) =>{
         const {name, value} = e.currentTarget;
         const parentCategory = name.split('-')[0];
         const childCategory = name.split('-')[1];
+        console.log(name);
 
         setData({ ...data,
             levels: data.levels.map((category) =>{
@@ -77,7 +124,7 @@ const App = () =>{
     }
     const contents = {
         "input": <Form data ={data} handleData={handleData} handleLevels={handleLevels} handleSubmit = {handleSubmit} />,
-        "preview": <Preview data={data} handleData = {handleData} handleLevels={handleLevels} handleSubmit={handleSubmit}/>,
+        "preview": <Preview data={data} handleData = {handleData} handleLevels={handleLevels} handleLevelData={handleLevelData} handleSubmit={handleSubmit}/>,
         "print": <Print {...data}/>}
     return (
         <>

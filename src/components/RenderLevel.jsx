@@ -3,11 +3,12 @@ import React from 'react';
 
 const RenderLevel = (props) =>{
     const {titleName, value} = props;
-    const levels = levelData["English"][titleName].levels
+    const levels = levelData["English"][titleName].levels;
+    const roundedValue = Math.round(value);
 
     return(
         <>
-            <p className="level-text">{levels[value-1].description}</p>
+            <p className="level-text">{levels[roundedValue-1].description}</p>
         </>
     )
 }
