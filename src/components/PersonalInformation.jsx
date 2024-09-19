@@ -13,7 +13,15 @@ const PersonalInformation = ({props, handleData}) =>{
                 </label>
                 <label className='two-columns'>
                     <span>Course</span>
-                    <RenderInput title="course" id="course" type="text" styleName="form-input" value={props.course} handler ={handleData} placeHolder="PL"/>
+                    <select id="options" value={props.course} onChange={() => console.log("clicked")}>
+                        <option value="">Select course</option>
+                        <option value="ONLINE">ONLINE</option>
+                        <option value="PL">PL</option>
+                        <option value="GL">GL</option>
+                        <option value="SGL">SGL</option>
+                        <option value="FLEX">FLEX</option>
+                    </select>
+                    {/* <RenderInput title="course" id="course" type="text" styleName="form-input" value={props.course} handler ={handleData} placeHolder="PL"/> */}
                 </label>
                 <label className='two-columns'>
                     <span>Textbook</span>
