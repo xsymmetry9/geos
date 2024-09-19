@@ -1,15 +1,11 @@
-# **React + Sass + Bundle**
-
-This is a starter project for all React Projects.  
+# GEOS Project
+A basic project designed for educational use, allowing teachers to write and manage Student Progress Reports. The layout is customizable using SASS.
 
 ## **Features**
-- Webpack
-- React
-- Sass
+- **Webpack** for bundling
+- **React** for dynamic UI
+- **Sass** for styling and customization
 
-## **Getting Started**
-
-``
-    npm install
-
-``
+### Version 1.0 (Released in September 2024)
+- Print functionality for reports
+- Implemented a graph image for data presentation
