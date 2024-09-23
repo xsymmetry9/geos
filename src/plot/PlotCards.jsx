@@ -1,5 +1,5 @@
 import React from 'react';
-import levelData from "../resource/levels.json";
+import RenderLevel from "../components/RenderLevel-2";
 
 const PlotCards = (data) =>{
     const {levels} = data;
@@ -7,14 +7,16 @@ const PlotCards = (data) =>{
     const arr = ["vocabulary", "grammar", "pronunciation", "listening", "conversation"];
 
     const Card = ({item, index}) => {
-        const score = Math.round(levels[index].final); //rounds to the nearest whole number
+        const finalLevel = levels[index].final;
+        console.log("Category is: " + item);
+        console.log("Final level is: " + finalLevel);
         
         return (<div className= "level-card">
                     <div className="level-card-title">
                         <strong><p className="level-card-title">{item.toUpperCase()}</p></strong>
                     </div>
                     <div className="level-card-description">
-                        <p>{levelData["English"][item].levels[score].description}</p>
+                        <RenderLevel category={item} studentLevel={finalLevel}/>
                     </div>
                 </div>)
     }
@@ -26,5 +28,4 @@ const PlotCards = (data) =>{
         </>
     )
 }
-
 export default PlotCards;

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import levelData from "../resource/levels.json";
 import getLevelData from "../resource/levels-2.json";
-import RenderLevel from "../components/RenderLevel.jsx";
+import RenderLevel from "../components/RenderLevel-2.jsx";
 
 
 const StudentLevel = ({props, handle}) =>{
@@ -59,14 +59,12 @@ const StudentLevel = ({props, handle}) =>{
                     <p className="input-title py-3">Final Level: {studentLevel}</p>
                     <p>{levels[getLevelInformation()]}</p>
                 </div>
-
             </>
         )
 
     }
     const Plot = (item) =>{
         const arr = ["initial", "final", "target"];
-        
         
         return(
             <>
@@ -124,42 +122,15 @@ const StudentLevel = ({props, handle}) =>{
                     <div id="render-level-information">
                         <h2 className="level-information-title">Level Information</h2>
                         <div className="input-wrapper">
-                            {/* <select 
-                                name="level-information"
-                                id="level-information"
-                                value={item['final']}>Select their final level
-
-                                {
-                                    studentLevel[item.name].levels.map((levelItem, index) => {
-                                        return (<option key={index} value={levelItem.id}>{levelItem.name}</option>)
-                                    })
-                                }
-
-                            </select> */}
+                            {/* Work on the dropdown box */}
                         </div>
                         <div className="block">
-                            <DropdownMenu category = {item.name} studentLevel = {item['final']}/>
+                            <div className="level-information-display-box">
+                                <p className='input-title py-3'>Final Level: {item['final']}</p>
+                                <RenderLevel category = {item.name} studentLevel = {item['final']}/>
+                            </div>
                         </div>
-
                     </div>
-                          
-                    {/* {arr.map((categoryItem, index) => {
-                            return(
-                                <div key={`${item.name}-${categoryItem}-${index}`} className="form-card">
-                                    <label className="wrapper-level-input" htmlFor = {`${item.name}-${categoryItem}`}>
-                                        <div className="wrapper-two-columns input-title">
-                                            <span className='text-capitalized'>{categoryItem}</span>
-                                            <span className='text-capitalized'>Level: {item[categoryItem]}</span>
-                                        </div>
-                                        <div className='wrapper-level-input'>
-                                            <input type='number' min="1" max="10" step={.1}></input>
-                                            <Input title = {`${item.name}-${categoryItem}`} type="range" value ={item[categoryItem]} handler={handle}/>
-                                        </div>
-                                    </label>
-                                    <RenderLevel levelType={categoryItem} value={item[categoryItem]} titleName ={item.name}/>
-                                </div>
-                            )
-                        })} */}
                 </div>
             </>
         )
