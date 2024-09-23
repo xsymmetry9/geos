@@ -1,19 +1,31 @@
 @use "../../styles/base.scss";
-
-select, input{
+input, textarea{
+    cursor: pointer;
     font-size: base.$font-size-1;
+    color: #333;
     width: 100%;
-    padding: 10px;
-    border: 1px solid gray;
+    padding: 8px;
+    border: 1px solid lightgray;
     border-radius: 5px;
     box-sizing: border-box;
     background-color: #fff;
 }
 select option{
-    padding: 10px;
     background-color: #fff;
     color: #333;
     font-size: base.$font-size-1;
+}
+select{
+    background-color: #fff;
+    width: 100%;
+    padding: 8px;
+    outline: 1px solid lightgray;
+    border-radius: 5px;
+}
+select:focus, select:hover, input:focus, input:hover,
+select:focus-visible, input:focus-visible, textarea:hover, textarea:focus{
+    border: 2px solid green;
+    border-radius: 5px;
 }
 
 .input-title{
