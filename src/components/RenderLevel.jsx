@@ -8,7 +8,9 @@ const RenderLevel = (props) =>{
 
     return(
         <>
-            <p className="level-text">{levels[roundedValue-1].description}</p>
+            <div className="level-information-display-box">
+                <p className="level-text">{levels[roundedValue-1].description}</p>
+            </div>
         </>
     )
 }

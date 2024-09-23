@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 import levelData from "../resource/levels.json";
+import getLevelData from "../resource/levels-2.json";
 import RenderLevel from "../components/RenderLevel.jsx";
 
 
 const StudentLevel = ({props, handle}) =>{
     const studentLevel = levelData["English"];    
+
     const [tab, setTab] = useState(0);
     const {levels}  = props;
 
@@ -25,21 +27,56 @@ const StudentLevel = ({props, handle}) =>{
         )
     }
 
-    const DropdownMenu = (props) =>{
+    const DropdownMenu = ({category, studentLevel}) =>{
+        const [level, setLevel] = useState("DEFAULT");
+
+        const levels = (getLevelData['English'][category]);
         
+        const getLevelInformation = () => studentLevel == 1 || studentLevel < 1.5 ? "1" : 
+            studentLevel >= 1.5 && studentLevel < 2 ? "1.5" :
+            studentLevel >= 2 && studentLevel < 2.5 ? "2" : 
+            studentLevel >= 2.5 && studentLevel < 3 ? "2.5" :
+            studentLevel >= 3 && studentLevel < 3.5 ? "3" :
+            studentLevel >= 3.5 && studentLevel < 4 ? "3.5" :
+            studentLevel >= 4 && studentLevel < 4.5 ? "4" :
+            studentLevel >= 4.5 && studentLevel < 5 ? "4.5" :
+            studentLevel >= 5 && studentLevel < 5.5 ? "5" :
+            studentLevel >= 5.5 && studentLevel < 6 ? "5.5" :
+            studentLevel >= 6 && studentLevel < 6.5 ? "6" :
+            studentLevel >= 6.5 && studentLevel < 7 ? "6.5" :
+            studentLevel >= 7 && studentLevel < 7.5 ? "7" :
+            studentLevel >= 7.5 && studentLevel < 8 ? "7.5" :
+            studentLevel >= 8 && studentLevel < 8.5 ? "8" :
+            studentLevel >= 8.5 && studentLevel < 9 ? "8.5" :
+            studentLevel >= 9 && studentLevel < 9.5 ? "9" :
+            studentLevel >= 9.5 && studentLevel < 10 ? "9.5" :
+            studentLevel == 10 ? "10" :
+            studentLevel > 10 ? "10+" : "error";
+
+        return(
+            <>
+                <div className="level-information-display-box">
+                    <p className="input-title py-3">Final Level: {studentLevel}</p>
+                    <p>{levels[getLevelInformation()]}</p>
+                </div>
+
+            </>
+        )
 
     }
     const Plot = (item) =>{
         const arr = ["initial", "final", "target"];
         
+        
         return(
             <>
                 <h2 className='level-title text-center'>{item.name}</h2>
-        
+    
                 <div className='input-student-level-information'>
                     <div id="input-level-information">
+                        <p className="input-title p-3 bold">Select student's level:</p>
                         <div className="input-student-level-container">
-                            <p>Initial: <span>{item['initial']}</span></p>
+                            <p className="input-title">Initial: <span>{item['initial']}</span></p>
                             <label htmlFor="initial">
                                 <input 
                                     id={`${item.name}-initial`}
@@ -54,7 +91,7 @@ const StudentLevel = ({props, handle}) =>{
 
                         </div>
                         <div className="input-student-level-container">
-                            <p>Final: <span>{item['final']}</span></p>
+                            <p className="input-title">Final: <span>{item['final']}</span></p>
                             <label htmlFor="final">
 
                             <input 
@@ -70,7 +107,7 @@ const StudentLevel = ({props, handle}) =>{
 
                         </div>
                         <div className="input-student-level-container">
-                            <p>Target: <span>{item['target']}</span></p>
+                            <p className="input-title">Target: <span>{item['target']}</span></p>
                             <label htmlFor="target">
                                 <input 
                                     id={`${item.name}-target`}
@@ -85,18 +122,24 @@ const StudentLevel = ({props, handle}) =>{
                         </div>
                     </div>
                     <div id="render-level-information">
-                        <h1>Level Information</h1>
-                        <select 
-                            name="level-information"
-                            id="level-information"
-                            value={item['final']}
-                            >Select their final level
-                                {studentLevel[item.name].levels.map((levelItem, index) => {
-                                return (<option key={index} value={levelItem.id}>{levelItem.name}</option>)
-                            })}
-                            
-                        </select>
-                            <RenderLevel levelType={'final'} value={item['final']} titleName ={item.name}/>
+                        <h2 className="level-information-title">Level Information</h2>
+                        <div className="input-wrapper">
+                            {/* <select 
+                                name="level-information"
+                                id="level-information"
+                                value={item['final']}>Select their final level
+
+                                {
+                                    studentLevel[item.name].levels.map((levelItem, index) => {
+                                        return (<option key={index} value={levelItem.id}>{levelItem.name}</option>)
+                                    })
+                                }
+
+                            </select> */}
+                        </div>
+                        <div className="block">
+                            <DropdownMenu category = {item.name} studentLevel = {item['final']}/>
+                        </div>
 
                     </div>
                           
