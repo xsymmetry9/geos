@@ -17,6 +17,8 @@ select option{
     color: #333;
 }
 select{
+    -webkit-appearance: none; /* Removes default appearance for WebKit browsers */
+    -moz-appearance: none; /* Removes default styles for Firefox */
     font-size: base.$font-size-1;
     background-color: #fff;
     width: 100%;
