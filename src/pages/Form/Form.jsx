@@ -34,10 +34,12 @@ const Form = ({data, handleData, handleLevels, handleSubmit}) =>{
         <>
             <div className='form-container'>
                 {/* page goes here */}
-                {arr[page]}
+                <div id="form-block" className="block">
+                    {arr[page]}
+                </div>
 
                 {/* Navigation goes here */}
-                <div className='form-nav-buttons-group'>
+                <div id="form-navigation" className='form-nav-buttons-group'>
                     <Button name={`\u27F5`} style={`secondary ${page === 0 ? "inactive" : "active"}`}handle={prevPage} />
                     <Button 
                         name={page < arr.length - 1 ? "\u27F6": "Preview"}
