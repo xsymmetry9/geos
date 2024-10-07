@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import PersonalInformation from './Partials/PersonalInformation.jsx';
 import StudentLevel from '../../components/StudentLevel.jsx';
-import Comment from '../../components/Comment.jsx';
+import Comment from "./Partials/Comment.jsx";
 import Button from "../../components/Button/Button.jsx";
 import "./Form.scss";
 

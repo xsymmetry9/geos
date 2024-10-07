@@ -1,4 +1,4 @@
-import levelData from "../resource/levels-2.json";
+import levelData from "../resource/levels.json";
 import React from 'react';
 
 const RenderLevelInformation = ({category, studentLevel}) =>{
