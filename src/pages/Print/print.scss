@@ -6,6 +6,8 @@ $background-light: rgba(0, 161, 173, .2);
 @media print {
     @page {
       size: A4;
+      padding: 0;
+      margin: 0;
     }
     .table{
         height: 89.6px;
