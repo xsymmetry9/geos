@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import levelData from "../resource/levels.json";
-import getLevelData from "../resource/levels.json";
-import RenderLevel from "../components/RenderLevel-2.jsx";
-
+import RenderLevel from "../components/RenderLevel.jsx";
 
 const StudentLevel = ({props, handle}) =>{
     const studentLevel = levelData["English"];    
@@ -20,49 +18,10 @@ const StudentLevel = ({props, handle}) =>{
         return(
             <>
                 <Plot {...props[tab]}/>
-                {/* <div className='level-description-container'>
-                        <RenderLevel {...props.levels[tab]}/>
-                </div> */}
             </>
         )
     }
 
-    const DropdownMenu = ({category, studentLevel}) =>{
-        const [level, setLevel] = useState("DEFAULT");
-
-        const levels = (getLevelData['English'][category]);
-        
-        const getLevelInformation = () => studentLevel == 1 || studentLevel < 1.5 ? "1" : 
-            studentLevel >= 1.5 && studentLevel < 2 ? "1.5" :
-            studentLevel >= 2 && studentLevel < 2.5 ? "2" : 
-            studentLevel >= 2.5 && studentLevel < 3 ? "2.5" :
-            studentLevel >= 3 && studentLevel < 3.5 ? "3" :
-            studentLevel >= 3.5 && studentLevel < 4 ? "3.5" :
-            studentLevel >= 4 && studentLevel < 4.5 ? "4" :
-            studentLevel >= 4.5 && studentLevel < 5 ? "4.5" :
-            studentLevel >= 5 && studentLevel < 5.5 ? "5" :
-            studentLevel >= 5.5 && studentLevel < 6 ? "5.5" :
-            studentLevel >= 6 && studentLevel < 6.5 ? "6" :
-            studentLevel >= 6.5 && studentLevel < 7 ? "6.5" :
-            studentLevel >= 7 && studentLevel < 7.5 ? "7" :
-            studentLevel >= 7.5 && studentLevel < 8 ? "7.5" :
-            studentLevel >= 8 && studentLevel < 8.5 ? "8" :
-            studentLevel >= 8.5 && studentLevel < 9 ? "8.5" :
-            studentLevel >= 9 && studentLevel < 9.5 ? "9" :
-            studentLevel >= 9.5 && studentLevel < 10 ? "9.5" :
-            studentLevel == 10 ? "10" :
-            studentLevel > 10 ? "10+" : "error";
-
-        return(
-            <>
-                <div className="level-information-display-box">
-                    <p className="input-title py-3">Final Level: {studentLevel}</p>
-                    <p>{levels[getLevelInformation()]}</p>
-                </div>
-            </>
-        )
-
-    }
     const Plot = (item) =>{
         const arr = ["initial", "final", "target"];
         

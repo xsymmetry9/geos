@@ -23,7 +23,6 @@ const PersonalInformation = ({props, handleData}) =>{
                             <option value="SGL">SGL</option>
                             <option value="FLEX">FLEX</option>
                         </select>
-                    {/* <RenderInput title="course" id="course" type="text" styleName="form-input" value={props.course} handler ={handleData} placeHolder="PL"/> */}
                     </div>
                     
                 </label>

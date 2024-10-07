@@ -1,5 +1,5 @@
 import React from 'react';
-import RenderLevel from "../components/RenderLevel-2";
+import RenderLevel from "../components/RenderLevel";
 
 const PlotCards = (data) =>{
     const {levels} = data;

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import levelData from "../resource/levels.json";
 import getLevelData from "../resource/levels-2.json";
-import RenderLevel from "../components/RenderLevel-2.jsx";
+import RenderLevel from "./RenderLevel.jsx";
 
 
 const StudentLevel = ({props, handle}) =>{

@@ -1,13 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 import "./Preview.scss";
 import RenderInput from "../../components/Input/Input"
 
 const Preview = ({data, handleData, handleLevelData}) =>{
-    const [isNameEditable, setIsNameEditable] = useState(false);
-    const [isCourseEditable, setIsCourseEditable] = useState(false);
-    const [IsTextdookEditable, setIsTextdookEditable] = useState(false);
-    const [isAttendanceEditable, setIsAttendanceEditable] = useState(false);
-    const [isTotalLessonsEditable, setTotalLessonEditable] = useState(false);
 
     const {
         name,
@@ -34,23 +29,23 @@ const Preview = ({data, handleData, handleLevelData}) =>{
                     </div>
                     {/* Courses */}
                     <div id="course"className="flex-two-cols">
-                    <p><strong>Course Name:</strong></p>
-                    <RenderInput title="course" id="course" type="text" styleName="form-preview-input" value={course} handler ={handleData} placeHolder="PL"/>                                      
+                        <p><strong>Course Name:</strong></p>
+                        <RenderInput title="course" id="course" type="text" styleName="form-preview-input" value={course} handler ={handleData} placeHolder="PL"/>                                      
                     </div>
                     {/* Textbooks */}
                     <div id="textbooks"className="flex-two-cols">
-                    <p><strong>Textbook Name:</strong></p>
-                    <RenderInput title="textbook" id="textbook" type="text" styleName="form-preview-input" value={textbook} handler ={handleData} placeHolder="Textbook Name"/>
+                        <p><strong>Textbook Name:</strong></p>
+                        <RenderInput title="textbook" id="textbook" type="text" styleName="form-preview-input" value={textbook} handler ={handleData} placeHolder="Textbook Name"/>
                     </div>
                     {/* Attendance */}
                     <div id="attendance" className="flex-two-cols">
-                    <p><strong># of Attended Classes:</strong></p>
-                    <RenderInput title="attendance" id="attendance" type="number" styleName="form-preview-input" value={attendance} handler ={handleData} placeHolder="Attendance"/>
+                        <p><strong># of Attended Classes:</strong></p>
+                        <RenderInput title="attendance" id="attendance" type="number" styleName="form-preview-input" value={attendance} handler ={handleData} placeHolder="Attendance"/>
                     </div>  
                     {/* Total Lessons */}
                     <div id="totalLessons" className="flex-two-cols">
                         <p><strong>Total Lessons:</strong></p>
-                    <RenderInput title="totalLessons" id="totalLessons" type="number" styleName="form-preview-input" value={totalLessons} handler ={handleData} placeHolder="Attendance"/>
+                        <RenderInput title="totalLessons" id="totalLessons" type="number" styleName="form-preview-input" value={totalLessons} handler ={handleData} placeHolder="Attendance"/>
                     </div>   
                 </div>
                            

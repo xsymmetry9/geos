@@ -16,10 +16,8 @@ const InputComment = ({props, handleData}) =>{
                     value={props.comment} 
                     handler ={handleData} 
                     placeholder="Comment goes here"/>  
-            </div>
-                            
+            </div>              
         </>
-   
     )
 }
 export default InputComment;
