@@ -1,7 +1,7 @@
 import React from "react";
-import PlotCards from "../plot/PlotCards";
-import Graph from "../plot/Graph";
-import RenderLogo from "../components/Image/RenderLogo";
+import PlotCards from "../../../plot/PlotCards";
+import Graph from "../../../plot/Graph";
+import RenderLogo from "../../../components/Image/RenderLogo";
 
 const Preview = (data) =>{
     const {name,

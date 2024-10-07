@@ -1,5 +1,5 @@
 import React, { useRef, forwardRef } from "react";
-import PlotPage from "../../components/PlotPage";
+import PlotPage from "./Partials/PlotPage";
 import ReactToPrint from 'react-to-print';
 import "./print.scss"
 
