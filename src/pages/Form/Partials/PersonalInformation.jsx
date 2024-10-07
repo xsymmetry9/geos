@@ -1,6 +1,5 @@
 import React from 'react';
-import Heading from "./Heading/Heading";
-import RenderInput from './Input/Input';
+import RenderInput from '../../../components/Input/Input';
 
 const PersonalInformation = ({props, handleData}) =>{
     return(
@@ -50,7 +49,5 @@ const PersonalInformation = ({props, handleData}) =>{
             
         </>
     )
-    
 }
-
 export default PersonalInformation;

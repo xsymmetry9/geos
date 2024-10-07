@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import PersonalInformation from '../../components/PersonalInformation.jsx';
+import PersonalInformation from './Partials/PersonalInformation.jsx';
 import StudentLevel from '../../components/StudentLevel.jsx';
 import Comment from '../../components/Comment.jsx';
 import Button from "../../components/Button/Button.jsx";
