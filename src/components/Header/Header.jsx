@@ -1,6 +1,8 @@
 import "./header.scss";
 import RenderLogo from "../Image/RenderLogo";
 import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPencil, faSearch, faPrint } from "@fortawesome/free-solid-svg-icons";
 
 const Header = (props) =>{
 
@@ -14,9 +16,14 @@ const Header = (props) =>{
                     </a>
                 </div>
                 <ul className='navigation-container'>
-                    <li onClick={navControl} className='navigation-lists' id="input"><a>Input</a></li>
-                    <li onClick={navControl} className='navigation-lists' id="preview"><a>Preview</a></li>
-                    <li onClick={navControl} className="navigation-lists" id="print"><a>Print</a></li>
+                    <li onClick={navControl} className='navigation-lists' id="input">
+                        <a><FontAwesomeIcon icon={faPencil}></FontAwesomeIcon>input</a>
+                        </li>
+                    <li onClick={navControl} className='navigation-lists' id="preview">
+                        <a>
+                            <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>preview</a></li>
+                    <li onClick={navControl} className="navigation-lists" id="print">
+                        <a><FontAwesomeIcon icon={faPrint}></FontAwesomeIcon>print</a></li>
                 </ul>
             </div>
   

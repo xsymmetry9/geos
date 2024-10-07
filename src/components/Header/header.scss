@@ -21,7 +21,11 @@ header{
             li{
                 cursor: pointer;
                 a{
-                    font-size: base.$font-size-1;
+                    display: flex;
+                    gap: 8px;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: .8rem;
                     font-weight: 700;
                     padding: 5px 12px;
                     &:hover, &:focus{
