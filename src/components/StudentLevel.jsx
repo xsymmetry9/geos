@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import levelData from "../resource/levels.json";
-import getLevelData from "../resource/levels-2.json";
+import getLevelData from "../resource/levels.json";
 import RenderLevel from "./RenderLevel.jsx";
 
 
