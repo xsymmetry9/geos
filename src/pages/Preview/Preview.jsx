@@ -30,7 +30,14 @@ const Preview = ({data, handleData, handleLevelData}) =>{
                     {/* Courses */}
                     <div id="course"className="flex-two-cols">
                         <p><strong>Course Name:</strong></p>
-                        <RenderInput title="course" id="course" type="text" styleName="form-preview-input" value={course} handler ={handleData} placeHolder="PL"/>                                      
+                        <select className="form-preview-input" name="course" id="course"  value={course} onChange={handleData}>
+                            <option>Select course</option>
+                            <option value="ONLINE">ONLINE</option>
+                            <option value="PL">PL</option>
+                            <option value="GL">GL</option>
+                            <option value="SGL">SGL</option>
+                            <option value="FLEX">FLEX</option>
+                        </select>
                     </div>
                     {/* Textbooks */}
                     <div id="textbooks"className="flex-two-cols">

@@ -1,7 +1,9 @@
 import React from 'react';
 import RenderInput from '../../../components/Input/Input';
+import textbooks from "../../../resource/textbooks.json";
 
 const PersonalInformation = ({props, handleData}) =>{
+    console.log(textbooks.English);
     return(
         <>
             <h2 className="form-title">Personal Information</h2>
@@ -9,13 +11,13 @@ const PersonalInformation = ({props, handleData}) =>{
                 <label htmlFor="name">
                     <div className='input-wrapper'>
                         <p className="input-title">Name</p>
-                        <RenderInput title="name" id="name" type="text" styleName="form-input" value={props.name} handler ={(e) => handleData(e)} placeHolder="Student Name"/>
+                        <input type="text" name="name" value={props.name} onChange={handleData} placeholder="Student's name"/>
                     </div>
                 </label>
                 <label htmlFor="course">
                     <div className="input-wrapper">
                         <p className="input-title">Course</p>
-                        <select id="course" name="course" value={props.course} onChange={handleData}>
+                        <select className="spacing-sm" id="course" name="course" value={props.course} onChange={handleData}>
                             <option value="">Select course</option>
                             <option value="ONLINE">ONLINE</option>
                             <option value="PL">PL</option>
@@ -29,19 +31,22 @@ const PersonalInformation = ({props, handleData}) =>{
                 <label htmlFor= "textbook">
                     <div className="input-wrapper">
                         <p className="input-title">Textbook</p>
-                        <RenderInput title="textbook" id="textbook" type="text" styleName="form-input" value={props.textbook} handler ={handleData} placeHolder="EF1"/>                            
+                        <select className="spacing-sm" name="textbook" id="textbook" value={props.textbook} onChange={handleData}>
+                            <option value="DEFAULT">Textbook name</option>
+                            {textbooks.English.map((item) => <option value={item}>{item}</option>)}
+                        </select>
                     </div>
                 </label>
                 <label htmlFor= "attendance">
                     <div className="input-wrapper">
                         <p className="input-title">Attendance</p>
-                        <RenderInput title="attendance" id="attendance" type="number" styleName="form-input" value={props.attendance} handler ={handleData} placeHolder="28"/>
+                        <input className="spacing-sm" type="number" name="attendance" id="attendance" value={props.attendance} onChange={handleData}/>
                     </div>
                 </label>                             
                 <label htmlFor="totalLessons">
                     <div className='input-wrapper'>
                         <p className="input-title">Total Lessons</p>
-                        <RenderInput title="totalLessons" id="total-lesson" type="number" styleName="form-input" value={props.totalLessons} handler ={handleData} placeHolder="30"/>                          
+                        <input className="spacing-sm" type="number" name="totalLessons" id="total-lesson" value={props.totalLessons} onChange={handleData}/>
                     </div>  
                 </label>
             </div>

@@ -43,3 +43,10 @@ header{
     }
 }
 
+.nav-icon-container{
+    border-radius: 5px;
+    
+}
+.nav-icon-container:hover, .nav-icon-container:focus{
+    background-color: base.$button-bg-color;
+}

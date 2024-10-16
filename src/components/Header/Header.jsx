@@ -17,13 +17,13 @@ const Header = (props) =>{
                 </div>
                 <ul className='navigation-container'>
                     <li onClick={navControl} className='navigation-lists' id="input">
-                        <a><FontAwesomeIcon icon={faPencil}></FontAwesomeIcon>input</a>
+                        <a className="nav-icon-container"><FontAwesomeIcon icon={faPencil}></FontAwesomeIcon><span className="hidden"></span></a>
                         </li>
                     <li onClick={navControl} className='navigation-lists' id="preview">
-                        <a>
-                            <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>preview</a></li>
+                        <a className="nav-icon-container">
+                            <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon><span className="hidden">preview</span></a></li>
                     <li onClick={navControl} className="navigation-lists" id="print">
-                        <a><FontAwesomeIcon icon={faPrint}></FontAwesomeIcon>print</a></li>
+                        <a className="nav-icon-container"><FontAwesomeIcon icon={faPrint}></FontAwesomeIcon><span className="hidden">print</span></a></li>
                 </ul>
             </div>
   
