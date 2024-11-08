@@ -1,9 +1,7 @@
 import React from 'react';
-import RenderInput from '../../../components/Input/Input';
 import textbooks from "../../../resource/textbooks.json";
 
 const PersonalInformation = ({props, handleData}) =>{
-    console.log(textbooks.English);
     return(
         <>
             <h2 className="form-title">Personal Information</h2>
@@ -33,7 +31,7 @@ const PersonalInformation = ({props, handleData}) =>{
                         <p className="input-title">Textbook</p>
                         <select className="spacing-sm" name="textbook" id="textbook" value={props.textbook} onChange={handleData}>
                             <option value="DEFAULT">Textbook name</option>
-                            {textbooks.English.map((item) => <option value={item}>{item}</option>)}
+                            {textbooks.English.map((item, index) => <option key={index} value={item}>{item}</option>)}
                         </select>
                     </div>
                 </label>

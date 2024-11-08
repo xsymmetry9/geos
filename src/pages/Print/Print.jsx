@@ -1,7 +1,7 @@
 import React, { useRef, forwardRef } from "react";
 import PlotPage from "./Partials/PlotPage";
 import ReactToPrint from 'react-to-print';
-import "./print.scss"
+import "../../styles/Print.scss"
 
 const ComponentToPrint = forwardRef((props, ref) => {
     return (

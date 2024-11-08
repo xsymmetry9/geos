@@ -115,24 +115,7 @@ label{
 }
 
 
-.input-student-level-information{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
 
-    input{
-        width: 100%;
-    }
-
-    .input-student-level-container{
-        display: grid;
-        grid-template-columns: 200px 1fr;
-        justify-content: center;
-        align-items: center;
-        border-bottom: 1px solid rgb(179, 170, 170);
-        padding: 8px;
-    }
- 
-}
 
 @media(max-width: 55em)
 {

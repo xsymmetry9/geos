@@ -1,5 +1,5 @@
 import React from "react";
-import "./Preview.scss";
+import "../../styles/Preview.scss";
 import RenderInput from "../../components/Input/Input"
 
 const Preview = ({data, handleData, handleLevelData}) =>{
