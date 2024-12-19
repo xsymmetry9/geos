@@ -137,13 +137,3 @@ tb{
     border: none;
 }
 
-.btn-print{
-    width: 100px;
-    background-color: blue;
-    margin-inline: auto;
-    &:hover, &:focus{
-        background-color: white;
-        color: black;
-        outline: 2px solid blue;
-    }
-}

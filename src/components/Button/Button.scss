@@ -35,3 +35,11 @@ button{
     }
 
 }
+
+.btn-levels{
+    outline: 2px solid base.$primary-color-dark;
+    &:hover, &:focus{
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+}
