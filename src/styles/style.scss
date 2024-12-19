@@ -136,6 +136,10 @@ label{
     padding-bottom: 1rem;
 }
 
+.pt-3{
+    padding-top: 1rem;
+}
+
 .spacing-sm{
     padding: base.$spacing-sm;
 }
@@ -144,4 +148,20 @@ label{
 }
 .spacing-lg{
     padding: base.$spacing-lg;
+}
+
+/* ----------------------------------Reusable Classes ------------------------------------ */
+
+.btn-print{
+    width: 100px;
+    background-color: blue;
+    margin-inline: auto;
+    color: base.$primary-color;
+    &:hover, &:focus{
+        background-color: base.$primary-color;
+        outline: 2px solid blue;
+    }
+}
+.font-red{
+    color: red;
 }

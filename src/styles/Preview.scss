@@ -86,15 +86,28 @@ tr{
 th{
     padding: 8px;
 }
+td{
+    border-right: 1px solid black;
+}
+td:first-child{
+    border-left: 1px solid black;
+}
+td{
+    border-bottom: 1px solid black;
+}
 th, td{
-
-    border: 1px solid black;
     font-size: .8rem;
     text-align: center;
 }
 th{
-    background-color: gray;
-    color: white;
+    background-color: rgba(128, 128, 128, 0.318);
+    color: base.$primary-color;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+th:first-child{
+    border-left: 1px solid black;
 }
 td{
     display: flex;
@@ -136,3 +149,4 @@ tb{
 .preview-input:focus{
     border: none;
 }
+

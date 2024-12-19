@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import levelData from "../../../resource/levels.json";
 import RenderLevel from "../../../components/RenderLevel";
+import Button from '../../../components/Button/Button';
 
 const StudentLevel = ({props, handle}) =>{
     const studentLevel = levelData["English"];    
@@ -35,7 +36,7 @@ const StudentLevel = ({props, handle}) =>{
                             type="range" 
                             min={1} 
                             max={10} 
-                            step={.1} 
+                            step={.5} 
                             value={item[levelName]}
                             onChange = {handle}/>
                     </div>                          
@@ -81,8 +82,9 @@ const StudentLevel = ({props, handle}) =>{
                     <PlotBarInput {...levels}/>
                 
                     <div className='form-nav-buttons-group'>
-                        <button className= {`levels ${tab !== 0 ? "active" : "disabled"}`} onClick={prevTab} disabled={tab===0}>Prev</button>
-                        <button className={`levels ${tab === levels.length-1 ? "disabled" : "active"}`} disabled={tab===props.levels.length -1} onClick={nextTab}>Next</button>
+                        {tab !== 0 && <Button style= "btn-levels" handle={prevTab} name={"Prev"} />}
+                        {tab !== levels.length - 1 && <Button style= "btn-levels" handle={nextTab} name={"Next"} />}
+                        {tab == levels.length -1 && <p className="font-red">Go to the next page</p>}
                     </div>
                 </div>
             </>

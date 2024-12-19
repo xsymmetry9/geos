@@ -237,21 +237,6 @@ p{
     display:flex;
     justify-content: center;
     gap: 10px;
-    button{
-        color: white;
-    }
-    #print{
-        background-color: blue;
-    }
-    #print:hover, #print:focus{
-        background-color: rgb(100, 100, 252);
-    }
-    #save{
-        background-color: green;
-    }
-    #save:hover, #print:focus{
-        background-color: rgb(71, 125, 71);
-    }
 }
 
 

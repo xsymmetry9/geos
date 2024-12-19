@@ -26,14 +26,6 @@ const App = () =>{
     const navControl = (e) =>{
         const page = e.currentTarget.getAttribute("id");
         setPages(page);
-        // if(page === "print")
-        //     {
-        //         document.querySelector(".content").print();
-        //         console.log("hello");
-        //     }
-        //     else{
-        //         setPages(page);
-        //     }
     }
 
     const handleData = (e) =>{
@@ -124,7 +116,7 @@ const App = () =>{
     }
     const contents = {
         "input": <Form data ={data} handleData={handleData} handleLevels={handleLevels} handleSubmit = {handleSubmit} />,
-        "preview": <Preview data={data} handleData = {handleData} handleLevels={handleLevels} handleLevelData={handleLevelData} handleSubmit={handleSubmit}/>,
+        "preview": <Preview data={data} handleData = {handleData} handleLevels={handleLevels} handleLevelData={handleLevelData} handleSubmit={handleSubmit} handlerNavControl = {navControl}/>,
         "print": <Print {...data}/>}
     return (
         <>

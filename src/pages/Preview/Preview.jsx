@@ -2,7 +2,7 @@ import React from "react";
 import "../../styles/Preview.scss";
 import RenderInput from "../../components/Input/Input"
 
-const Preview = ({data, handleData, handleLevelData}) =>{
+const Preview = ({data, handleData, handleLevelData, handlerNavControl}) =>{
 
     const {
         name,
@@ -80,7 +80,7 @@ const Preview = ({data, handleData, handleLevelData}) =>{
                                         type="number" 
                                         min={1} 
                                         max={10} 
-                                        step={.1} 
+                                        step={.5} 
                                         value={levels[0]['initial']}
                                         onChange = {handleLevelData}/>                                
                                 </label>
@@ -94,7 +94,7 @@ const Preview = ({data, handleData, handleLevelData}) =>{
                                             type="number" 
                                             min={1} 
                                             max={10} 
-                                            step={.1} 
+                                            step={.5} 
                                             value={levels[0]['final']}
                                             onChange = {handleLevelData}/>                                
                                     </label>
@@ -108,7 +108,7 @@ const Preview = ({data, handleData, handleLevelData}) =>{
                                         type="number" 
                                         min={1} 
                                         max={10} 
-                                        step={.1} 
+                                        step={.5} 
                                         value={levels[0]['target']}
                                         onChange = {handleLevelData}/>                                
                                 </label>                            
@@ -125,7 +125,7 @@ const Preview = ({data, handleData, handleLevelData}) =>{
                                         type="number" 
                                         min={1} 
                                         max={10} 
-                                        step={.1} 
+                                        step={.5} 
                                         value={levels[1]['initial']}
                                         onChange = {handleLevelData}/>                                
                                 </label>                                
@@ -139,7 +139,7 @@ const Preview = ({data, handleData, handleLevelData}) =>{
                                         type="number" 
                                         min={1} 
                                         max={10} 
-                                        step={.1} 
+                                        step={.5} 
                                         value={levels[1]['final']}
                                         onChange = {handleLevelData}/>                                
                                 </label>
@@ -153,7 +153,7 @@ const Preview = ({data, handleData, handleLevelData}) =>{
                                         type="number" 
                                         min={1} 
                                         max={10} 
-                                        step={.1} 
+                                        step={.5} 
                                         value={levels[1]['target']}
                                         onChange = {handleLevelData}/>                                
                                 </label>
@@ -170,7 +170,7 @@ const Preview = ({data, handleData, handleLevelData}) =>{
                                         type="number" 
                                         min={1} 
                                         max={10} 
-                                        step={.1} 
+                                        step={.5} 
                                         value={levels[2]['initial']}
                                         onChange = {handleLevelData}/>                                
                                 </label> 
@@ -184,7 +184,7 @@ const Preview = ({data, handleData, handleLevelData}) =>{
                                         type="number" 
                                         min={1} 
                                         max={10} 
-                                        step={.1} 
+                                        step={.5} 
                                         value={levels[2]['target']}
                                         onChange = {handleLevelData}/>                                
                                 </label> 
@@ -198,7 +198,7 @@ const Preview = ({data, handleData, handleLevelData}) =>{
                                         type="number" 
                                         min={1} 
                                         max={10} 
-                                        step={.1} 
+                                        step={.5} 
                                         value={levels[2]['final']}
                                         onChange = {handleLevelData}/>                                
                                 </label> 
@@ -215,7 +215,7 @@ const Preview = ({data, handleData, handleLevelData}) =>{
                                         type="number" 
                                         min={1} 
                                         max={10} 
-                                        step={.1} 
+                                        step={.5} 
                                         value={levels[3]['initial']}
                                         onChange = {handleLevelData}/>                                
                                 </label> 
@@ -228,7 +228,7 @@ const Preview = ({data, handleData, handleLevelData}) =>{
                                         type="number" 
                                         min={1} 
                                         max={10} 
-                                        step={.1} 
+                                        step={.5} 
                                         value={levels[3]['target']}
                                         onChange = {handleLevelData}/>                                
                                 </label> </td>
@@ -240,7 +240,7 @@ const Preview = ({data, handleData, handleLevelData}) =>{
                                         type="number" 
                                         min={1} 
                                         max={10} 
-                                        step={.1} 
+                                        step={.5} 
                                         value={levels[3]['final']}
                                         onChange = {handleLevelData}/>                                
                                 </label> </td>
@@ -256,7 +256,7 @@ const Preview = ({data, handleData, handleLevelData}) =>{
                                         type="number" 
                                         min={1} 
                                         max={10} 
-                                        step={.1} 
+                                        step={.5} 
                                         value={levels[4]['initial']}
                                         onChange = {handleLevelData}/>                                
                                 </label> 
@@ -270,7 +270,7 @@ const Preview = ({data, handleData, handleLevelData}) =>{
                                         type="number" 
                                         min={1} 
                                         max={10} 
-                                        step={.1} 
+                                        step={.5} 
                                         value={levels[4]['final']}
                                         onChange = {handleLevelData}/>                                
                                 </label> 
@@ -284,7 +284,7 @@ const Preview = ({data, handleData, handleLevelData}) =>{
                                         type="number" 
                                         min={1} 
                                         max={10} 
-                                        step={.1} 
+                                        step={.5} 
                                         value={levels[4]['target']}
                                         onChange = {handleLevelData}/>                                
                                 </label> 
@@ -299,6 +299,7 @@ const Preview = ({data, handleData, handleLevelData}) =>{
                         <RenderInput title="comment" id="comment" type="textarea" styleName="form-preview-input" value={data.comment} handler ={handleData} placeHolder="Your comment ..."/></div>
 
             </section>
+            <button className="btn-print" id="print" onClick={handlerNavControl}>Print</button>
          
             
         </>

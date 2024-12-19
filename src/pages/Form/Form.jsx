@@ -40,7 +40,7 @@ const Form = ({data, handleData, handleLevels, handleSubmit}) =>{
 
                 {/* Navigation goes here */}
                 <div id="form-navigation" className='form-nav-buttons-group'>
-                    <Button name={`\u27F5`} style={`secondary ${page === 0 ? "inactive" : "active"}`}handle={prevPage} />
+                    {page != 0 && <Button name={`\u27F5`} style="secondary active" handle={prevPage} />}
                     <Button 
                         name={page < arr.length - 1 ? "\u27F6": "Preview"}
                         style={"primary"}
