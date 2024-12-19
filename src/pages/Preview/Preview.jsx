@@ -2,7 +2,7 @@ import React from "react";
 import "../../styles/Preview.scss";
 import RenderInput from "../../components/Input/Input"
 
-const Preview = ({data, handleData, handleLevelData}) =>{
+const Preview = ({data, handleData, handleLevelData, handlerNavControl}) =>{
 
     const {
         name,
@@ -299,6 +299,7 @@ const Preview = ({data, handleData, handleLevelData}) =>{
                         <RenderInput title="comment" id="comment" type="textarea" styleName="form-preview-input" value={data.comment} handler ={handleData} placeHolder="Your comment ..."/></div>
 
             </section>
+            <button className="btn-print" id="print" onClick={handlerNavControl}>Print</button>
          
             
         </>

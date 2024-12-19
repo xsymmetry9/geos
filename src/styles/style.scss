@@ -145,3 +145,16 @@ label{
 .spacing-lg{
     padding: base.$spacing-lg;
 }
+
+/* ----------------------------------Reusable Classes ------------------------------------ */
+
+.btn-print{
+    width: 100px;
+    background-color: blue;
+    margin-inline: auto;
+    color: base.$primary-color;
+    &:hover, &:focus{
+        background-color: base.$primary-color;
+        outline: 2px solid blue;
+    }
+}
