@@ -80,7 +80,7 @@ const Preview = ({data, handleData, handleLevelData, handlerNavControl}) =>{
                                         type="number" 
                                         min={1} 
                                         max={10} 
-                                        step={.1} 
+                                        step={.5} 
                                         value={levels[0]['initial']}
                                         onChange = {handleLevelData}/>                                
                                 </label>
@@ -94,7 +94,7 @@ const Preview = ({data, handleData, handleLevelData, handlerNavControl}) =>{
                                             type="number" 
                                             min={1} 
                                             max={10} 
-                                            step={.1} 
+                                            step={.5} 
                                             value={levels[0]['final']}
                                             onChange = {handleLevelData}/>                                
                                     </label>
@@ -108,7 +108,7 @@ const Preview = ({data, handleData, handleLevelData, handlerNavControl}) =>{
                                         type="number" 
                                         min={1} 
                                         max={10} 
-                                        step={.1} 
+                                        step={.5} 
                                         value={levels[0]['target']}
                                         onChange = {handleLevelData}/>                                
                                 </label>                            
@@ -125,7 +125,7 @@ const Preview = ({data, handleData, handleLevelData, handlerNavControl}) =>{
                                         type="number" 
                                         min={1} 
                                         max={10} 
-                                        step={.1} 
+                                        step={.5} 
                                         value={levels[1]['initial']}
                                         onChange = {handleLevelData}/>                                
                                 </label>                                
@@ -139,7 +139,7 @@ const Preview = ({data, handleData, handleLevelData, handlerNavControl}) =>{
                                         type="number" 
                                         min={1} 
                                         max={10} 
-                                        step={.1} 
+                                        step={.5} 
                                         value={levels[1]['final']}
                                         onChange = {handleLevelData}/>                                
                                 </label>
@@ -256,7 +256,7 @@ const Preview = ({data, handleData, handleLevelData, handlerNavControl}) =>{
                                         type="number" 
                                         min={1} 
                                         max={10} 
-                                        step={.1} 
+                                        step={.5} 
                                         value={levels[4]['initial']}
                                         onChange = {handleLevelData}/>                                
                                 </label> 
@@ -270,7 +270,7 @@ const Preview = ({data, handleData, handleLevelData, handlerNavControl}) =>{
                                         type="number" 
                                         min={1} 
                                         max={10} 
-                                        step={.1} 
+                                        step={.5} 
                                         value={levels[4]['final']}
                                         onChange = {handleLevelData}/>                                
                                 </label> 
@@ -284,7 +284,7 @@ const Preview = ({data, handleData, handleLevelData, handlerNavControl}) =>{
                                         type="number" 
                                         min={1} 
                                         max={10} 
-                                        step={.1} 
+                                        step={.5} 
                                         value={levels[4]['target']}
                                         onChange = {handleLevelData}/>                                
                                 </label> 
