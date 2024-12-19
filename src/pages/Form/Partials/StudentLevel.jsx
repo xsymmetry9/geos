@@ -35,7 +35,7 @@ const StudentLevel = ({props, handle}) =>{
                             type="range" 
                             min={1} 
                             max={10} 
-                            step={.1} 
+                            step={.5} 
                             value={item[levelName]}
                             onChange = {handle}/>
                     </div>                          

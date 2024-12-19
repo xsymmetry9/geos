@@ -2,45 +2,36 @@
 
 button{
     cursor: pointer;
-    background-color: black;
-    color: white;
     padding: 8px 12px;
     border: none;
-    font-size: base.$font-size-1;
+    font-size: base.$font-size-2;
+    width: 140px;
     font-weight: 600;
     border-radius: 5px;
 }
-button:hover{
-    background-color: white;
-    color: black;
-}
 
 .primary{
-    background-color: blue;
-    color: white;
+    background-color: base.$button-background-color;
+    color: base.$primary-color-dark;
+    box-shadow: 1px 1px 1px 2px rgba(255, 166, 0, 0.3);
+
+    &:hover, &:focus{
+        background-color: base.$background-color;
+        outline: 2px solid base.$button-background-color;
+    }
 }
 .primary.inactive{
     background-color: gray;
 }
 
 .secondary{
-    background-color: green;
+    background-color: base.$button-background-secondary-color;
     color: white;
+    box-shadow: 1px 1px 2px 2px rgba(38, 226, 255, 0.3);
+    &:hover, &:focus{
+        background-color: base.$background-color;
+        outline: 2px solid base.$button-background-secondary-color;
+        color: base.$primary-color-dark;
+    }
 
 }
-.secondary.inactive{
-    background-color: gray;
-}
-
-
-    // .active{
-    //     background-color: blue;
-    // }
-    // .active:hover, .levels:focus{
-    //     background-color: #0000ffb4;
-    // }
-    // .disabled{
-    //     background-color: gray;
-    //     color: black;
-    // }
-
