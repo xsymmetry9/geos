@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/Preview.scss";
 import RenderInput from "../../components/Input/Input"
+import Button from "../../components/Button/Button"
 
 const Preview = ({data, handleData, handleLevelData, handlerNavControl}) =>{
 

@@ -160,6 +160,7 @@ label{
     &:hover, &:focus{
         background-color: base.$primary-color;
         outline: 2px solid blue;
+        color: base.$primary-color-dark;
     }
 }
 .font-red{
